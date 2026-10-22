@@ -379,6 +379,18 @@
       transition: width 0.4s ease;
     }
 
+    /* Caja informativa en Ajustes */
+    .info-box {
+      margin-top: 15px;
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--soft-pink);
+      border: 1px solid var(--primary-lila);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      display: none;
+    }
+
     /* Diseño Responsivo para Móviles Android */
     .mobile-menu-btn {
       display: none;
@@ -776,18 +788,19 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 11: AJUSTES (Modo Claro/Oscuro e Idioma)
+         SECCIÓN 11: AJUSTES (Modo Claro/Oscuro, Idioma, Instalar/Desinstalar y Borrar Datos)
          ==================================================================== -->
     <section id="sec-ajustes" class="section-view">
+      <!-- Tarjeta 1: Apariencia e Idioma -->
       <div class="card">
-        <h3 class="card-title">⚙️ Ajustes de la Aplicación</h3>
+        <h3 class="card-title" data-i18n="titleAppearance">⚙️ Ajustes de Apariencia e Idioma</h3>
         <div class="form-grid">
           <div>
-            <label>Modo Visual (Claro / Oscuro):</label>
-            <button class="btn btn-secondary" onclick="toggleTheme()" style="width:100%;">Cambiar Modo Claro / Oscuro</button>
+            <label data-i18n="lblTheme">Modo Visual (Claro / Oscuro):</label>
+            <button class="btn btn-secondary" onclick="toggleTheme()" style="width:100%;" data-i18n="btnToggleTheme">Cambiar Modo Claro / Oscuro</button>
           </div>
           <div>
-            <label>Idioma de la Interfaz:</label>
+            <label data-i18n="lblLanguage">Idioma de la Interfaz:</label>
             <select id="lang-select" onchange="changeLanguage(this.value)">
               <option value="es">Español</option>
               <option value="ca">Català</option>
@@ -795,6 +808,43 @@
             </select>
           </div>
         </div>
+      </div>
+
+      <!-- Tarjeta 2: Instalar, Desinstalar y Borrar todos los datos -->
+      <div class="card">
+        <h3 class="card-title" data-i18n="titleAppManagement">📱 Instalación de la Aplicación y Datos</h3>
+        <p style="margin-bottom:15px; font-size:0.9rem; color:var(--text-muted);" data-i18n="descAppManagement">
+          Gestiona la instalación de la aplicación en tu dispositivo Android u ordenador, o restablece todos los datos a su estado original.
+        </p>
+
+        <div class="form-grid">
+          <!-- Botón para Instalar la App -->
+          <div>
+            <label data-i18n="lblInstallApp">Instalar en el dispositivo:</label>
+            <button class="btn" onclick="installPWA()" style="width:100%;" id="btn-install-pwa" data-i18n="btnInstallApp">
+              📲 Instalar Aplicación
+            </button>
+          </div>
+
+          <!-- Botón para Desinstalar la App -->
+          <div>
+            <label data-i18n="lblUninstallApp">Desinstalar del dispositivo:</label>
+            <button class="btn btn-secondary" onclick="uninstallPWA()" style="width:100%;" data-i18n="btnUninstallApp">
+              📤 Desinstalar Aplicación
+            </button>
+          </div>
+
+          <!-- Botón adicional para Borrar todos los datos -->
+          <div>
+            <label data-i18n="lblResetData">Restablecimiento total:</label>
+            <button class="btn btn-danger" onclick="resetAllData()" style="width:100%;" data-i18n="btnResetData">
+              🗑️ Borrar todos los datos
+            </button>
+          </div>
+        </div>
+
+        <!-- Cuadro de ayuda dinámica que se muestra al pulsar Instalar o Desinstalar -->
+        <div id="pwa-helper-box" class="info-box"></div>
       </div>
     </section>
 
@@ -864,7 +914,19 @@
         lblTask: "Tarea:",
         lblCategory: "Categoría:",
         lblAssignTo: "Asignar a (Colaborador):",
-        lblRepeatType: "Repetición:"
+        lblRepeatType: "Repetición:",
+        titleAppearance: "⚙️ Ajustes de Apariencia e Idioma",
+        lblTheme: "Modo Visual (Claro / Oscuro):",
+        btnToggleTheme: "Cambiar Modo Claro / Oscuro",
+        lblLanguage: "Idioma de la Interfaz:",
+        titleAppManagement: "📱 Instalación de la Aplicación y Datos",
+        descAppManagement: "Gestiona la instalación de la aplicación en tu dispositivo Android u ordenador, o restablece todos los datos a su estado original.",
+        lblInstallApp: "Instalar en el dispositivo:",
+        btnInstallApp: "📲 Instalar Aplicación",
+        lblUninstallApp: "Desinstalar del dispositivo:",
+        btnUninstallApp: "📤 Desinstalar Aplicación",
+        lblResetData: "Restablecimiento total:",
+        btnResetData: "🗑️ Borrar todos los datos"
       },
       ca: {
         appTitle: "El Meu Pla de Neteja",
@@ -889,7 +951,19 @@
         lblTask: "Tasca:",
         lblCategory: "Categoria:",
         lblAssignTo: "Assignar a (Col·laborador):",
-        lblRepeatType: "Repetició:"
+        lblRepeatType: "Repetició:",
+        titleAppearance: "⚙️ Ajustos d'Aparença i Idioma",
+        lblTheme: "Mode Visual (Clar / Fosc):",
+        btnToggleTheme: "Canviar Mode Clar / Fosc",
+        lblLanguage: "Idioma de la Interfície:",
+        titleAppManagement: "📱 Instal·lació de l'Aplicació i Dades",
+        descAppManagement: "Gestiona la instal·lació de l'aplicació al teu dispositiu Android o ordinador, o restableix totes les dades al seu estat original.",
+        lblInstallApp: "Instal·lar al dispositiu:",
+        btnInstallApp: "📲 Instal·lar Aplicació",
+        lblUninstallApp: "Desinstal·lar del dispositiu:",
+        btnUninstallApp: "📤 Desinstal·lar Aplicació",
+        lblResetData: "Restabliment total:",
+        btnResetData: "🗑️ Esborrar totes les dades"
       },
       en: {
         appTitle: "My Cleaning Plan",
@@ -914,7 +988,19 @@
         lblTask: "Task:",
         lblCategory: "Category:",
         lblAssignTo: "Assign to (Collaborator):",
-        lblRepeatType: "Repeat:"
+        lblRepeatType: "Repeat:",
+        titleAppearance: "⚙️ Appearance & Language Settings",
+        lblTheme: "Visual Mode (Light / Dark):",
+        btnToggleTheme: "Toggle Light / Dark Mode",
+        lblLanguage: "Interface Language:",
+        titleAppManagement: "📱 App Installation & Data",
+        descAppManagement: "Manage the installation of the app on your Android device or computer, or reset all data to factory defaults.",
+        lblInstallApp: "Install on device:",
+        btnInstallApp: "📲 Install App",
+        lblUninstallApp: "Uninstall from device:",
+        btnUninstallApp: "📤 Uninstall App",
+        lblResetData: "Factory Reset:",
+        btnResetData: "🗑️ Delete All Data"
       }
     };
 
@@ -925,6 +1011,7 @@
     let appData = loadData();
     let calCurrentDate = new Date();
     let calViewMode = "month"; // 'month', 'week', 'day'
+    let deferredPrompt = null; // Guardará el evento de instalación de Android/Chrome
 
     function loadData() {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -1490,7 +1577,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       K. COPIA DE SEGURIDAD, AJUSTES, IDIOMA Y PWA ANDROID
+       K. COPIA DE SEGURIDAD, AJUSTES, IDIOMA Y GESTIÓN DE INSTALACIÓN PWA
        -------------------------------------------------------------------------- */
     function exportBackup() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
@@ -1547,18 +1634,106 @@
       });
     }
 
-    // Configura un Manifiesto PWA automático para instalar en Android
+    // 1. Capturar el evento de instalación cuando se abre en GitHub Pages / Android Chrome
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+
+    // 2. Configurar Manifiesto PWA con icono SVG integrado para Android
     function setupPWA() {
+      const iconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#f5ebe0"/><rect x="10" y="52" width="11" height="28" fill="#4a2559"/><rect x="25" y="42" width="11" height="38" fill="#4a2559"/><rect x="40" y="32" width="11" height="48" fill="#4a2559"/><text x="54" y="78" font-family="Georgia, serif" font-size="38" font-weight="bold" fill="#1d1d1b">LB</text></svg>`;
+      const iconDataUrl = "data:image/svg+xml;utf8," + encodeURIComponent(iconSVG);
+
       const manifest = {
         name: "Mi Plan de Limpieza - LB",
         short_name: "Plan Limpieza",
-        start_url: ".",
+        start_url: window.location.href,
         display: "standalone",
         background_color: "#fdf8ff",
-        theme_color: "#9b5de5"
+        theme_color: "#9b5de5",
+        icons: [
+          {
+            src: iconDataUrl,
+            sizes: "192x192 512x512",
+            type: "image/svg+xml",
+            purpose: "any maskable"
+          }
+        ]
       };
       const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
       document.getElementById('pwa-manifest').setAttribute('href', URL.createObjectURL(blob));
+    }
+
+    // 3. Función del botón "📲 Instalar Aplicación"
+    async function installPWA() {
+      const helperBox = document.getElementById('pwa-helper-box');
+      helperBox.style.display = 'block';
+
+      // Comprobar si ya se está ejecutando como aplicación instalada
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+      if (isStandalone) {
+        helperBox.innerHTML = "✅ <strong>¡La aplicación ya está instalada!</strong> Actualmente la estás utilizando desde el icono de tu dispositivo.";
+        return;
+      }
+
+      // Si el navegador capturó el permiso automático de instalación, lo lanzamos
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          helperBox.innerHTML = "🎉 <strong>¡Instalación completada!</strong> Ya tienes el icono de Mi Plan de Limpieza en la pantalla de tu dispositivo.";
+        } else {
+          helperBox.innerHTML = "ℹ️ Has cancelado la ventana de instalación. Puedes volver a pulsar el botón cuando quieras.";
+        }
+        deferredPrompt = null;
+      } else {
+        // Si se abre en local o el navegador requiere el menú manual
+        helperBox.innerHTML = `
+          📲 <strong>Cómo instalar la aplicación en tu dispositivo:</strong><br>
+          1. Asegúrate de haber abierto este archivo desde tu enlace web de <strong>GitHub Pages</strong> en Google Chrome.<br>
+          2. En tu móvil Android, toca el icono de los <strong>tres puntos (⋮)</strong> arriba a la derecha en Chrome.<br>
+          3. Selecciona <strong>"Instalar aplicación"</strong> o <strong>"Añadir a pantalla de inicio"</strong>.
+        `;
+      }
+    }
+
+    // 4. Función del botón "📤 Desinstalar Aplicación"
+    async function uninstallPWA() {
+      const helperBox = document.getElementById('pwa-helper-box');
+      helperBox.style.display = 'block';
+
+      // Limpiar posibles Service Workers o cachés de navegador registrados
+      if ('serviceWorker' in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        for (let registration of registrations) {
+          await registration.unregister();
+        }
+      }
+
+      helperBox.innerHTML = `
+        📤 <strong>Pasos para desinstalar la aplicación del dispositivo:</strong><br>
+        • <strong>En móvil Android:</strong> Ve a la pantalla de inicio de tu teléfono, mantén pulsado el icono de <em>"Plan Limpieza"</em> durante 2 segundos y arrástralo hacia <strong>"Desinstalar"</strong> (o toca el icono de información ⓘ y pulsa Desinstalar).<br>
+        • <strong>En Ordenador (Chrome/Edge):</strong> Abre la aplicación instalada, haz clic en los tres puntos (⋮) de la barra superior derecha y selecciona <strong>"Desinstalar Mi Plan de Limpieza"</strong>.<br>
+        <em>Nota: Si también deseas eliminar tus registros guardados antes de desinstalar, pulsa el botón rojo "🗑️ Borrar todos los datos".</em>
+      `;
+    }
+
+    // 5. Función del botón "🗑️ Borrar todos los datos"
+    function resetAllData() {
+      const confirm1 = confirm("⚠️ ¿Estás segura de que quieres BORRAR TODOS LOS DATOS?\n\nSe eliminarán todas las tareas programadas en el calendario y se restaurarán las listas originales.");
+      if (!confirm1) return;
+
+      const confirm2 = confirm("Última confirmación: ¿Realmente deseas formatear la aplicación y empezar de cero?");
+      if (confirm2) {
+        localStorage.removeItem(STORAGE_KEY);
+        appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+        saveData();
+        const helperBox = document.getElementById('pwa-helper-box');
+        helperBox.style.display = 'block';
+        helperBox.innerHTML = "✅ <strong>Todos los datos han sido borrados correctamente.</strong> La aplicación ha vuelto a su estado original de fábrica.";
+        alert("Todos los datos se han borrado correctamente.");
+      }
     }
 
     function refreshAllViews() {
