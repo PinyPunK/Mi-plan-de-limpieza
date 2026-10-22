@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Plan de Limpieza - LB</title>
+  <!-- Color de barra para Android -->
+  <meta name="theme-color" content="#9b5de5">
+  <link id="pwa-manifest" rel="manifest">
+
+  <style>
+    /* ==========================================================================
+       1. VARIABLES DE DISEÑO (Colores Rosa, Lila y Blanco + Modo Oscuro)
+       Puedes cambiar estos códigos hexadecimales si deseas ajustar algún tono.
+       ========================================================================== */
+    :root {
+      --bg-main: #fdf8ff;         /* Blanco con un toque muy suave de lila */
+      --bg-card: #ffffff;         /* Blanco puro para tarjetas */
+      --bg-sidebar: #f3e5f5;      /* Lila pastel claro para el menú */
+      --primary-lila: #9b5de5;    /* Lila principal alegre */
+      --primary-pink: #f15bb5;    /* Rosa alegre para botones y acentos */
+      --soft-pink: #fce4ec;       /* Rosa suave para fondos secundarios */
+      --text-main: #3c2a4d;       /* Gris/Morado muy oscuro para lectura fácil */
+      --text-muted: #7b6888;      /* Texto secundario */
+      --border-color: #e1bee7;    /* Bordes lila claro */
+      --danger: #ff4d6d;          /* Rojo rosado para borrar/pendientes */
+      --success: #00bbf9;         /* Azul/Verde alegre para completado */
+      --shadow: 0 4px 12px rgba(155, 93, 229, 0.12);
+    }
+
+    /* Variables que se activan automáticamente cuando el usuario elige Modo Oscuro */
+    body.dark-mode {
+      --bg-main: #1a1224;
+      --bg-card: #281c36;
+      --bg-sidebar: #21162e;
+      --primary-lila: #b57cff;
+      --primary-pink: #ff70c0;
+      --soft-pink: #3a2342;
+      --text-main: #f8f0fc;
+      --text-muted: #c2add3;
+      --border-color: #46325c;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ==========================================================================
+       2. ESTILOS GENERALES DE LA INTERFAZ
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      display: flex;
+      min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Barra lateral (Menú) */
+    .sidebar {
+      width: 260px;
+      background-color: var(--bg-sidebar);
+      border-right: 2px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: #f5ebe0;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 2px solid var(--primary-lila);
+      color: #222;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #4a2559;
+      line-height: 1.2;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: none;
+      text-align: left;
+      padding: 11px 14px;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--soft-pink);
+      color: var(--primary-pink);
+    }
+
+    .nav-btn.active {
+      background: linear-gradient(135deg, var(--primary-lila), var(--primary-pink));
+      color: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .badge-alert {
+      background-color: var(--danger);
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 2px 7px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    /* Contenedor Principal */
+    .main-content {
+      margin-left: 260px;
+      flex: 1;
+      padding: 25px;
+      max-width: 1200px;
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      background: var(--bg-card);
+      padding: 15px 20px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .section-view {
+      display: none;
+    }
+
+    .section-view.active {
+      display: block;
+      animation: fadeIn 0.25s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tarjetas, Formularios y Botones */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: var(--primary-lila);
+      border-bottom: 2px solid var(--soft-pink);
+      padding-bottom: 8px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    input[type="text"], input[type="date"], input[type="number"], select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 10px;
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--primary-pink), var(--primary-lila));
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .btn:hover { opacity: 0.92; }
+    .btn:active { transform: scale(0.98); }
+    .btn-secondary { background: var(--soft-pink); color: var(--primary-lila); border: 1px solid var(--primary-lila); }
+    .btn-danger { background: var(--danger); color: #fff; }
+    .btn-sm { padding: 5px 10px; font-size: 0.8rem; border-radius: 7px; }
+
+    /* Listas de elementos (Estancias, Tareas, Categorías, Colaboradores) */
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 12px;
+    }
+
+    .item-box {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      padding: 12px 15px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .item-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    /* Calendario */
+    .cal-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+
+    .cal-day-header {
+      text-align: center;
+      font-weight: bold;
+      color: var(--primary-lila);
+      padding: 6px;
+      font-size: 0.85rem;
+    }
+
+    .cal-cell {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      min-height: 90px;
+      border-radius: 10px;
+      padding: 8px;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.1s;
+    }
+
+    .cal-cell:hover {
+      border-color: var(--primary-pink);
+      transform: translateY(-2px);
+    }
+
+    .cal-cell.today {
+      border: 2px solid var(--primary-pink);
+      background: var(--soft-pink);
+    }
+
+    .cal-date-num {
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .cal-pill {
+      font-size: 0.72rem;
+      background: var(--primary-lila);
+      color: white;
+      padding: 2px 5px;
+      border-radius: 5px;
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cal-pill.done {
+      background: #8ac926;
+      text-decoration: line-through;
+      opacity: 0.8;
+    }
+
+    /* Casillas de Agenda y Tareas */
+    .task-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid var(--border-color);
+      gap: 10px;
+    }
+
+    .task-row:last-child { border-bottom: none; }
+
+    .task-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .task-checkbox {
+      width: 22px;
+      height: 22px;
+      accent-color: var(--primary-pink);
+      cursor: pointer;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--soft-pink);
+      color: var(--primary-lila);
+      margin-right: 5px;
+    }
+
+    /* Gráficos de barras */
+    .chart-row {
+      margin-bottom: 12px;
+    }
+
+    .chart-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .progress-bg {
+      width: 100%;
+      height: 14px;
+      background: var(--soft-pink);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-lila), var(--primary-pink));
+      border-radius: 10px;
+      transition: width 0.4s ease;
+    }
+
+    /* Diseño Responsivo para Móviles Android */
+    .mobile-menu-btn {
+      display: none;
+      background: var(--primary-lila);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      .main-content {
+        margin-left: 0;
+        padding: 15px;
+      }
+      .mobile-menu-btn {
+        display: inline-block;
+      }
+      .cal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cal-day-header { display: none; }
+    }
+
+    /* ==========================================================================
+       3. FORMATO ESPECIAL DE IMPRESIÓN (@media print)
+       Oculta menús y botones al imprimir, mostrando solo el planificador.
+       ========================================================================== */
+    @media print {
+      .sidebar, .header-bar, .no-print {
+        display: none !important;
+      }
+      .main-content {
+        margin-left: 0 !important;
+        padding: 0 !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA LATERAL DE NAVEGACIÓN (MENÚ) -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Logotipo personalizado LB recreado en SVG vectorial -->
+    <div class="brand-box">
+      <svg width="48" height="42" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <!-- Barras de progreso púrpura -->
+        <rect x="8" y="48" width="11" height="28" fill="#4a2559" rx="1"/>
+        <rect x="23" y="38" width="11" height="38" fill="#4a2559" rx="1"/>
+        <rect x="38" y="28" width="11" height="48" fill="#4a2559" rx="1"/>
+        <!-- Pluma superior -->
+        <path d="M5 42 C18 25, 32 15, 48 10 C44 24, 32 34, 15 39 Z" fill="#4a2559"/>
+        <line x1="3" y1="44" x2="25" y2="32" stroke="#f5ebe0" stroke-width="2"/>
+        <!-- Letras LB en tipografía Serif clásica -->
+        <text x="54" y="75" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#1d1d1b">LB</text>
+      </svg>
+      <div class="brand-title" data-i18n="appTitle">Mi Plan de Limpieza</div>
+    </div>
+
+    <button class="nav-btn active" onclick="showSection('agenda')" data-i18n="navAgenda">📅 Agenda Día a Día</button>
+    <button class="nav-btn" onclick="showSection('calendario')" data-i18n="navCalendar">🗓️ Calendario y Programar</button>
+    <button class="nav-btn" onclick="showSection('pendientes')">
+      <span data-i18n="navPending">⚠️ Tareas Pendientes</span>
+      <span class="badge-alert" id="pending-count">0</span>
+    </button>
+    <button class="nav-btn" onclick="showSection('estancias')" data-i18n="navRooms">🏠 Estancias</button>
+    <button class="nav-btn" onclick="showSection('tareas')" data-i18n="navTasks">✨ Tareas</button>
+    <button class="nav-btn" onclick="showSection('categorias')" data-i18n="navCategories">🏷️ Categorías</button>
+    <button class="nav-btn" onclick="showSection('colaboradores')" data-i18n="navCollabs">👥 Colaboradores</button>
+    <button class="nav-btn" onclick="showSection('graficos')" data-i18n="navCharts">📊 Gráficos</button>
+    <button class="nav-btn" onclick="showSection('impresion')" data-i18n="navPrint">🖨️ Impresión Agenda</button>
+    <button class="nav-btn" onclick="showSection('backup')" data-i18n="navBackup">💾 Copia de Seguridad</button>
+    <button class="nav-btn" onclick="showSection('ajustes')" data-i18n="navSettings">⚙️ Ajustes</button>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <!-- Cabecera superior -->
+    <header class="header-bar">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        <h2 id="current-section-title" data-i18n="navAgenda">📅 Agenda Día a Día</h2>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <button class="btn btn-secondary btn-sm" onclick="toggleTheme()" id="theme-btn">🌙 / ☀️</button>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         SECCIÓN 1: AGENDA DÍA A DÍA
+         ==================================================================== -->
+    <section id="sec-agenda" class="section-view active">
+      <div class="card no-print">
+        <div class="form-grid" style="align-items: end;">
+          <div>
+            <label data-i18n="lblSelectDate">Seleccionar Fecha:</label>
+            <input type="date" id="agenda-date" onchange="renderAgenda()">
+          </div>
+          <div>
+            <label data-i18n="lblFilterRoom">Filtrar por Estancia:</label>
+            <select id="agenda-room-filter" onchange="renderAgenda()"></select>
+          </div>
+          <div>
+            <label data-i18n="lblFilterCollab">Filtrar por Colaborador:</label>
+            <select id="agenda-collab-filter" onchange="renderAgenda()"></select>
+          </div>
+          <div>
+            <button class="btn" onclick="setAgendaToday()" data-i18n="btnToday">Ir a Hoy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title" id="agenda-list-title">Tareas del Día</h3>
+        <div id="agenda-tasks-container"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 2: CALENDARIO Y PROGRAMADOR DE TAREAS
+         ==================================================================== -->
+    <section id="sec-calendario" class="section-view">
+      <!-- Formulario para programar tarea nueva -->
+      <div class="card">
+        <h3 class="card-title" data-i18n="titleScheduleTask">Programar Tarea Nueva</h3>
+        <input type="hidden" id="edit-schedule-id" value="">
+        <div class="form-grid">
+          <div>
+            <label data-i18n="lblStartDate">Fecha de inicio:</label>
+            <input type="date" id="sched-date">
+          </div>
+          <div>
+            <label data-i18n="lblRoom">Estancia:</label>
+            <select id="sched-room"></select>
+          </div>
+          <div>
+            <label data-i18n="lblTask">Tarea:</label>
+            <select id="sched-task"></select>
+          </div>
+          <div>
+            <label data-i18n="lblCategory">Categoría:</label>
+            <select id="sched-cat"></select>
+          </div>
+          <div>
+            <label data-i18n="lblAssignTo">Asignar a (Colaborador):</label>
+            <select id="sched-collab"></select>
+          </div>
+          <div>
+            <label data-i18n="lblRepeatType">Repetición:</label>
+            <select id="sched-repeat" onchange="updateRepeatOptionsUI()">
+              <option value="none">Sin repetición (Solo ese día)</option>
+              <option value="daily">Diariamente</option>
+              <option value="weekly">Semanalmente (Elegir días)</option>
+              <option value="monthly_nth">Cada X meses (Ej: Primer martes...)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Opciones extra si elige Semanalmente -->
+        <div id="repeat-weekly-box" style="display:none; margin-bottom:15px; padding:12px; background:var(--soft-pink); border-radius:10px;">
+          <label>Marca los días de la semana que se repite:</label>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:6px;">
+            <label><input type="checkbox" class="wk-day" value="1"> Lunes</label>
+            <label><input type="checkbox" class="wk-day" value="2"> Martes</label>
+            <label><input type="checkbox" class="wk-day" value="3"> Miércoles</label>
+            <label><input type="checkbox" class="wk-day" value="4"> Jueves</label>
+            <label><input type="checkbox" class="wk-day" value="5"> Viernes</label>
+            <label><input type="checkbox" class="wk-day" value="6"> Sábado</label>
+            <label><input type="checkbox" class="wk-day" value="0"> Domingo</label>
+          </div>
+        </div>
+
+        <!-- Opciones extra si elige Cada X meses (Primer/Segundo/Tercer/Cuarto/Último día) -->
+        <div id="repeat-monthly-box" style="display:none; margin-bottom:15px; padding:12px; background:var(--soft-pink); border-radius:10px;">
+          <div class="form-grid">
+            <div>
+              <label>Cada cuántos meses:</label>
+              <input type="number" id="sched-month-interval" value="1" min="1" max="12">
+            </div>
+            <div>
+              <label>Posición en el mes:</label>
+              <select id="sched-month-pos">
+                <option value="1">Primer</option>
+                <option value="2">Segundo</option>
+                <option value="3">Tercer</option>
+                <option value="4">Cuarto</option>
+                <option value="-1">Último</option>
+              </select>
+            </div>
+            <div>
+              <label>Día de la semana:</label>
+              <select id="sched-month-weekday">
+                <option value="1">Lunes</option>
+                <option value="2">Martes</option>
+                <option value="3">Miércoles</option>
+                <option value="4">Jueves</option>
+                <option value="5">Viernes</option>
+                <option value="6">Sábado</option>
+                <option value="0">Domingo</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn" onclick="saveScheduledTask()" id="btn-save-sched">💾 Guardar Programación</button>
+        <button class="btn btn-secondary" onclick="cancelEditSchedule()" id="btn-cancel-sched" style="display:none;">Cancelar Edición</button>
+      </div>
+
+      <!-- Vista del Calendario (Mensual, Semanal, Diaria) -->
+      <div class="card">
+        <div class="cal-controls">
+          <div style="display:flex; gap:8px;">
+            <button class="btn btn-secondary btn-sm" onclick="changeCalPeriod(-1)">◀ Anterior</button>
+            <button class="btn btn-secondary btn-sm" onclick="changeCalPeriod(1)">Siguiente ▶</button>
+          </div>
+          <h3 id="cal-header-label" style="color:var(--primary-lila);">Mes / Año</h3>
+          <div style="display:flex; gap:6px;">
+            <select id="cal-room-filter" onchange="renderCalendar()" style="width:auto;"></select>
+            <button class="btn btn-sm" onclick="setCalView('month')">Mensual</button>
+            <button class="btn btn-sm" onclick="setCalView('week')">Semanal</button>
+            <button class="btn btn-sm" onclick="setCalView('day')">Diaria</button>
+          </div>
+        </div>
+
+        <div id="calendar-grid-wrapper"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 3: TAREAS PENDIENTES (Vencidas y no realizadas)
+         ==================================================================== -->
+    <section id="sec-pendientes" class="section-view">
+      <div class="card">
+        <h3 class="card-title" data-i18n="navPending">⚠️ Tareas Pendientes (Vencidas sin completar)</h3>
+        <p style="margin-bottom:15px; font-size:0.9rem; color:var(--text-muted);">
+          Aquí aparecen automáticamente todas las tareas cuya fecha ya ha pasado y aún no tienen marcada su casilla de verificación.
+        </p>
+        <div id="pending-tasks-container"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 4: ESTANCIAS
+         ==================================================================== -->
+    <section id="sec-estancias" class="section-view">
+      <div class="card">
+        <h3 class="card-title" data-i18n="navRooms">🏠 Gestión de Estancias</h3>
+        <div style="display:flex; gap:10px; margin-bottom:15px;">
+          <input type="text" id="new-room-input" placeholder="Nombre de la nueva estancia...">
+          <button class="btn" onclick="addMasterItem('rooms', 'new-room-input')">+ Añadir</button>
+        </div>
+        <div id="rooms-list" class="items-grid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 5: TAREAS
+         ==================================================================== -->
+    <section id="sec-tareas" class="section-view">
+      <div class="card">
+        <h3 class="card-title" data-i18n="navTasks">✨ Catálogo de Tareas</h3>
+        <div style="display:flex; gap:10px; margin-bottom:15px;">
+          <input type="text" id="new-task-input" placeholder="Crear nueva tarea...">
+          <button class="btn" onclick="addMasterItem('tasks', 'new-task-input')">+ Añadir</button>
+        </div>
+        <div id="tasks-list" class="items-grid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 6: CATEGORÍAS
+         ==================================================================== -->
+    <section id="sec-categorias" class="section-view">
+      <div class="card">
+        <h3 class="card-title" data-i18n="navCategories">🏷️ Categorías de Frecuencia</h3>
+        <div style="display:flex; gap:10px; margin-bottom:15px;">
+          <input type="text" id="new-cat-input" placeholder="Nueva categoría...">
+          <button class="btn" onclick="addMasterItem('categories', 'new-cat-input')">+ Añadir</button>
+        </div>
+        <div id="categories-list" class="items-grid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 7: COLABORADORES
+         ==================================================================== -->
+    <section id="sec-colaboradores" class="section-view">
+      <div class="card">
+        <h3 class="card-title" data-i18n="navCollabs">👥 Colaboradores del Hogar</h3>
+        <div style="display:flex; gap:10px; margin-bottom:15px;">
+          <input type="text" id="new-collab-input" placeholder="Nombre del colaborador...">
+          <button class="btn" onclick="addMasterItem('collaborators', 'new-collab-input')">+ Añadir</button>
+        </div>
+        <div id="collaborators-list" class="items-grid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 8: GRÁFICOS DE CUMPLIMIENTO
+         ==================================================================== -->
+    <section id="sec-graficos" class="section-view">
+      <div class="card">
+        <h3 class="card-title">📊 Índice de Cumplimiento por Estancia</h3>
+        <div id="chart-by-room"></div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">📅 Índice de Cumplimiento por Fecha (Últimos 7 días con tareas)</h3>
+        <div id="chart-by-date"></div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">✨ Índice de Cumplimiento por Tarea</h3>
+        <div id="chart-by-task"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 9: IMPRESIÓN DEL PLANIFICADOR TIPO AGENDA
+         ==================================================================== -->
+    <section id="sec-impresion" class="section-view">
+      <div class="card no-print">
+        <h3 class="card-title">🖨️ Configurar Impresión del Planificador</h3>
+        <div class="form-grid">
+          <div>
+            <label>Rango Rápido:</label>
+            <select id="print-preset" onchange="applyPrintPreset()">
+              <option value="day">Por Día (Hoy)</option>
+              <option value="week">Por Semana (Esta semana)</option>
+              <option value="month" selected>Por Mes (Este mes)</option>
+              <option value="custom">Personalizado por fechas</option>
+            </select>
+          </div>
+          <div>
+            <label>Desde Fecha:</label>
+            <input type="date" id="print-from" onchange="renderPrintPreview()">
+          </div>
+          <div>
+            <label>Hasta Fecha:</label>
+            <input type="date" id="print-to" onchange="renderPrintPreview()">
+          </div>
+          <div>
+            <label>Estancia:</label>
+            <select id="print-room" onchange="renderPrintPreview()"></select>
+          </div>
+          <div>
+            <label>Colaborador:</label>
+            <select id="print-collab" onchange="renderPrintPreview()"></select>
+          </div>
+        </div>
+        <button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar en PDF</button>
+      </div>
+
+      <!-- Vista previa que saldrá impresa en el papel -->
+      <div class="card" id="print-area">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--primary-lila); padding-bottom:10px; margin-bottom:15px;">
+          <h2>Mi Plan de Limpieza - LB</h2>
+          <span id="print-subtitle" style="font-weight:bold; color:var(--primary-pink);">Planificador</span>
+        </div>
+        <div id="print-preview-container"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 10: COPIA DE SEGURIDAD (Sincronización entre dispositivos)
+         ==================================================================== -->
+    <section id="sec-backup" class="section-view">
+      <div class="card">
+        <h3 class="card-title">💾 Copia de Seguridad y Sincronización</h3>
+        <p style="margin-bottom:15px; line-height:1.5;">
+          Descarga tus datos en un archivo para guardar una copia de seguridad o para enviárselo por WhatsApp/Email a <strong>Lucas</strong> u <strong>Óscar</strong> y que ellos lo carguen en sus teléfonos.
+        </p>
+        <div style="display:flex; gap:15px; flex-wrap:wrap;">
+          <button class="btn" onclick="exportBackup()">⬇️ Descargar Copia de Seguridad (.json)</button>
+          <div>
+            <input type="file" id="import-file" accept=".json" style="display:none;" onchange="importBackup(event)">
+            <button class="btn btn-secondary" onclick="document.getElementById('import-file').click()">⬆️ Restaurar / Cargar Copia (.json)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 11: AJUSTES (Modo Claro/Oscuro e Idioma)
+         ==================================================================== -->
+    <section id="sec-ajustes" class="section-view">
+      <div class="card">
+        <h3 class="card-title">⚙️ Ajustes de la Aplicación</h3>
+        <div class="form-grid">
+          <div>
+            <label>Modo Visual (Claro / Oscuro):</label>
+            <button class="btn btn-secondary" onclick="toggleTheme()" style="width:100%;">Cambiar Modo Claro / Oscuro</button>
+          </div>
+          <div>
+            <label>Idioma de la Interfaz:</label>
+            <select id="lang-select" onchange="changeLanguage(this.value)">
+              <option value="es">Español</option>
+              <option value="ca">Català</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       4. LÓGICA DE PROGRAMACIÓN EN JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    /* --------------------------------------------------------------------------
+       A. DATOS INICIALES POR DEFECTO (Tus listas exactas)
+       -------------------------------------------------------------------------- */
+    const DEFAULT_DATA = {
+      rooms: [
+        "Recibidor", "Aseo", "Estudio", "Cocina", "Escaleras", "Salón", "Rellano",
+        "Patio", "Caseta", "Gatos", "Dormitorio Suite", "Baño Suite",
+        "Dormitorio Óscar", "Dormitorio Lucas", "Baño Principal"
+      ],
+      categories: [
+        "Diario", "Semanal", "Mensual", "Bimensual", "Trimestral", "Semestral"
+      ],
+      tasks: [
+        "Limpiar el polvo", "Limpiar comedero", "Limpiar Fuente", "Rellenar comedero",
+        "Cambiar filtro Fuente", "Limpiar interruptores", "Limpiar cristales",
+        "Lavar cortinas", "Limpiar ventilador", "Limpiar lámparas", "Limpiar Puerta",
+        "Desinfectar con Ozono", "Aspirar", "Fregar", "Limpiar sanitarios",
+        "Limpiar espejo", "Cambiar toallas", "Cambiar bolsa de basura", "Arenero",
+        "Limpiar estantes", "Limpiar mueble", "Limpiar azulejos", "Cambiar sábanas",
+        "Organizar armario", "Organizar cajones", "Limpiar encimera", "Fregadero",
+        "Limpiar nevera", "Limpiar lavadora", "Limpiar lavavajillas", "Limpiar Air Frier",
+        "Limpiar Microondas", "Limpiar cafetera", "Limpiar mesa", "Limpiar Puerta entrada",
+        "Limpiar piscina", "Barrer", "Organizar caseta", "Tirar basura",
+        "Hacer la cama", "Tender", "Doblar y guardar ropa"
+      ],
+      collaborators: ["Lorena", "Lucas", "Óscar"],
+      scheduledOccurrences: [], // Aquí se guardan las tareas programadas en el calendario
+      settings: {
+        darkMode: false,
+        lang: "es"
+      }
+    };
+
+    /* --------------------------------------------------------------------------
+       B. DICCIONARIO MULTILENGUAJE (Español, Catalán, Inglés)
+       -------------------------------------------------------------------------- */
+    const I18N = {
+      es: {
+        appTitle: "Mi Plan de Limpieza",
+        navAgenda: "📅 Agenda Día a Día",
+        navCalendar: "🗓️ Calendario y Programar",
+        navPending: "⚠️ Tareas Pendientes",
+        navRooms: "🏠 Estancias",
+        navTasks: "✨ Tareas",
+        navCategories: "🏷️ Categorías",
+        navCollabs: "👥 Colaboradores",
+        navCharts: "📊 Gráficos",
+        navPrint: "🖨️ Impresión Agenda",
+        navBackup: "💾 Copia de Seguridad",
+        navSettings: "⚙️ Ajustes",
+        lblSelectDate: "Seleccionar Fecha:",
+        lblFilterRoom: "Filtrar por Estancia:",
+        lblFilterCollab: "Filtrar por Colaborador:",
+        btnToday: "Ir a Hoy",
+        titleScheduleTask: "Programar Tarea Nueva",
+        lblStartDate: "Fecha de inicio:",
+        lblRoom: "Estancia:",
+        lblTask: "Tarea:",
+        lblCategory: "Categoría:",
+        lblAssignTo: "Asignar a (Colaborador):",
+        lblRepeatType: "Repetición:"
+      },
+      ca: {
+        appTitle: "El Meu Pla de Neteja",
+        navAgenda: "📅 Agenda Dia a Dia",
+        navCalendar: "🗓️ Calendari i Programar",
+        navPending: "⚠️ Tasques Pendents",
+        navRooms: "🏠 Estances",
+        navTasks: "✨ Tasques",
+        navCategories: "🏷️ Categories",
+        navCollabs: "👥 Col·laboradors",
+        navCharts: "📊 Gràfics",
+        navPrint: "🖨️ Impressió Agenda",
+        navBackup: "💾 Còpia de Seguretat",
+        navSettings: "⚙️ Ajustos",
+        lblSelectDate: "Seleccionar Data:",
+        lblFilterRoom: "Filtrar per Estança:",
+        lblFilterCollab: "Filtrar per Col·laborador:",
+        btnToday: "Anar a Avui",
+        titleScheduleTask: "Programar Tasca Nova",
+        lblStartDate: "Data d'inici:",
+        lblRoom: "Estança:",
+        lblTask: "Tasca:",
+        lblCategory: "Categoria:",
+        lblAssignTo: "Assignar a (Col·laborador):",
+        lblRepeatType: "Repetició:"
+      },
+      en: {
+        appTitle: "My Cleaning Plan",
+        navAgenda: "📅 Daily Agenda",
+        navCalendar: "🗓️ Calendar & Schedule",
+        navPending: "⚠️ Pending Tasks",
+        navRooms: "🏠 Rooms",
+        navTasks: "✨ Tasks",
+        navCategories: "🏷️ Categories",
+        navCollabs: "👥 Collaborators",
+        navCharts: "📊 Charts",
+        navPrint: "🖨️ Print Planner",
+        navBackup: "💾 Backup & Sync",
+        navSettings: "⚙️ Settings",
+        lblSelectDate: "Select Date:",
+        lblFilterRoom: "Filter by Room:",
+        lblFilterCollab: "Filter by Collaborator:",
+        btnToday: "Go to Today",
+        titleScheduleTask: "Schedule New Task",
+        lblStartDate: "Start Date:",
+        lblRoom: "Room:",
+        lblTask: "Task:",
+        lblCategory: "Category:",
+        lblAssignTo: "Assign to (Collaborator):",
+        lblRepeatType: "Repeat:"
+      }
+    };
+
+    /* --------------------------------------------------------------------------
+       C. ESTADO GLOBAL Y GESTIÓN DE MEMORIA LOCAL (localStorage)
+       -------------------------------------------------------------------------- */
+    const STORAGE_KEY = "LORENA_CLEANING_APP_V1";
+    let appData = loadData();
+    let calCurrentDate = new Date();
+    let calViewMode = "month"; // 'month', 'week', 'day'
+
+    function loadData() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        try {
+          return JSON.parse(saved);
+        } catch (e) {
+          console.error("Error leyendo memoria local, cargando datos por defecto.");
+        }
+      }
+      return JSON.parse(JSON.stringify(DEFAULT_DATA));
+    }
+
+    function saveData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+      refreshAllViews();
+    }
+
+    function getTodayISO() {
+      const d = new Date();
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    /* --------------------------------------------------------------------------
+       D. NAVEGACIÓN Y GESTIÓN DE INTERFAZ
+       -------------------------------------------------------------------------- */
+    function showSection(sectionId) {
+      document.querySelectorAll('.section-view').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+
+      const targetSec = document.getElementById('sec-' + sectionId);
+      if (targetSec) targetSec.classList.add('active');
+
+      // Marcar botón activo
+      const clickedBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(sectionId));
+      if (clickedBtn) {
+        clickedBtn.classList.add('active');
+        document.getElementById('current-section-title').innerText = clickedBtn.innerText.replace(/[0-9]/g, '').trim();
+      }
+
+      // Cerrar menú en móvil si estaba abierto
+      document.getElementById('sidebar').classList.remove('open');
+      refreshAllViews();
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+
+    /* --------------------------------------------------------------------------
+       E. GESTIÓN DE LISTAS MAESTRAS (Crear, Editar y Borrar)
+       -------------------------------------------------------------------------- */
+    function renderMasterList(listKey, containerId) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = "";
+      appData[listKey].forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'item-box';
+        div.innerHTML = `
+          <span><strong>${item}</strong></span>
+          <div class="item-actions">
+            <button class="btn btn-secondary btn-sm" onclick="editMasterItem('${listKey}', ${index})">✏️</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteMasterItem('${listKey}', ${index})">🗑️</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function addMasterItem(listKey, inputId) {
+      const input = document.getElementById(inputId);
+      const val = input.value.trim();
+      if (!val) return alert("Por favor, escribe un nombre válido.");
+      appData[listKey].push(val);
+      input.value = "";
+      saveData();
+    }
+
+    function editMasterItem(listKey, index) {
+      const oldVal = appData[listKey][index];
+      const newVal = prompt("Editar nombre:", oldVal);
+      if (newVal && newVal.trim() !== "") {
+        const trimmed = newVal.trim();
+        appData[listKey][index] = trimmed;
+        // Actualizar también en tareas ya programadas para no perder coherencia
+        appData.scheduledOccurrences.forEach(occ => {
+          if (listKey === 'rooms' && occ.room === oldVal) occ.room = trimmed;
+          if (listKey === 'tasks' && occ.task === oldVal) occ.task = trimmed;
+          if (listKey === 'categories' && occ.category === oldVal) occ.category = trimmed;
+          if (listKey === 'collaborators' && occ.collaborator === oldVal) occ.collaborator = trimmed;
+        });
+        saveData();
+      }
+    }
+
+    function deleteMasterItem(listKey, index) {
+      if (confirm(`¿Seguro que deseas borrar "${appData[listKey][index]}"?`)) {
+        appData[listKey].splice(index, 1);
+        saveData();
+      }
+    }
+
+    function populateDropdowns() {
+      const fillSelect = (id, items, includeAll = false) => {
+        const sel = document.getElementById(id);
+        if (!sel) return;
+        const prev = sel.value;
+        sel.innerHTML = includeAll ? `<option value="ALL">Todas / Todos</option>` : "";
+        items.forEach(i => {
+          const opt = document.createElement('option');
+          opt.value = i;
+          opt.textContent = i;
+          sel.appendChild(opt);
+        });
+        if (prev && Array.from(sel.options).some(o => o.value === prev)) sel.value = prev;
+      };
+
+      fillSelect('sched-room', appData.rooms);
+      fillSelect('sched-task', appData.tasks);
+      fillSelect('sched-cat', appData.categories);
+      fillSelect('sched-collab', appData.collaborators);
+
+      fillSelect('agenda-room-filter', appData.rooms, true);
+      fillSelect('agenda-collab-filter', appData.collaborators, true);
+      fillSelect('cal-room-filter', appData.rooms, true);
+      fillSelect('print-room', appData.rooms, true);
+      fillSelect('print-collab', appData.collaborators, true);
+    }
+
+    /* --------------------------------------------------------------------------
+       F. MOTOR DE PROGRAMACIÓN DE TAREAS Y CÁLCULO DE REPETICIONES
+       -------------------------------------------------------------------------- */
+    function updateRepeatOptionsUI() {
+      const val = document.getElementById('sched-repeat').value;
+      document.getElementById('repeat-weekly-box').style.display = (val === 'weekly') ? 'block' : 'none';
+      document.getElementById('repeat-monthly-box').style.display = (val === 'monthly_nth') ? 'block' : 'none';
+    }
+
+    // Calcula el "N-ésimo día de la semana" de un mes (Ej: Segundo jueves o Último miércoles)
+    function getNthWeekdayOfMonth(year, month, weekday, nthPosition) {
+      if (nthPosition > 0) {
+        let count = 0;
+        for (let day = 1; day <= 31; day++) {
+          const d = new Date(year, month, day);
+          if (d.getMonth() !== month) break;
+          if (d.getDay() === weekday) {
+            count++;
+            if (count === nthPosition) return d;
+          }
+        }
+      } else if (nthPosition === -1) { // Último del mes
+        for (let day = 31; day >= 1; day--) {
+          const d = new Date(year, month, day);
+          if (d.getMonth() !== month) continue;
+          if (d.getDay() === weekday) return d;
+        }
+      }
+      return null;
+    }
+
+    function formatDateISO(dateObj) {
+      const y = dateObj.getFullYear();
+      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const d = String(dateObj.getDate()).padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+
+    function saveScheduledTask() {
+      const startDateStr = document.getElementById('sched-date').value;
+      const room = document.getElementById('sched-room').value;
+      const task = document.getElementById('sched-task').value;
+      const category = document.getElementById('sched-cat').value;
+      const collaborator = document.getElementById('sched-collab').value;
+      const repeatType = document.getElementById('sched-repeat').value;
+      const editId = document.getElementById('edit-schedule-id').value;
+
+      if (!startDateStr) return alert("Por favor, selecciona una fecha de inicio.");
+
+      // Si estamos editando un registro concreto, actualizamos ese registro
+      if (editId) {
+        const occ = appData.scheduledOccurrences.find(o => o.id === editId);
+        if (occ) {
+          occ.date = startDateStr;
+          occ.room = room;
+          occ.task = task;
+          occ.category = category;
+          occ.collaborator = collaborator;
+        }
+        cancelEditSchedule();
+        saveData();
+        alert("Tarea actualizada correctamente.");
+        return;
+      }
+
+      // Si es una programación nueva, calculamos las fechas de los próximos 12 meses (365 días)
+      const startParts = startDateStr.split('-').map(Number);
+      const startDate = new Date(startParts[0], startParts[1] - 1, startParts[2]);
+      const datesToCreate = [];
+
+      if (repeatType === 'none') {
+        datesToCreate.push(startDateStr);
+      } else if (repeatType === 'daily') {
+        for (let i = 0; i < 365; i++) {
+          const d = new Date(startDate);
+          d.setDate(d.getDate() + i);
+          datesToCreate.push(formatDateISO(d));
+        }
+      } else if (repeatType === 'weekly') {
+        const checkedDays = Array.from(document.querySelectorAll('.wk-day:checked')).map(cb => Number(cb.value));
+        if (checkedDays.length === 0) return alert("Marca al menos un día de la semana.");
+        for (let i = 0; i < 365; i++) {
+          const d = new Date(startDate);
+          d.setDate(d.getDate() + i);
+          if (checkedDays.includes(d.getDay())) {
+            datesToCreate.push(formatDateISO(d));
+          }
+        }
+      } else if (repeatType === 'monthly_nth') {
+        const interval = Math.max(1, Number(document.getElementById('sched-month-interval').value));
+        const nthPos = Number(document.getElementById('sched-month-pos').value);
+        const weekday = Number(document.getElementById('sched-month-weekday').value);
+
+        for (let m = 0; m < 12; m += interval) {
+          const targetMonthDate = new Date(startDate.getFullYear(), startDate.getMonth() + m, 1);
+          const foundDate = getNthWeekdayOfMonth(targetMonthDate.getFullYear(), targetMonthDate.getMonth(), weekday, nthPos);
+          if (foundDate && foundDate >= startDate) {
+            datesToCreate.push(formatDateISO(foundDate));
+          }
+        }
+      }
+
+      // Crear los registros individuales en la base de datos
+      datesToCreate.forEach(dateISO => {
+        appData.scheduledOccurrences.push({
+          id: 'occ_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
+          date: dateISO,
+          room,
+          task,
+          category,
+          collaborator,
+          completed: false
+        });
+      });
+
+      saveData();
+      alert(`¡Se han programado ${datesToCreate.length} sesiones para esta tarea en el calendario!`);
+    }
+
+    function editScheduledOccurrence(id) {
+      const occ = appData.scheduledOccurrences.find(o => o.id === id);
+      if (!occ) return;
+      showSection('calendario');
+      document.getElementById('edit-schedule-id').value = occ.id;
+      document.getElementById('sched-date').value = occ.date;
+      document.getElementById('sched-room').value = occ.room;
+      document.getElementById('sched-task').value = occ.task;
+      document.getElementById('sched-cat').value = occ.category;
+      document.getElementById('sched-collab').value = occ.collaborator;
+      document.getElementById('sched-repeat').value = 'none';
+      updateRepeatOptionsUI();
+
+      document.getElementById('btn-save-sched').innerText = "💾 Guardar Cambios en Registro";
+      document.getElementById('btn-cancel-sched').style.display = "inline-block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function cancelEditSchedule() {
+      document.getElementById('edit-schedule-id').value = "";
+      document.getElementById('btn-save-sched').innerText = "💾 Guardar Programación";
+      document.getElementById('btn-cancel-sched').style.display = "none";
+    }
+
+    function deleteScheduledOccurrence(id) {
+      if (confirm("¿Deseas borrar esta tarea programada?")) {
+        appData.scheduledOccurrences = appData.scheduledOccurrences.filter(o => o.id !== id);
+        saveData();
+      }
+    }
+
+    function toggleOccurrenceCompleted(id) {
+      const occ = appData.scheduledOccurrences.find(o => o.id === id);
+      if (occ) {
+        occ.completed = !occ.completed;
+        saveData();
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       G. RENDERIZADO DE AGENDA Y TAREAS PENDIENTES
+       -------------------------------------------------------------------------- */
+    function setAgendaToday() {
+      document.getElementById('agenda-date').value = getTodayISO();
+      renderAgenda();
+    }
+
+    function createTaskRowHTML(occ, showDate = false) {
+      return `
+        <div class="task-row">
+          <div class="task-info">
+            <input type="checkbox" class="task-checkbox" ${occ.completed ? 'checked' : ''} onchange="toggleOccurrenceCompleted('${occ.id}')">
+            <div>
+              <div style="${occ.completed ? 'text-decoration:line-through; opacity:0.6;' : 'font-weight:700;'}">
+                ${occ.task}
+              </div>
+              <div style="margin-top:4px;">
+                ${showDate ? `<span class="tag">📅 ${occ.date}</span>` : ''}
+                <span class="tag">🏠 ${occ.room}</span>
+                <span class="tag">🏷️ ${occ.category}</span>
+                <span class="tag">👤 ${occ.collaborator}</span>
+              </div>
+            </div>
+          </div>
+          <div class="item-actions no-print">
+            <button class="btn btn-secondary btn-sm" onclick="editScheduledOccurrence('${occ.id}')">✏️</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteScheduledOccurrence('${occ.id}')">🗑️</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderAgenda() {
+      const dateInput = document.getElementById('agenda-date');
+      if (!dateInput.value) dateInput.value = getTodayISO();
+      const selectedDate = dateInput.value;
+      const roomFilter = document.getElementById('agenda-room-filter').value || 'ALL';
+      const collabFilter = document.getElementById('agenda-collab-filter').value || 'ALL';
+
+      document.getElementById('agenda-list-title').innerText = `Tareas del Día (${selectedDate})`;
+
+      const filtered = appData.scheduledOccurrences.filter(occ => {
+        if (occ.date !== selectedDate) return false;
+        if (roomFilter !== 'ALL' && occ.room !== roomFilter) return false;
+        if (collabFilter !== 'ALL' && occ.collaborator !== collabFilter) return false;
+        return true;
+      });
+
+      const container = document.getElementById('agenda-tasks-container');
+      if (filtered.length === 0) {
+        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">No hay tareas programadas para este filtro en esta fecha.</p>`;
+      } else {
+        container.innerHTML = filtered.map(o => createTaskRowHTML(o, false)).join('');
+      }
+    }
+
+    function renderPendingTasks() {
+      const today = getTodayISO();
+      const pending = appData.scheduledOccurrences
+        .filter(occ => occ.date < today && !occ.completed)
+        .sort((a, b) => a.date.localeCompare(b.date));
+
+      document.getElementById('pending-count').innerText = pending.length;
+      const container = document.getElementById('pending-tasks-container');
+
+      if (pending.length === 0) {
+        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">🎉 ¡Excelente! No tienes ninguna tarea atrasada pendiente.</p>`;
+      } else {
+        container.innerHTML = pending.map(o => createTaskRowHTML(o, true)).join('');
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       H. VISTA DEL CALENDARIO (Mensual, Semanal y Diaria)
+       -------------------------------------------------------------------------- */
+    function setCalView(mode) {
+      calViewMode = mode;
+      renderCalendar();
+    }
+
+    function changeCalPeriod(delta) {
+      if (calViewMode === 'month') {
+        calCurrentDate.setMonth(calCurrentDate.getMonth() + delta);
+      } else if (calViewMode === 'week') {
+        calCurrentDate.setDate(calCurrentDate.getDate() + (delta * 7));
+      } else {
+        calCurrentDate.setDate(calCurrentDate.getDate() + delta);
+      }
+      renderCalendar();
+    }
+
+    function openDayInAgenda(dateISO) {
+      document.getElementById('agenda-date').value = dateISO;
+      showSection('agenda');
+    }
+
+    function renderCalendar() {
+      const wrapper = document.getElementById('calendar-grid-wrapper');
+      const headerLabel = document.getElementById('cal-header-label');
+      const roomFilter = document.getElementById('cal-room-filter').value || 'ALL';
+      const todayISO = getTodayISO();
+
+      const monthsNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      const dayHeaders = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+
+      if (calViewMode === 'month') {
+        const year = calCurrentDate.getFullYear();
+        const month = calCurrentDate.getMonth();
+        headerLabel.innerText = `${monthsNames[month]} ${year}`;
+
+        const firstDay = new Date(year, month, 1);
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        let startOffset = (firstDay.getDay() + 6) % 7; // Ajuste para empezar en Lunes
+
+        let html = `<div class="cal-grid">`;
+        dayHeaders.forEach(d => html += `<div class="cal-day-header">${d}</div>`);
+
+        for (let i = 0; i < startOffset; i++) {
+          html += `<div></div>`;
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+          const dateISO = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+          const dayTasks = appData.scheduledOccurrences.filter(o => o.date === dateISO && (roomFilter === 'ALL' || o.room === roomFilter));
+
+          html += `
+            <div class="cal-cell ${dateISO === todayISO ? 'today' : ''}" onclick="openDayInAgenda('${dateISO}')">
+              <div class="cal-date-num">${day}</div>
+              ${dayTasks.slice(0, 3).map(t => `<div class="cal-pill ${t.completed ? 'done' : ''}">${t.room}: ${t.task}</div>`).join('')}
+              ${dayTasks.length > 3 ? `<div style="font-size:0.7rem; color:var(--primary-pink); font-weight:bold;">+${dayTasks.length - 3} más...</div>` : ''}
+            </div>
+          `;
+        }
+        html += `</div>`;
+        wrapper.innerHTML = html;
+
+      } else if (calViewMode === 'week') {
+        // Calcular el lunes de la semana actual
+        const current = new Date(calCurrentDate);
+        const day = (current.getDay() + 6) % 7;
+        const monday = new Date(current);
+        monday.setDate(current.getDate() - day);
+
+        headerLabel.innerText = `Semana del ${formatDateISO(monday)}`;
+        let html = `<div class="cal-grid">`;
+        for (let i = 0; i < 7; i++) {
+          const d = new Date(monday);
+          d.setDate(monday.getDate() + i);
+          const dateISO = formatDateISO(d);
+          const dayTasks = appData.scheduledOccurrences.filter(o => o.date === dateISO && (roomFilter === 'ALL' || o.room === roomFilter));
+
+          html += `
+            <div class="cal-cell ${dateISO === todayISO ? 'today' : ''}" onclick="openDayInAgenda('${dateISO}')">
+              <div class="cal-date-num">${dayHeaders[i]} ${d.getDate()}</div>
+              ${dayTasks.map(t => `<div class="cal-pill ${t.completed ? 'done' : ''}">${t.room}: ${t.task} (${t.collaborator})</div>`).join('')}
+            </div>
+          `;
+        }
+        html += `</div>`;
+        wrapper.innerHTML = html;
+
+      } else { // Vista Diaria dentro de Calendario
+        const dateISO = formatDateISO(calCurrentDate);
+        headerLabel.innerText = `Día ${dateISO}`;
+        const dayTasks = appData.scheduledOccurrences.filter(o => o.date === dateISO && (roomFilter === 'ALL' || o.room === roomFilter));
+        wrapper.innerHTML = dayTasks.length
+          ? dayTasks.map(o => createTaskRowHTML(o, false)).join('')
+          : `<p style="padding:10px; color:var(--text-muted);">No hay tareas programadas para este día.</p>`;
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       I. GRÁFICOS DE CUMPLIMIENTO (Por Estancia, Fecha y Tarea)
+       -------------------------------------------------------------------------- */
+    function renderCharts() {
+      const buildBarHTML = (label, done, total) => {
+        const pct = total === 0 ? 0 : Math.round((done / total) * 100);
+        return `
+          <div class="chart-row">
+            <div class="chart-label">
+              <span>${label}</span>
+              <span>${done}/${total} (${pct}%)</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill" style="width:${pct}%;"></div>
+            </div>
+          </div>
+        `;
+      };
+
+      // 1. Por Estancia
+      const roomContainer = document.getElementById('chart-by-room');
+      let roomHTML = "";
+      appData.rooms.forEach(room => {
+        const list = appData.scheduledOccurrences.filter(o => o.room === room);
+        if (list.length > 0) {
+          const done = list.filter(o => o.completed).length;
+          roomHTML += buildBarHTML(room, done, list.length);
+        }
+      });
+      roomContainer.innerHTML = roomHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por estancia.</p>`;
+
+      // 2. Por Fecha
+      const dateContainer = document.getElementById('chart-by-date');
+      const uniqueDates = [...new Set(appData.scheduledOccurrences.map(o => o.date))].sort().slice(-7);
+      let dateHTML = "";
+      uniqueDates.forEach(d => {
+        const list = appData.scheduledOccurrences.filter(o => o.date === d);
+        const done = list.filter(o => o.completed).length;
+        dateHTML += buildBarHTML(d, done, list.length);
+      });
+      dateContainer.innerHTML = dateHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por fecha.</p>`;
+
+      // 3. Por Tarea
+      const taskContainer = document.getElementById('chart-by-task');
+      let taskHTML = "";
+      appData.tasks.forEach(task => {
+        const list = appData.scheduledOccurrences.filter(o => o.task === task);
+        if (list.length > 0) {
+          const done = list.filter(o => o.completed).length;
+          taskHTML += buildBarHTML(task, done, list.length);
+        }
+      });
+      taskContainer.innerHTML = taskHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por tarea.</p>`;
+    }
+
+    /* --------------------------------------------------------------------------
+       J. IMPRESIÓN DEL PLANIFICADOR TIPO AGENDA
+       -------------------------------------------------------------------------- */
+    function applyPrintPreset() {
+      const preset = document.getElementById('print-preset').value;
+      const now = new Date();
+      const fromInput = document.getElementById('print-from');
+      const toInput = document.getElementById('print-to');
+
+      if (preset === 'day') {
+        fromInput.value = formatDateISO(now);
+        toInput.value = formatDateISO(now);
+      } else if (preset === 'week') {
+        const day = (now.getDay() + 6) % 7;
+        const mon = new Date(now); mon.setDate(now.getDate() - day);
+        const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
+        fromInput.value = formatDateISO(mon);
+        toInput.value = formatDateISO(sun);
+      } else if (preset === 'month') {
+        const first = new Date(now.getFullYear(), now.getMonth(), 1);
+        const last = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+        fromInput.value = formatDateISO(first);
+        toInput.value = formatDateISO(last);
+      }
+      renderPrintPreview();
+    }
+
+    function renderPrintPreview() {
+      const from = document.getElementById('print-from').value;
+      const to = document.getElementById('print-to').value;
+      const room = document.getElementById('print-room').value || 'ALL';
+      const collab = document.getElementById('print-collab').value || 'ALL';
+
+      document.getElementById('print-subtitle').innerText = `Del ${from} al ${to} | Estancia: ${room} | Colaborador: ${collab}`;
+
+      const list = appData.scheduledOccurrences
+        .filter(o => o.date >= from && o.date <= to && (room === 'ALL' || o.room === room) && (collab === 'ALL' || o.collaborator === collab))
+        .sort((a, b) => a.date.localeCompare(b.date));
+
+      const container = document.getElementById('print-preview-container');
+      if (list.length === 0) {
+        container.innerHTML = `<p>No hay tareas registradas para este rango.</p>`;
+      } else {
+        container.innerHTML = list.map(o => createTaskRowHTML(o, true)).join('');
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       K. COPIA DE SEGURIDAD, AJUSTES, IDIOMA Y PWA ANDROID
+       -------------------------------------------------------------------------- */
+    function exportBackup() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+      const a = document.createElement('a');
+      a.setAttribute("href", dataStr);
+      a.setAttribute("download", `plan_limpieza_LB_${getTodayISO()}.json`);
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    function importBackup(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (imported.rooms && imported.tasks) {
+            appData = imported;
+            saveData();
+            alert("¡Copia de seguridad cargada y sincronizada con éxito!");
+          } else {
+            alert("El archivo no tiene el formato correcto.");
+          }
+        } catch (err) {
+          alert("Error al leer el archivo.");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function toggleTheme() {
+      appData.settings.darkMode = !appData.settings.darkMode;
+      applySettings();
+      saveData();
+    }
+
+    function changeLanguage(lang) {
+      appData.settings.lang = lang;
+      applySettings();
+      saveData();
+    }
+
+    function applySettings() {
+      document.body.classList.toggle('dark-mode', appData.settings.darkMode);
+      const lang = appData.settings.lang || 'es';
+      document.getElementById('lang-select').value = lang;
+
+      const dict = I18N[lang] || I18N.es;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.innerText = dict[key];
+      });
+    }
+
+    // Configura un Manifiesto PWA automático para instalar en Android
+    function setupPWA() {
+      const manifest = {
+        name: "Mi Plan de Limpieza - LB",
+        short_name: "Plan Limpieza",
+        start_url: ".",
+        display: "standalone",
+        background_color: "#fdf8ff",
+        theme_color: "#9b5de5"
+      };
+      const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+      document.getElementById('pwa-manifest').setAttribute('href', URL.createObjectURL(blob));
+    }
+
+    function refreshAllViews() {
+      populateDropdowns();
+      renderMasterList('rooms', 'rooms-list');
+      renderMasterList('tasks', 'tasks-list');
+      renderMasterList('categories', 'categories-list');
+      renderMasterList('collaborators', 'collaborators-list');
+      renderAgenda();
+      renderPendingTasks();
+      renderCalendar();
+      renderCharts();
+    }
+
+    // Inicialización al arrancar la página
+    window.onload = function() {
+      document.getElementById('sched-date').value = getTodayISO();
+      document.getElementById('agenda-date').value = getTodayISO();
+      setupPWA();
+      applySettings();
+      applyPrintPreset();
+      refreshAllViews();
+    };
+  </script>
+</body>
+</html>
