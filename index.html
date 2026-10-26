@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Plan de Limpieza - LB</title>
-  <!-- Color de la barra superior en Android -->
+  <!-- Color de la barra superior en Android y Windows -->
   <meta name="theme-color" content="#9b5de5">
+  <!-- Iconos directos para pestaña del navegador y accesos directos -->
+  <link id="favicon-link" rel="icon" type="image/png" href="Logo%20Lorena.jpg">
+  <link id="apple-icon-link" rel="apple-touch-icon" href="Logo%20Lorena.jpg">
+  <!-- Enlace al manifiesto de instalación PWA que rellenaremos con PNG por código -->
   <link id="pwa-manifest" rel="manifest">
 
   <style>
@@ -20,7 +24,7 @@
       --primary-lila: #9b5de5;    /* Lila principal alegre */
       --primary-pink: #f15bb5;    /* Rosa alegre para botones y detalles */
       --soft-pink: #fce4ec;       /* Rosa suave para etiquetas y fondos activos */
-      --text-main: #3c2a4d;       /* Color de texto principal oscuro para lectura */
+      --text-main: #3c2a4d;       /* Color de texto principal oscuro */
       --text-muted: #7b6888;      /* Texto secundario */
       --border-color: #e1bee7;    /* Bordes lila claro */
       --danger: #ff4d6d;          /* Rojo rosado para avisos/borrar */
@@ -79,7 +83,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 12px;
+      padding: 10px 12px;
       background: #f5ebe0;
       border-radius: 14px;
       margin-bottom: 18px;
@@ -94,6 +98,13 @@
       transform: scale(1.02);
       box-shadow: 0 4px 12px rgba(241, 91, 181, 0.3);
       border-color: var(--primary-pink);
+    }
+
+    .brand-logo-img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
     }
 
     .brand-title {
@@ -162,6 +173,17 @@
       border: 1px solid var(--border-color);
     }
 
+    .sync-status-pill {
+      font-size: 0.78rem;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: var(--soft-pink);
+      color: var(--primary-lila);
+      font-weight: 700;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+    }
+
     .section-view {
       display: none;
     }
@@ -214,7 +236,7 @@
       color: var(--text-muted);
     }
 
-    input[type="text"], input[type="date"], input[type="number"], select {
+    input[type="text"], input[type="password"], input[type="date"], input[type="number"], select {
       width: 100%;
       padding: 10px 12px;
       border: 1.5px solid var(--border-color);
@@ -245,7 +267,7 @@
     .btn-danger { background: var(--danger); color: #fff; }
     .btn-sm { padding: 6px 11px; font-size: 0.82rem; border-radius: 8px; }
 
-    /* Listas de elementos (Estancias, Lista de Tareas, Categorías, Colaboradores) */
+    /* Listas de elementos */
     .items-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -313,12 +335,10 @@
       box-shadow: var(--shadow);
     }
 
-    /* Día de hoy en el calendario */
     .cal-cell.today {
       background: var(--soft-pink);
     }
 
-    /* Día seleccionado por el usuario al hacer clic */
     .cal-cell.selected-day {
       border: 2.5px solid var(--primary-pink);
       box-shadow: 0 0 0 3px rgba(241, 91, 181, 0.25);
@@ -359,7 +379,7 @@
       opacity: 0.85;
     }
 
-    /* Filas de tareas con casilla de verificación */
+    /* Filas de tareas */
     .task-row {
       display: flex;
       justify-content: space-between;
@@ -371,10 +391,7 @@
       transition: background 0.15s;
     }
 
-    .task-row:hover {
-      background: var(--bg-main);
-    }
-
+    .task-row:hover { background: var(--bg-main); }
     .task-row:last-child { border-bottom: none; }
 
     .task-info {
@@ -426,7 +443,6 @@
       transition: width 0.4s ease;
     }
 
-    /* Caja informativa en Ajustes */
     .info-box {
       margin-top: 15px;
       padding: 14px;
@@ -438,7 +454,6 @@
       display: none;
     }
 
-    /* Responsivo para móviles Android */
     .mobile-menu-btn {
       display: none;
       background: var(--primary-lila);
@@ -455,19 +470,10 @@
         transform: translateX(-100%);
         transition: transform 0.3s ease;
       }
-      .sidebar.open {
-        transform: translateX(0);
-      }
-      .main-content {
-        margin-left: 0;
-        padding: 14px;
-      }
-      .mobile-menu-btn {
-        display: inline-block;
-      }
-      .cal-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .sidebar.open { transform: translateX(0); }
+      .main-content { margin-left: 0; padding: 14px; }
+      .mobile-menu-btn { display: inline-block; }
+      .cal-grid { grid-template-columns: repeat(2, 1fr); }
       .cal-day-header { display: none; }
     }
 
@@ -499,7 +505,9 @@
   <aside class="sidebar" id="sidebar">
     <!-- Al presionar el logotipo volvemos siempre al Calendario de Inicio -->
     <div class="brand-box" onclick="showSection('inicio')" title="Ir al Calendario de Inicio">
-      <svg width="48" height="42" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+      <!-- Carga el archivo Logo Lorena.jpg de tu carpeta; si no lo encuentra, muestra el SVG de respaldo -->
+      <img src="Logo%20Lorena.jpg" alt="Logo LB" class="brand-logo-img" id="sidebar-logo-img" onerror="this.style.display='none'; document.getElementById('fallback-svg-logo').style.display='block';">
+      <svg id="fallback-svg-logo" style="display:none;" width="48" height="42" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="48" width="11" height="28" fill="#4a2559" rx="1"/>
         <rect x="23" y="38" width="11" height="38" fill="#4a2559" rx="1"/>
         <rect x="38" y="28" width="11" height="48" fill="#4a2559" rx="1"/>
@@ -527,14 +535,19 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="main-content">
-    <!-- Cabecera superior con acceso rápido a Inicio, Tareas Pendientes y Tema -->
+    <!-- Cabecera superior con estado de Sincronización en la Nube, Pendientes y Tema -->
     <header class="header-bar">
       <div style="display:flex; align-items:center; gap:10px;">
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         <h2 id="current-section-title" data-i18n="titleHomeCalendar">🗓️ Calendario del Mes</h2>
       </div>
       <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-        <button class="btn btn-secondary btn-sm" onclick="showSection('inicio')" data-i18n="btnGoCalendar">🗓️ Ver Calendario</button>
+        <span id="cloud-status-badge" class="sync-status-pill" onclick="showSection('backup')" title="Configurar o ver estado de sincronización entre dispositivos">
+          ☁️ Nube: Local
+        </span>
+        <button class="btn btn-secondary btn-sm" onclick="syncFromGitHub(true)" title="Descargar últimos cambios de otros dispositivos">
+          🔄 Sincronizar
+        </button>
         <button class="btn btn-danger btn-sm" onclick="openPendingTasksView()" title="Ver tareas atrasadas sin completar">
           ⚠️ <span data-i18n="lblPendingShort">Pendientes:</span> <span id="pending-count">0</span>
         </button>
@@ -547,7 +560,6 @@
          ==================================================================== -->
     <section id="sec-inicio" class="section-view active">
       <div class="card">
-        <!-- Controles superiores del Calendario -->
         <div class="cal-controls">
           <div style="display:flex; gap:6px; align-items:center;">
             <button class="btn btn-secondary btn-sm" onclick="changeCalPeriod(-1)">◀</button>
@@ -565,11 +577,10 @@
           </div>
         </div>
 
-        <!-- Cuadrícula del Calendario -->
         <div id="calendar-grid-wrapper"></div>
       </div>
 
-      <!-- Panel inferior interactivo (Opción A): se actualiza al tocar cualquier día del calendario -->
+      <!-- Panel inferior interactivo: muestra las tareas del día seleccionado -->
       <div class="card" id="selected-day-panel">
         <div class="card-title">
           <span id="selected-day-title">📅 Tareas del Día Seleccionado</span>
@@ -618,7 +629,6 @@
           </div>
         </div>
 
-        <!-- Opciones extra si elige Semanalmente -->
         <div id="repeat-weekly-box" style="display:none; margin-bottom:15px; padding:12px; background:var(--soft-pink); border-radius:10px;">
           <label>Marca los días de la semana que se repite:</label>
           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:6px;">
@@ -632,7 +642,6 @@
           </div>
         </div>
 
-        <!-- Opciones extra si elige Cada X meses (Primer/Segundo/Tercer/Cuarto/Último) -->
         <div id="repeat-monthly-box" style="display:none; margin-bottom:15px; padding:12px; background:var(--soft-pink); border-radius:10px;">
           <div class="form-grid">
             <div>
@@ -665,12 +674,11 @@
         </div>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" onclick="saveScheduledTask()" id="btn-save-sched">💾 Guardar y Ver en Calendario</button>
+          <button class="btn" onclick="saveScheduledTask()" id="btn-save-sched">💾 Guardar y Sincronizar</button>
           <button class="btn btn-secondary" onclick="cancelEditSchedule()" id="btn-cancel-sched" style="display:none;">Cancelar Edición</button>
         </div>
       </div>
 
-      <!-- Panel de Tareas Pendientes (Opción B: integrado dentro de Programar Tarea) -->
       <div class="card" id="pending-tasks-card">
         <h3 class="card-title">⚠️ Tareas Pendientes (Vencidas en días anteriores sin completar)</h3>
         <div id="pending-tasks-container"></div>
@@ -787,7 +795,6 @@
         <button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar en PDF</button>
       </div>
 
-      <!-- Vista previa limpia para impresión -->
       <div class="card" id="print-area">
         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--primary-lila); padding-bottom:10px; margin-bottom:15px;">
           <h2>Mi Plan de Limpieza - LB</h2>
@@ -798,19 +805,49 @@
     </section>
 
     <!-- ====================================================================
-         8. COPIA DE SEGURIDAD
+         8. COPIA DE SEGURIDAD Y SINCRONIZACIÓN EN LA NUBE (GITHUB API)
          ==================================================================== -->
     <section id="sec-backup" class="section-view">
+      <!-- Tarjeta 1: Sincronización automática entre dispositivos con GitHub -->
       <div class="card">
-        <h3 class="card-title" data-i18n="nav8">8. Copia de seguridad</h3>
-        <p style="margin-bottom:15px; line-height:1.5;">
-          Descarga tus datos en un archivo para guardar una copia de seguridad o para compartirla con <strong>Lucas</strong> y <strong>Óscar</strong> en sus dispositivos.
+        <h3 class="card-title">☁️ Sincronización Automática entre Dispositivos (GitHub Cloud)</h3>
+        <p style="margin-bottom:15px; font-size:0.9rem; line-height:1.5; color:var(--text-muted);">
+          Introduce los datos de tu repositorio de GitHub una sola vez en cada dispositivo (tu móvil, tu PC Windows y los móviles de <strong>Lucas</strong> y <strong>Óscar</strong>). A partir de ese momento, cualquier tarea que crees o marques se sincronizará automáticamente en todos los dispositivos.
+        </p>
+
+        <div class="form-grid">
+          <div>
+            <label>1. Tu Usuario de GitHub:</label>
+            <input type="text" id="gh-owner" placeholder="Ej: lorena-lb">
+          </div>
+          <div>
+            <label>2. Nombre del Repositorio:</label>
+            <input type="text" id="gh-repo" placeholder="Ej: plan-limpieza">
+          </div>
+          <div>
+            <label>3. Token de GitHub (Clave Personal):</label>
+            <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx...">
+          </div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" onclick="saveGitHubConfig()">🔗 Guardar y Conectar Dispositivo</button>
+          <button class="btn btn-secondary" onclick="syncFromGitHub(true)">⬇️ Descargar datos de la nube ahora</button>
+          <button class="btn btn-secondary" onclick="syncToGitHub(true)">⬆️ Subir mis datos a la nube ahora</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Copia de seguridad manual en archivo .json -->
+      <div class="card">
+        <h3 class="card-title" data-i18n="nav8">💾 Copia de Seguridad en Archivo Local (.json)</h3>
+        <p style="margin-bottom:15px; line-height:1.5; font-size:0.9rem; color:var(--text-muted);">
+          También puedes guardar un archivo de respaldo en tu dispositivo o cargarlo manualmente cuando quieras.
         </p>
         <div style="display:flex; gap:15px; flex-wrap:wrap;">
-          <button class="btn" onclick="exportBackup()">⬇️ Descargar Copia de Seguridad (.json)</button>
+          <button class="btn btn-secondary" onclick="exportBackup()">⬇️ Descargar Archivo (.json)</button>
           <div>
             <input type="file" id="import-file" accept=".json" style="display:none;" onchange="importBackup(event)">
-            <button class="btn btn-secondary" onclick="document.getElementById('import-file').click()">⬆️ Restaurar / Cargar Copia (.json)</button>
+            <button class="btn btn-secondary" onclick="document.getElementById('import-file').click()">⬆️ Cargar Archivo (.json)</button>
           </div>
         </div>
       </div>
@@ -841,7 +878,7 @@
       <div class="card">
         <h3 class="card-title" data-i18n="titleAppManagement">📱 Instalación de la Aplicación y Datos</h3>
         <p style="margin-bottom:15px; font-size:0.9rem; color:var(--text-muted);" data-i18n="descAppManagement">
-          Gestiona la instalación de la aplicación en tu dispositivo Android u ordenador, o restablece todos los datos a su estado original.
+          Gestiona la instalación de la aplicación con tu logotipo LB en Windows o Android, o restablece los datos a su estado original.
         </p>
 
         <div class="form-grid">
@@ -876,8 +913,15 @@
        ========================================================================== -->
   <script>
     /* --------------------------------------------------------------------------
-       A. DATOS INICIALES POR DEFECTO
+       A. VARIABLES CONFIGURABLES Y DATOS INICIALES
+       Si tu imagen en GitHub tiene otro nombre distinto a "Logo Lorena.jpg",
+       solo tienes que cambiarlo en la constante LOGO_FILENAME de abajo.
        -------------------------------------------------------------------------- */
+    const LOGO_FILENAME = "Logo Lorena.jpg";
+    const GITHUB_DATA_FILENAME = "datos_limpieza.json";
+    const STORAGE_KEY = "LORENA_CLEANING_APP_V1";
+    const GH_CONFIG_KEY = "LORENA_GH_SYNC_CONFIG";
+
     const DEFAULT_DATA = {
       rooms: [
         "Recibidor", "Aseo", "Estudio", "Cocina", "Escaleras", "Salón", "Rellano",
@@ -916,7 +960,6 @@
         appTitle: "Mi Plan de Limpieza",
         lblHomeHint: "🏠 Inicio / Calendario",
         titleHomeCalendar: "🗓️ Calendario del Mes",
-        btnGoCalendar: "🗓️ Inicio / Calendario",
         lblPendingShort: "Pendientes:",
         nav1: "1. Programar tarea",
         nav2: "2. Estancias",
@@ -944,7 +987,7 @@
         btnToggleTheme: "Cambiar Modo Claro / Oscuro",
         lblLanguage: "Idioma de la Interfaz:",
         titleAppManagement: "📱 Instalación de la Aplicación y Datos",
-        descAppManagement: "Gestiona la instalación de la aplicación en tu dispositivo Android u ordenador, o restablece todos los datos a su estado original.",
+        descAppManagement: "Gestiona la instalación de la aplicación con tu logotipo LB en Windows o Android, o restablece los datos a su estado original.",
         lblInstallApp: "Instalar en el dispositivo:",
         btnInstallApp: "📲 Instalar Aplicación",
         lblUninstallApp: "Desinstalar del dispositivo:",
@@ -956,7 +999,6 @@
         appTitle: "El Meu Pla de Neteja",
         lblHomeHint: "🏠 Inici / Calendari",
         titleHomeCalendar: "🗓️ Calendari del Mes",
-        btnGoCalendar: "🗓️ Inici / Calendari",
         lblPendingShort: "Pendents:",
         nav1: "1. Programar tasca",
         nav2: "2. Estances",
@@ -984,7 +1026,7 @@
         btnToggleTheme: "Canviar Mode Clar / Fosc",
         lblLanguage: "Idioma de la Interfície:",
         titleAppManagement: "📱 Instal·lació de l'Aplicació i Dades",
-        descAppManagement: "Gestiona la instal·lació de l'aplicació al teu dispositiu Android o ordinador, o restableix totes les dades al seu estat original.",
+        descAppManagement: "Gestiona la instal·lació de l'aplicació al teu dispositiu Android o Windows, o restableix totes les dades.",
         lblInstallApp: "Instal·lar al dispositiu:",
         btnInstallApp: "📲 Instal·lar Aplicació",
         lblUninstallApp: "Desinstal·lar del dispositiu:",
@@ -996,7 +1038,6 @@
         appTitle: "My Cleaning Plan",
         lblHomeHint: "🏠 Home / Calendar",
         titleHomeCalendar: "🗓️ Monthly Calendar",
-        btnGoCalendar: "🗓️ Home / Calendar",
         lblPendingShort: "Pending:",
         nav1: "1. Schedule task",
         nav2: "2. Rooms",
@@ -1024,7 +1065,7 @@
         btnToggleTheme: "Toggle Light / Dark Mode",
         lblLanguage: "Interface Language:",
         titleAppManagement: "📱 App Installation & Data",
-        descAppManagement: "Manage the installation of the app on your Android device or computer, or reset all data to factory defaults.",
+        descAppManagement: "Manage the installation of the app on your Android or Windows device, or reset all data.",
         lblInstallApp: "Install on device:",
         btnInstallApp: "📲 Install App",
         lblUninstallApp: "Uninstall from device:",
@@ -1035,49 +1076,206 @@
     };
 
     /* --------------------------------------------------------------------------
-       C. ESTADO GLOBAL Y MEMORIA LOCAL (localStorage)
+       C. ESTADO GLOBAL, MEMORIA LOCAL Y MOTOR DE SINCRONIZACIÓN GITHUB API
        -------------------------------------------------------------------------- */
-    const STORAGE_KEY = "LORENA_CLEANING_APP_V1";
     let appData = loadData();
     let calCurrentDate = new Date();
-    let calViewMode = "month";      // 'month', 'week', 'day'
-    let selectedDateISO = getTodayISO(); // Fecha actualmente seleccionada en el calendario de inicio
+    let calViewMode = "month";
+    let selectedDateISO = getTodayISO();
     let deferredPrompt = null;
 
     function loadData() {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
-        try {
-          return JSON.parse(saved);
-        } catch (e) {
-          console.error("Error leyendo memoria local, cargando datos por defecto.");
-        }
+        try { return JSON.parse(saved); } catch (e) { console.error(e); }
       }
       return JSON.parse(JSON.stringify(DEFAULT_DATA));
     }
 
-    function saveData() {
+    // Guarda en memoria local y sube automáticamente los cambios al repositorio de GitHub
+    function saveData(skipCloudUpload = false) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
       refreshAllViews();
+      if (!skipCloudUpload) {
+        syncToGitHub(false);
+      }
+    }
+
+    function getGitHubConfig() {
+      const raw = localStorage.getItem(GH_CONFIG_KEY);
+      if (!raw) return null;
+      try { return JSON.parse(raw); } catch (e) { return null; }
+    }
+
+    function loadGitHubConfigToUI() {
+      // Si la página está alojada en GitHub Pages (ej: usuario.github.io/repo), deducimos usuario y repo automáticamente
+      let defaultOwner = "";
+      let defaultRepo = "";
+      if (window.location.hostname.includes("github.io")) {
+        defaultOwner = window.location.hostname.split(".")[0];
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+        if (pathParts.length > 0) defaultRepo = pathParts[0];
+      }
+
+      const cfg = getGitHubConfig() || { owner: defaultOwner, repo: defaultRepo, token: "" };
+      document.getElementById('gh-owner').value = cfg.owner || "";
+      document.getElementById('gh-repo').value = cfg.repo || "";
+      document.getElementById('gh-token').value = cfg.token || "";
+      updateCloudBadge(cfg.token ? "Conectado" : "Modo Local");
+    }
+
+    function updateCloudBadge(statusText) {
+      const badge = document.getElementById('cloud-status-badge');
+      if (badge) badge.innerText = `☁️ Nube: ${statusText}`;
+    }
+
+    async function saveGitHubConfig() {
+      const owner = document.getElementById('gh-owner').value.trim();
+      const repo = document.getElementById('gh-repo').value.trim();
+      const token = document.getElementById('gh-token').value.trim();
+
+      if (!owner || !repo || !token) {
+        return alert("Por favor, completa los 3 campos (Usuario, Repositorio y Token de GitHub).");
+      }
+
+      localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({ owner, repo, token }));
+      updateCloudBadge("Verificando...");
+
+      // Al conectar, primero intentamos descargar si ya existen datos en la nube; si no, subimos los actuales
+      const downloaded = await syncFromGitHub(false);
+      if (!downloaded) {
+        await syncToGitHub(true);
+      } else {
+        alert("✅ ¡Dispositivo conectado y sincronizado con éxito con tu repositorio de GitHub!");
+      }
+    }
+
+    // Funciones auxiliares para codificar/decodificar texto en formato UTF-8 Base64 (requerido por GitHub)
+    function utf8ToBase64(str) {
+      return window.btoa(unescape(encodeURIComponent(str)));
+    }
+    function base64ToUtf8(str) {
+      return decodeURIComponent(escape(window.atob(str)));
+    }
+
+    // Descarga los datos desde el archivo datos_limpieza.json en tu repositorio de GitHub
+    async function syncFromGitHub(showAlerts = false) {
+      const cfg = getGitHubConfig();
+      if (!cfg || !cfg.owner || !cfg.repo || !cfg.token) {
+        if (showAlerts) {
+          alert("Para sincronizar entre dispositivos, configura primero tu conexión en el apartado '8. Copia de seguridad'.");
+          showSection('backup');
+        }
+        return false;
+      }
+
+      try {
+        updateCloudBadge("Sincronizando...");
+        const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${GITHUB_DATA_FILENAME}`;
+        const res = await fetch(url, {
+          headers: {
+            "Authorization": `token ${cfg.token}`,
+            "Accept": "application/vnd.github.v3+json"
+          },
+          cache: "no-store"
+        });
+
+        if (res.status === 404) {
+          updateCloudBadge("Conectado (Nuevo)");
+          if (showAlerts) alert("Aún no había archivo de datos en la nube. Se creará ahora con tus datos actuales.");
+          await syncToGitHub(false);
+          return true;
+        }
+
+        if (!res.ok) throw new Error("Error de acceso a GitHub API");
+
+        const fileData = await res.json();
+        const cleanBase64 = fileData.content.replace(/\s/g, '');
+        const decodedJSON = base64ToUtf8(cleanBase64);
+        const parsedData = JSON.parse(decodedJSON);
+
+        if (parsedData && parsedData.rooms && parsedData.tasks) {
+          appData = parsedData;
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+          applySettings();
+          refreshAllViews();
+          updateCloudBadge("Sincronizado ✅");
+          if (showAlerts) alert("✅ ¡Datos actualizados desde la nube!");
+          return true;
+        }
+      } catch (err) {
+        console.error(err);
+        updateCloudBadge("Error de red ⚠️");
+        if (showAlerts) alert("No se pudo conectar con GitHub. Revisa que el Usuario, Repositorio y Token sean correctos.");
+      }
+      return false;
+    }
+
+    // Sube automáticamente los cambios al archivo datos_limpieza.json en tu repositorio de GitHub
+    async function syncToGitHub(showAlerts = false) {
+      const cfg = getGitHubConfig();
+      if (!cfg || !cfg.owner || !cfg.repo || !cfg.token) return false;
+
+      try {
+        updateCloudBadge("Guardando...");
+        const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${GITHUB_DATA_FILENAME}`;
+
+        // 1. Consultar si el archivo ya existe para obtener su código identificador (SHA)
+        let currentSha = null;
+        const getRes = await fetch(url, {
+          headers: {
+            "Authorization": `token ${cfg.token}`,
+            "Accept": "application/vnd.github.v3+json"
+          },
+          cache: "no-store"
+        });
+
+        if (getRes.ok) {
+          const existing = await getRes.json();
+          currentSha = existing.sha;
+        }
+
+        // 2. Enviar el archivo actualizado a GitHub
+        const bodyPayload = {
+          message: `Actualización automática Plan de Limpieza (${getTodayISO()})`,
+          content: utf8ToBase64(JSON.stringify(appData, null, 2))
+        };
+        if (currentSha) bodyPayload.sha = currentSha;
+
+        const putRes = await fetch(url, {
+          method: "PUT",
+          headers: {
+            "Authorization": `token ${cfg.token}`,
+            "Accept": "application/vnd.github.v3+json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(bodyPayload)
+        });
+
+        if (!putRes.ok) throw new Error("No se pudo escribir en el repositorio.");
+
+        updateCloudBadge("Sincronizado ✅");
+        if (showAlerts) alert("✅ ¡Tus datos se han subido correctamente a la nube de GitHub!");
+        return true;
+      } catch (err) {
+        console.error(err);
+        updateCloudBadge("Error al subir ⚠️");
+        if (showAlerts) alert("Error al subir los datos a GitHub. Verifica que tu Token tenga permisos de escritura ('repo').");
+        return false;
+      }
     }
 
     function getTodayISO() {
       const d = new Date();
-      const year = d.getFullYear();
-      const month = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      return `${year}-${month}-${day}`;
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
     }
 
     function formatDateISO(dateObj) {
-      const y = dateObj.getFullYear();
-      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
-      const d = String(dateObj.getDate()).padStart(2, '0');
-      return `${y}-${m}-${d}`;
+      return `${dateObj.getFullYear()}-${String(dateObj.getMonth() + 1).padStart(2, '0')}-${String(dateObj.getDate()).padStart(2, '0')}`;
     }
 
     /* --------------------------------------------------------------------------
-       D. NAVEGACIÓN ENTRE LA PÁGINA DE INICIO (CALENDARIO) Y LOS 9 PUNTOS
+       D. NAVEGACIÓN ENTRE PÁGINA DE INICIO (CALENDARIO) Y LOS 9 PUNTOS
        -------------------------------------------------------------------------- */
     function showSection(sectionId) {
       document.querySelectorAll('.section-view').forEach(sec => sec.classList.remove('active'));
@@ -1120,7 +1318,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       E. GESTIÓN DE LISTAS MAESTRAS (2. Estancias, 3. Tareas, 4. Categorías, 5. Colaboradores)
+       E. GESTIÓN DE LISTAS MAESTRAS
        -------------------------------------------------------------------------- */
     function renderMasterList(listKey, containerId) {
       const container = document.getElementById(containerId);
@@ -1198,7 +1396,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       F. MOTOR DE PROGRAMACIÓN DE TAREAS Y REPETICIONES (1. Programar tarea)
+       F. MOTOR DE PROGRAMACIÓN DE TAREAS Y REPETICIONES
        -------------------------------------------------------------------------- */
     function updateRepeatOptionsUI() {
       const val = document.getElementById('sched-repeat').value;
@@ -1238,7 +1436,6 @@
 
       if (!startDateStr) return alert("Por favor, selecciona una fecha de inicio.");
 
-      // Si estamos editando un registro existente
       if (editId) {
         const occ = appData.scheduledOccurrences.find(o => o.id === editId);
         if (occ) {
@@ -1255,7 +1452,6 @@
         return;
       }
 
-      // Calcular repeticiones para los próximos 12 meses (365 días)
       const startParts = startDateStr.split('-').map(Number);
       const startDate = new Date(startParts[0], startParts[1] - 1, startParts[2]);
       const datesToCreate = [];
@@ -1307,7 +1503,7 @@
       selectedDateISO = startDateStr;
       calCurrentDate = new Date(startParts[0], startParts[1] - 1, startParts[2]);
       saveData();
-      alert(`¡Tarea programada con éxito (${datesToCreate.length} sesiones)! Ahora la verás en el calendario.`);
+      alert(`¡Tarea programada (${datesToCreate.length} sesiones)!`);
       showSection('inicio');
     }
 
@@ -1331,7 +1527,7 @@
 
     function cancelEditSchedule() {
       document.getElementById('edit-schedule-id').value = "";
-      document.getElementById('btn-save-sched').innerText = "💾 Guardar y Ver en Calendario";
+      document.getElementById('btn-save-sched').innerText = "💾 Guardar y Sincronizar";
       document.getElementById('btn-cancel-sched').style.display = "none";
     }
 
@@ -1428,7 +1624,7 @@
 
       const container = document.getElementById('selected-day-tasks-container');
       if (dayTasks.length === 0) {
-        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">No hay tareas programadas para este día con el filtro actual. Puedes pulsar <strong>"+ Programar tarea en este día"</strong> para añadir una.</p>`;
+        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">No hay tareas programadas para este día. Pulsa <strong>"+ Programar tarea en este día"</strong> para añadir una.</p>`;
       } else {
         container.innerHTML = dayTasks.map(o => createTaskRowHTML(o, false)).join('');
       }
@@ -1481,10 +1677,7 @@
 
         let html = `<div class="cal-grid">`;
         dayHeaders.forEach(d => html += `<div class="cal-day-header">${d}</div>`);
-
-        for (let i = 0; i < startOffset; i++) {
-          html += `<div></div>`;
-        }
+        for (let i = 0; i < startOffset; i++) html += `<div></div>`;
 
         for (let day = 1; day <= daysInMonth; day++) {
           const dateISO = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
@@ -1544,7 +1737,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       H. GRÁFICOS DE CUMPLIMIENTO (6. Gráficos)
+       H. GRÁFICOS E IMPRESIÓN (6 y 7)
        -------------------------------------------------------------------------- */
     function renderCharts() {
       const buildBarHTML = (label, done, total) => {
@@ -1595,9 +1788,6 @@
       taskContainer.innerHTML = taskHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por tarea.</p>`;
     }
 
-    /* --------------------------------------------------------------------------
-       I. IMPRESIÓN DEL PLANIFICADOR (7. Impresión agenda)
-       -------------------------------------------------------------------------- */
     function applyPrintPreset() {
       const preset = document.getElementById('print-preset').value;
       const now = new Date();
@@ -1643,7 +1833,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       J. COPIA DE SEGURIDAD, AJUSTES E INSTALACIÓN PWA (8 y 9)
+       I. COPIA MANUAL, AJUSTES Y GENERADOR DE ICONOS PNG PARA WINDOWS/ANDROID
        -------------------------------------------------------------------------- */
     function exportBackup() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
@@ -1665,7 +1855,7 @@
           if (imported.rooms && imported.tasks) {
             appData = imported;
             saveData();
-            alert("¡Copia de seguridad cargada con éxito!");
+            alert("¡Copia de seguridad cargada y sincronizada!");
           } else {
             alert("El archivo no tiene el formato correcto.");
           }
@@ -1705,23 +1895,67 @@
       deferredPrompt = e;
     });
 
-    function setupPWA() {
-      const iconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#f5ebe0"/><rect x="10" y="52" width="11" height="28" fill="#4a2559"/><rect x="25" y="42" width="11" height="38" fill="#4a2559"/><rect x="40" y="32" width="11" height="48" fill="#4a2559"/><text x="54" y="78" font-family="Georgia, serif" font-size="38" font-weight="bold" fill="#1d1d1b">LB</text></svg>`;
-      const iconDataUrl = "data:image/svg+xml;utf8," + encodeURIComponent(iconSVG);
+    // Dibuja un icono PNG cuadrado perfecto a partir de tu archivo "Logo Lorena.jpg" (o el diseño LB de respaldo)
+    function createPNGIconFromLogo(size) {
+      return new Promise((resolve) => {
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = function() {
+          ctx.fillStyle = "#f5ebe0";
+          ctx.fillRect(0, 0, size, size);
+          ctx.drawImage(img, 0, 0, size, size);
+          resolve(canvas.toDataURL('image/png'));
+        };
+        img.onerror = function() {
+          // Respaldo en PNG si el archivo aún no ha cargado
+          ctx.fillStyle = "#f5ebe0";
+          ctx.fillRect(0, 0, size, size);
+          ctx.fillStyle = "#4a2559";
+          const s = size / 100;
+          ctx.fillRect(10 * s, 52 * s, 11 * s, 28 * s);
+          ctx.fillRect(25 * s, 42 * s, 11 * s, 38 * s);
+          ctx.fillRect(40 * s, 32 * s, 11 * s, 48 * s);
+          ctx.fillStyle = "#1d1d1b";
+          ctx.font = `bold ${38 * s}px Georgia, serif`;
+          ctx.fillText("LB", 54 * s, 78 * s);
+          resolve(canvas.toDataURL('image/png'));
+        };
+        img.src = encodeURI(LOGO_FILENAME);
+      });
+    }
+
+    // Genera el Manifiesto PWA con iconos PNG de 192x192 y 512x512 para que Windows muestre el logo al instalar
+    async function setupPWA() {
+      const icon192 = await createPNGIconFromLogo(192);
+      const icon512 = await createPNGIconFromLogo(512);
+
+      document.getElementById('favicon-link').href = icon192;
+      document.getElementById('apple-icon-link').href = icon192;
 
       const manifest = {
         name: "Mi Plan de Limpieza - LB",
         short_name: "Plan Limpieza",
-        start_url: window.location.href,
+        start_url: window.location.href.split('#')[0],
         display: "standalone",
         background_color: "#fdf8ff",
         theme_color: "#9b5de5",
         icons: [
           {
-            src: iconDataUrl,
-            sizes: "192x192 512x512",
-            type: "image/svg+xml",
-            purpose: "any maskable"
+            src: icon192,
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any"
+          },
+          {
+            src: icon512,
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any"
           }
         ]
       };
@@ -1743,17 +1977,16 @@
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === 'accepted') {
-          helperBox.innerHTML = "🎉 <strong>¡Instalación completada!</strong> Ya tienes el icono de Mi Plan de Limpieza en la pantalla de tu dispositivo.";
+          helperBox.innerHTML = "🎉 <strong>¡Instalación completada con tu logo LB!</strong> Ya tienes el icono en tu dispositivo.";
         } else {
-          helperBox.innerHTML = "ℹ️ Has cancelado la ventana de instalación. Puedes volver a pulsar el botón cuando quieras.";
+          helperBox.innerHTML = "ℹ️ Has cancelado la ventana de instalación.";
         }
         deferredPrompt = null;
       } else {
         helperBox.innerHTML = `
-          📲 <strong>Cómo instalar la aplicación en tu dispositivo:</strong><br>
-          1. Abre este enlace desde tu repositorio de <strong>GitHub Pages</strong> en Google Chrome.<br>
-          2. En tu móvil Android, toca el icono de los <strong>tres puntos (⋮)</strong> arriba a la derecha.<br>
-          3. Selecciona <strong>"Instalar aplicación"</strong> o <strong>"Añadir a pantalla de inicio"</strong>.
+          📲 <strong>Cómo instalar con el nuevo icono en Windows o Android:</strong><br>
+          • <em>Si ya la habías instalado antes en Windows sin logo:</em> Desinstálala primero (tres puntos ⋮ arriba a la derecha > Desinstalar), recarga tu página de GitHub Pages pulsando <strong>Ctrl + F5</strong> y vuelve a pulsar este botón.<br>
+          • <em>En Android:</em> Toca los tres puntos (⋮) de Chrome y elige <strong>"Instalar aplicación"</strong>.
         `;
       }
     }
@@ -1770,14 +2003,14 @@
       }
 
       helperBox.innerHTML = `
-        📤 <strong>Pasos para desinstalar la aplicación del dispositivo:</strong><br>
-        • <strong>En móvil Android:</strong> Mantén pulsado el icono de <em>"Plan Limpieza"</em> en tu pantalla de inicio durante 2 segundos y selecciona <strong>"Desinstalar"</strong>.<br>
-        • <strong>En Ordenador (Chrome/Edge):</strong> Abre la aplicación instalada, haz clic en los tres puntos (⋮) arriba a la derecha y selecciona <strong>"Desinstalar Mi Plan de Limpieza"</strong>.
+        📤 <strong>Pasos para desinstalar la aplicación:</strong><br>
+        • <strong>En Windows (Chrome / Edge):</strong> Abre la aplicación instalada, haz clic en los tres puntos (⋮) arriba a la derecha y selecciona <strong>"Desinstalar Mi Plan de Limpieza"</strong>.<br>
+        • <strong>En Android:</strong> Mantén pulsado el icono en tu pantalla de inicio durante 2 segundos y toca <strong>"Desinstalar"</strong>.
       `;
     }
 
     function resetAllData() {
-      const confirm1 = confirm("⚠️ ¿Estás segura de que quieres BORRAR TODOS LOS DATOS?\n\nSe eliminarán todas las tareas programadas en el calendario y se restaurarán las listas originales.");
+      const confirm1 = confirm("⚠️ ¿Estás segura de que quieres BORRAR TODOS LOS DATOS?\n\nSe eliminarán todas las tareas programadas.");
       if (!confirm1) return;
 
       const confirm2 = confirm("Última confirmación: ¿Realmente deseas formatear la aplicación y empezar de cero?");
@@ -1785,9 +2018,6 @@
         localStorage.removeItem(STORAGE_KEY);
         appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
         saveData();
-        const helperBox = document.getElementById('pwa-helper-box');
-        helperBox.style.display = 'block';
-        helperBox.innerHTML = "✅ <strong>Todos los datos han sido borrados correctamente.</strong> La aplicación ha vuelto a su estado original.";
         alert("Todos los datos se han borrado correctamente.");
       }
     }
@@ -1805,12 +2035,15 @@
     }
 
     // Inicialización al arrancar la aplicación
-    window.onload = function() {
+    window.onload = async function() {
       document.getElementById('sched-date').value = getTodayISO();
-      setupPWA();
+      await setupPWA();
       applySettings();
       applyPrintPreset();
+      loadGitHubConfigToUI();
       refreshAllViews();
+      // Descargar automáticamente los últimos cambios desde GitHub al abrir la app
+      await syncFromGitHub(false);
     };
   </script>
 </body>
