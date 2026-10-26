@@ -4,31 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Plan de Limpieza - LB</title>
-  <!-- Color de barra para Android -->
+  <!-- Color de la barra superior en Android -->
   <meta name="theme-color" content="#9b5de5">
   <link id="pwa-manifest" rel="manifest">
 
   <style>
     /* ==========================================================================
        1. VARIABLES DE DISEÑO (Colores Rosa, Lila y Blanco + Modo Oscuro)
-       Puedes cambiar estos códigos hexadecimales si deseas ajustar algún tono.
+       Ajusta estos códigos hexadecimales si deseas personalizar los tonos.
        ========================================================================== */
     :root {
-      --bg-main: #fdf8ff;         /* Blanco con un toque muy suave de lila */
-      --bg-card: #ffffff;         /* Blanco puro para tarjetas */
-      --bg-sidebar: #f3e5f5;      /* Lila pastel claro para el menú */
+      --bg-main: #fdf8ff;         /* Fondo general blanco-lila muy suave */
+      --bg-card: #ffffff;         /* Blanco puro para tarjetas y bloques */
+      --bg-sidebar: #f3e5f5;      /* Lila pastel para el menú izquierdo */
       --primary-lila: #9b5de5;    /* Lila principal alegre */
-      --primary-pink: #f15bb5;    /* Rosa alegre para botones y acentos */
-      --soft-pink: #fce4ec;       /* Rosa suave para fondos secundarios */
-      --text-main: #3c2a4d;       /* Gris/Morado muy oscuro para lectura fácil */
+      --primary-pink: #f15bb5;    /* Rosa alegre para botones y detalles */
+      --soft-pink: #fce4ec;       /* Rosa suave para etiquetas y fondos activos */
+      --text-main: #3c2a4d;       /* Color de texto principal oscuro para lectura */
       --text-muted: #7b6888;      /* Texto secundario */
       --border-color: #e1bee7;    /* Bordes lila claro */
-      --danger: #ff4d6d;          /* Rojo rosado para borrar/pendientes */
-      --success: #00bbf9;         /* Azul/Verde alegre para completado */
-      --shadow: 0 4px 12px rgba(155, 93, 229, 0.12);
+      --danger: #ff4d6d;          /* Rojo rosado para avisos/borrar */
+      --success: #2ec4b6;         /* Verde turquesa para tareas completadas */
+      --shadow: 0 4px 14px rgba(155, 93, 229, 0.12);
     }
 
-    /* Variables que se activan automáticamente cuando el usuario elige Modo Oscuro */
+    /* Variables automáticas para el Modo Oscuro */
     body.dark-mode {
       --bg-main: #1a1224;
       --bg-card: #281c36;
@@ -39,11 +39,11 @@
       --text-main: #f8f0fc;
       --text-muted: #c2add3;
       --border-color: #46325c;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
     }
 
     /* ==========================================================================
-       2. ESTILOS GENERALES DE LA INTERFAZ
+       2. ESTILOS GENERALES Y ESTRUCTURA INTUITIVA
        ========================================================================== */
     * {
       box-sizing: border-box;
@@ -60,9 +60,9 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    /* Barra lateral (Menú) */
+    /* Barra lateral izquierda */
     .sidebar {
-      width: 260px;
+      width: 265px;
       background-color: var(--bg-sidebar);
       border-right: 2px solid var(--border-color);
       display: flex;
@@ -74,6 +74,7 @@
       z-index: 100;
     }
 
+    /* Logotipo LB interactivo (Botón para volver a Inicio/Calendario) */
     .brand-box {
       display: flex;
       align-items: center;
@@ -81,24 +82,41 @@
       padding: 12px;
       background: #f5ebe0;
       border-radius: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       border: 2px solid var(--primary-lila);
       color: #222;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      user-select: none;
+    }
+
+    .brand-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(241, 91, 181, 0.3);
+      border-color: var(--primary-pink);
     }
 
     .brand-title {
       font-weight: 800;
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: #4a2559;
       line-height: 1.2;
     }
 
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: #7b4b8a;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* Botones del menú numerado (1 al 9) */
     .nav-btn {
       background: transparent;
       border: none;
       text-align: left;
       padding: 11px 14px;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       border-radius: 10px;
       color: var(--text-main);
       font-weight: 600;
@@ -113,6 +131,7 @@
     .nav-btn:hover {
       background-color: var(--soft-pink);
       color: var(--primary-pink);
+      transform: translateX(3px);
     }
 
     .nav-btn.active {
@@ -121,30 +140,23 @@
       box-shadow: var(--shadow);
     }
 
-    .badge-alert {
-      background-color: var(--danger);
-      color: #fff;
-      font-size: 0.75rem;
-      padding: 2px 7px;
-      border-radius: 12px;
-      font-weight: bold;
-    }
-
-    /* Contenedor Principal */
+    /* Contenedor Principal Derecha */
     .main-content {
-      margin-left: 260px;
+      margin-left: 265px;
       flex: 1;
       padding: 25px;
-      max-width: 1200px;
+      max-width: 1250px;
     }
 
     .header-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
       background: var(--bg-card);
-      padding: 15px 20px;
+      padding: 14px 20px;
       border-radius: 16px;
       box-shadow: var(--shadow);
       border: 1px solid var(--border-color);
@@ -160,7 +172,7 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(5px); }
+      from { opacity: 0; transform: translateY(4px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
@@ -175,25 +187,30 @@
     }
 
     .card-title {
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       margin-bottom: 15px;
       color: var(--primary-lila);
       border-bottom: 2px solid var(--soft-pink);
       padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
       margin-bottom: 15px;
     }
 
     label {
       display: block;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       color: var(--text-muted);
     }
 
@@ -204,30 +221,34 @@
       border-radius: 10px;
       background: var(--bg-main);
       color: var(--text-main);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
     .btn {
       background: linear-gradient(135deg, var(--primary-pink), var(--primary-lila));
       color: #fff;
       border: none;
-      padding: 10px 18px;
+      padding: 10px 16px;
       border-radius: 10px;
       font-weight: 600;
       cursor: pointer;
       transition: opacity 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
     .btn:hover { opacity: 0.92; }
     .btn:active { transform: scale(0.98); }
     .btn-secondary { background: var(--soft-pink); color: var(--primary-lila); border: 1px solid var(--primary-lila); }
     .btn-danger { background: var(--danger); color: #fff; }
-    .btn-sm { padding: 5px 10px; font-size: 0.8rem; border-radius: 7px; }
+    .btn-sm { padding: 6px 11px; font-size: 0.82rem; border-radius: 8px; }
 
-    /* Listas de elementos (Estancias, Tareas, Categorías, Colaboradores) */
+    /* Listas de elementos (Estancias, Lista de Tareas, Categorías, Colaboradores) */
     .items-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 12px;
     }
 
@@ -246,14 +267,16 @@
       gap: 6px;
     }
 
-    /* Calendario */
+    /* Calendario en Página de Inicio */
     .cal-controls {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
     }
 
     .cal-grid {
@@ -264,57 +287,79 @@
 
     .cal-day-header {
       text-align: center;
-      font-weight: bold;
+      font-weight: 700;
       color: var(--primary-lila);
       padding: 6px;
       font-size: 0.85rem;
+      background: var(--soft-pink);
+      border-radius: 8px;
     }
 
     .cal-cell {
       background: var(--bg-main);
-      border: 1px solid var(--border-color);
-      min-height: 90px;
-      border-radius: 10px;
+      border: 1.5px solid var(--border-color);
+      min-height: 98px;
+      border-radius: 12px;
       padding: 8px;
       cursor: pointer;
-      transition: border-color 0.2s, transform 0.1s;
+      transition: all 0.18s;
+      display: flex;
+      flex-direction: column;
     }
 
     .cal-cell:hover {
       border-color: var(--primary-pink);
       transform: translateY(-2px);
+      box-shadow: var(--shadow);
     }
 
+    /* Día de hoy en el calendario */
     .cal-cell.today {
-      border: 2px solid var(--primary-pink);
       background: var(--soft-pink);
     }
 
+    /* Día seleccionado por el usuario al hacer clic */
+    .cal-cell.selected-day {
+      border: 2.5px solid var(--primary-pink);
+      box-shadow: 0 0 0 3px rgba(241, 91, 181, 0.25);
+    }
+
     .cal-date-num {
-      font-weight: bold;
+      font-weight: 700;
       font-size: 0.9rem;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .today-badge {
+      font-size: 0.65rem;
+      background: var(--primary-pink);
+      color: #fff;
+      padding: 1px 5px;
+      border-radius: 6px;
     }
 
     .cal-pill {
       font-size: 0.72rem;
       background: var(--primary-lila);
       color: white;
-      padding: 2px 5px;
-      border-radius: 5px;
-      margin-bottom: 3px;
+      padding: 3px 6px;
+      border-radius: 6px;
+      margin-bottom: 4px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
     .cal-pill.done {
-      background: #8ac926;
+      background: var(--success);
       text-decoration: line-through;
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
-    /* Casillas de Agenda y Tareas */
+    /* Filas de tareas con casilla de verificación */
     .task-row {
       display: flex;
       justify-content: space-between;
@@ -322,6 +367,12 @@
       padding: 12px;
       border-bottom: 1px solid var(--border-color);
       gap: 10px;
+      border-radius: 10px;
+      transition: background 0.15s;
+    }
+
+    .task-row:hover {
+      background: var(--bg-main);
     }
 
     .task-row:last-child { border-bottom: none; }
@@ -329,7 +380,7 @@
     .task-info {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex: 1;
     }
 
@@ -349,13 +400,11 @@
       background: var(--soft-pink);
       color: var(--primary-lila);
       margin-right: 5px;
+      margin-top: 3px;
     }
 
-    /* Gráficos de barras */
-    .chart-row {
-      margin-bottom: 12px;
-    }
-
+    /* Gráficos de progreso */
+    .chart-row { margin-bottom: 12px; }
     .chart-label {
       display: flex;
       justify-content: space-between;
@@ -363,7 +412,6 @@
       margin-bottom: 4px;
       font-weight: 600;
     }
-
     .progress-bg {
       width: 100%;
       height: 14px;
@@ -371,7 +419,6 @@
       border-radius: 10px;
       overflow: hidden;
     }
-
     .progress-fill {
       height: 100%;
       background: linear-gradient(90deg, var(--primary-lila), var(--primary-pink));
@@ -391,7 +438,7 @@
       display: none;
     }
 
-    /* Diseño Responsivo para Móviles Android */
+    /* Responsivo para móviles Android */
     .mobile-menu-btn {
       display: none;
       background: var(--primary-lila);
@@ -400,6 +447,7 @@
       padding: 8px 12px;
       border-radius: 8px;
       font-size: 1.1rem;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
@@ -412,7 +460,7 @@
       }
       .main-content {
         margin-left: 0;
-        padding: 15px;
+        padding: 14px;
       }
       .mobile-menu-btn {
         display: inline-block;
@@ -425,7 +473,6 @@
 
     /* ==========================================================================
        3. FORMATO ESPECIAL DE IMPRESIÓN (@media print)
-       Oculta menús y botones al imprimir, mostrando solo el planificador.
        ========================================================================== */
     @media print {
       .sidebar, .header-bar, .no-print {
@@ -448,90 +495,96 @@
 </head>
 <body>
 
-  <!-- BARRA LATERAL DE NAVEGACIÓN (MENÚ) -->
+  <!-- BARRA LATERAL IZQUIERDA (Logotipo de Inicio + Menú 1 al 9) -->
   <aside class="sidebar" id="sidebar">
-    <!-- Logotipo personalizado LB recreado en SVG vectorial -->
-    <div class="brand-box">
+    <!-- Al presionar el logotipo volvemos siempre al Calendario de Inicio -->
+    <div class="brand-box" onclick="showSection('inicio')" title="Ir al Calendario de Inicio">
       <svg width="48" height="42" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
-        <!-- Barras de progreso púrpura -->
         <rect x="8" y="48" width="11" height="28" fill="#4a2559" rx="1"/>
         <rect x="23" y="38" width="11" height="38" fill="#4a2559" rx="1"/>
         <rect x="38" y="28" width="11" height="48" fill="#4a2559" rx="1"/>
-        <!-- Pluma superior -->
         <path d="M5 42 C18 25, 32 15, 48 10 C44 24, 32 34, 15 39 Z" fill="#4a2559"/>
         <line x1="3" y1="44" x2="25" y2="32" stroke="#f5ebe0" stroke-width="2"/>
-        <!-- Letras LB en tipografía Serif clásica -->
         <text x="54" y="75" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#1d1d1b">LB</text>
       </svg>
-      <div class="brand-title" data-i18n="appTitle">Mi Plan de Limpieza</div>
+      <div>
+        <div class="brand-title" data-i18n="appTitle">Mi Plan de Limpieza</div>
+        <div class="brand-subtitle" data-i18n="lblHomeHint">🏠 Inicio / Calendario</div>
+      </div>
     </div>
 
-    <button class="nav-btn active" onclick="showSection('agenda')" data-i18n="navAgenda">📅 Agenda Día a Día</button>
-    <button class="nav-btn" onclick="showSection('calendario')" data-i18n="navCalendar">🗓️ Calendario y Programar</button>
-    <button class="nav-btn" onclick="showSection('pendientes')">
-      <span data-i18n="navPending">⚠️ Tareas Pendientes</span>
-      <span class="badge-alert" id="pending-count">0</span>
-    </button>
-    <button class="nav-btn" onclick="showSection('estancias')" data-i18n="navRooms">🏠 Estancias</button>
-    <button class="nav-btn" onclick="showSection('tareas')" data-i18n="navTasks">✨ Tareas</button>
-    <button class="nav-btn" onclick="showSection('categorias')" data-i18n="navCategories">🏷️ Categorías</button>
-    <button class="nav-btn" onclick="showSection('colaboradores')" data-i18n="navCollabs">👥 Colaboradores</button>
-    <button class="nav-btn" onclick="showSection('graficos')" data-i18n="navCharts">📊 Gráficos</button>
-    <button class="nav-btn" onclick="showSection('impresion')" data-i18n="navPrint">🖨️ Impresión Agenda</button>
-    <button class="nav-btn" onclick="showSection('backup')" data-i18n="navBackup">💾 Copia de Seguridad</button>
-    <button class="nav-btn" onclick="showSection('ajustes')" data-i18n="navSettings">⚙️ Ajustes</button>
+    <!-- Menú con los 9 apartados exactos -->
+    <button class="nav-btn" onclick="showSection('programar')" data-i18n="nav1">1. Programar tarea</button>
+    <button class="nav-btn" onclick="showSection('estancias')" data-i18n="nav2">2. Estancias</button>
+    <button class="nav-btn" onclick="showSection('tareas')" data-i18n="nav3">3. Lista de tareas</button>
+    <button class="nav-btn" onclick="showSection('categorias')" data-i18n="nav4">4. Categorías</button>
+    <button class="nav-btn" onclick="showSection('colaboradores')" data-i18n="nav5">5. Colaboradores</button>
+    <button class="nav-btn" onclick="showSection('graficos')" data-i18n="nav6">6. Gráficos</button>
+    <button class="nav-btn" onclick="showSection('impresion')" data-i18n="nav7">7. Impresión agenda</button>
+    <button class="nav-btn" onclick="showSection('backup')" data-i18n="nav8">8. Copia de seguridad</button>
+    <button class="nav-btn" onclick="showSection('ajustes')" data-i18n="nav9">9. Ajustes</button>
   </aside>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="main-content">
-    <!-- Cabecera superior -->
+    <!-- Cabecera superior con acceso rápido a Inicio, Tareas Pendientes y Tema -->
     <header class="header-bar">
       <div style="display:flex; align-items:center; gap:10px;">
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-        <h2 id="current-section-title" data-i18n="navAgenda">📅 Agenda Día a Día</h2>
+        <h2 id="current-section-title" data-i18n="titleHomeCalendar">🗓️ Calendario del Mes</h2>
       </div>
-      <div style="display:flex; gap:10px; align-items:center;">
-        <button class="btn btn-secondary btn-sm" onclick="toggleTheme()" id="theme-btn">🌙 / ☀️</button>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <button class="btn btn-secondary btn-sm" onclick="showSection('inicio')" data-i18n="btnGoCalendar">🗓️ Ver Calendario</button>
+        <button class="btn btn-danger btn-sm" onclick="openPendingTasksView()" title="Ver tareas atrasadas sin completar">
+          ⚠️ <span data-i18n="lblPendingShort">Pendientes:</span> <span id="pending-count">0</span>
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="toggleTheme()" id="theme-btn" title="Modo Claro / Oscuro">🌙 / ☀️</button>
       </div>
     </header>
 
     <!-- ====================================================================
-         SECCIÓN 1: AGENDA DÍA A DÍA
+         PÁGINA DE INICIO: CALENDARIO DEL MES EN CURSO Y DETALLE DEL DÍA
          ==================================================================== -->
-    <section id="sec-agenda" class="section-view active">
-      <div class="card no-print">
-        <div class="form-grid" style="align-items: end;">
-          <div>
-            <label data-i18n="lblSelectDate">Seleccionar Fecha:</label>
-            <input type="date" id="agenda-date" onchange="renderAgenda()">
+    <section id="sec-inicio" class="section-view active">
+      <div class="card">
+        <!-- Controles superiores del Calendario -->
+        <div class="cal-controls">
+          <div style="display:flex; gap:6px; align-items:center;">
+            <button class="btn btn-secondary btn-sm" onclick="changeCalPeriod(-1)">◀</button>
+            <button class="btn btn-secondary btn-sm" onclick="goToTodayCalendar()" data-i18n="btnToday">Hoy</button>
+            <button class="btn btn-secondary btn-sm" onclick="changeCalPeriod(1)">▶</button>
+            <h3 id="cal-header-label" style="color:var(--primary-lila); margin-left:8px;">Mes / Año</h3>
           </div>
-          <div>
-            <label data-i18n="lblFilterRoom">Filtrar por Estancia:</label>
-            <select id="agenda-room-filter" onchange="renderAgenda()"></select>
-          </div>
-          <div>
-            <label data-i18n="lblFilterCollab">Filtrar por Colaborador:</label>
-            <select id="agenda-collab-filter" onchange="renderAgenda()"></select>
-          </div>
-          <div>
-            <button class="btn" onclick="setAgendaToday()" data-i18n="btnToday">Ir a Hoy</button>
+
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <select id="cal-room-filter" onchange="renderCalendar()" style="width:auto;"></select>
+            <select id="cal-collab-filter" onchange="renderCalendar()" style="width:auto;"></select>
+            <button class="btn btn-sm" onclick="setCalView('month')" data-i18n="btnViewMonth">Mensual</button>
+            <button class="btn btn-sm" onclick="setCalView('week')" data-i18n="btnViewWeek">Semanal</button>
+            <button class="btn btn-sm" onclick="setCalView('day')" data-i18n="btnViewDay">Diaria</button>
           </div>
         </div>
+
+        <!-- Cuadrícula del Calendario -->
+        <div id="calendar-grid-wrapper"></div>
       </div>
 
-      <div class="card">
-        <h3 class="card-title" id="agenda-list-title">Tareas del Día</h3>
-        <div id="agenda-tasks-container"></div>
+      <!-- Panel inferior interactivo (Opción A): se actualiza al tocar cualquier día del calendario -->
+      <div class="card" id="selected-day-panel">
+        <div class="card-title">
+          <span id="selected-day-title">📅 Tareas del Día Seleccionado</span>
+          <button class="btn btn-sm" onclick="jumpToScheduleForSelectedDate()" data-i18n="btnAddForThisDay">+ Programar tarea en este día</button>
+        </div>
+        <div id="selected-day-tasks-container"></div>
       </div>
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 2: CALENDARIO Y PROGRAMADOR DE TAREAS
+         1. PROGRAMAR TAREA (Incluye también el bloque de Tareas Pendientes)
          ==================================================================== -->
-    <section id="sec-calendario" class="section-view">
-      <!-- Formulario para programar tarea nueva -->
+    <section id="sec-programar" class="section-view">
       <div class="card">
-        <h3 class="card-title" data-i18n="titleScheduleTask">Programar Tarea Nueva</h3>
+        <h3 class="card-title" data-i18n="titleScheduleTask">1. Programar Tarea Nueva</h3>
         <input type="hidden" id="edit-schedule-id" value="">
         <div class="form-grid">
           <div>
@@ -579,7 +632,7 @@
           </div>
         </div>
 
-        <!-- Opciones extra si elige Cada X meses (Primer/Segundo/Tercer/Cuarto/Último día) -->
+        <!-- Opciones extra si elige Cada X meses (Primer/Segundo/Tercer/Cuarto/Último) -->
         <div id="repeat-monthly-box" style="display:none; margin-bottom:15px; padding:12px; background:var(--soft-pink); border-radius:10px;">
           <div class="form-grid">
             <div>
@@ -611,49 +664,25 @@
           </div>
         </div>
 
-        <button class="btn" onclick="saveScheduledTask()" id="btn-save-sched">💾 Guardar Programación</button>
-        <button class="btn btn-secondary" onclick="cancelEditSchedule()" id="btn-cancel-sched" style="display:none;">Cancelar Edición</button>
-      </div>
-
-      <!-- Vista del Calendario (Mensual, Semanal, Diaria) -->
-      <div class="card">
-        <div class="cal-controls">
-          <div style="display:flex; gap:8px;">
-            <button class="btn btn-secondary btn-sm" onclick="changeCalPeriod(-1)">◀ Anterior</button>
-            <button class="btn btn-secondary btn-sm" onclick="changeCalPeriod(1)">Siguiente ▶</button>
-          </div>
-          <h3 id="cal-header-label" style="color:var(--primary-lila);">Mes / Año</h3>
-          <div style="display:flex; gap:6px;">
-            <select id="cal-room-filter" onchange="renderCalendar()" style="width:auto;"></select>
-            <button class="btn btn-sm" onclick="setCalView('month')">Mensual</button>
-            <button class="btn btn-sm" onclick="setCalView('week')">Semanal</button>
-            <button class="btn btn-sm" onclick="setCalView('day')">Diaria</button>
-          </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" onclick="saveScheduledTask()" id="btn-save-sched">💾 Guardar y Ver en Calendario</button>
+          <button class="btn btn-secondary" onclick="cancelEditSchedule()" id="btn-cancel-sched" style="display:none;">Cancelar Edición</button>
         </div>
-
-        <div id="calendar-grid-wrapper"></div>
       </div>
-    </section>
 
-    <!-- ====================================================================
-         SECCIÓN 3: TAREAS PENDIENTES (Vencidas y no realizadas)
-         ==================================================================== -->
-    <section id="sec-pendientes" class="section-view">
-      <div class="card">
-        <h3 class="card-title" data-i18n="navPending">⚠️ Tareas Pendientes (Vencidas sin completar)</h3>
-        <p style="margin-bottom:15px; font-size:0.9rem; color:var(--text-muted);">
-          Aquí aparecen automáticamente todas las tareas cuya fecha ya ha pasado y aún no tienen marcada su casilla de verificación.
-        </p>
+      <!-- Panel de Tareas Pendientes (Opción B: integrado dentro de Programar Tarea) -->
+      <div class="card" id="pending-tasks-card">
+        <h3 class="card-title">⚠️ Tareas Pendientes (Vencidas en días anteriores sin completar)</h3>
         <div id="pending-tasks-container"></div>
       </div>
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 4: ESTANCIAS
+         2. ESTANCIAS
          ==================================================================== -->
     <section id="sec-estancias" class="section-view">
       <div class="card">
-        <h3 class="card-title" data-i18n="navRooms">🏠 Gestión de Estancias</h3>
+        <h3 class="card-title" data-i18n="nav2">2. Estancias</h3>
         <div style="display:flex; gap:10px; margin-bottom:15px;">
           <input type="text" id="new-room-input" placeholder="Nombre de la nueva estancia...">
           <button class="btn" onclick="addMasterItem('rooms', 'new-room-input')">+ Añadir</button>
@@ -663,11 +692,11 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 5: TAREAS
+         3. LISTA DE TAREAS
          ==================================================================== -->
     <section id="sec-tareas" class="section-view">
       <div class="card">
-        <h3 class="card-title" data-i18n="navTasks">✨ Catálogo de Tareas</h3>
+        <h3 class="card-title" data-i18n="nav3">3. Lista de tareas</h3>
         <div style="display:flex; gap:10px; margin-bottom:15px;">
           <input type="text" id="new-task-input" placeholder="Crear nueva tarea...">
           <button class="btn" onclick="addMasterItem('tasks', 'new-task-input')">+ Añadir</button>
@@ -677,11 +706,11 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 6: CATEGORÍAS
+         4. CATEGORÍAS
          ==================================================================== -->
     <section id="sec-categorias" class="section-view">
       <div class="card">
-        <h3 class="card-title" data-i18n="navCategories">🏷️ Categorías de Frecuencia</h3>
+        <h3 class="card-title" data-i18n="nav4">4. Categorías</h3>
         <div style="display:flex; gap:10px; margin-bottom:15px;">
           <input type="text" id="new-cat-input" placeholder="Nueva categoría...">
           <button class="btn" onclick="addMasterItem('categories', 'new-cat-input')">+ Añadir</button>
@@ -691,11 +720,11 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 7: COLABORADORES
+         5. COLABORADORES
          ==================================================================== -->
     <section id="sec-colaboradores" class="section-view">
       <div class="card">
-        <h3 class="card-title" data-i18n="navCollabs">👥 Colaboradores del Hogar</h3>
+        <h3 class="card-title" data-i18n="nav5">5. Colaboradores</h3>
         <div style="display:flex; gap:10px; margin-bottom:15px;">
           <input type="text" id="new-collab-input" placeholder="Nombre del colaborador...">
           <button class="btn" onclick="addMasterItem('collaborators', 'new-collab-input')">+ Añadir</button>
@@ -705,7 +734,7 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 8: GRÁFICOS DE CUMPLIMIENTO
+         6. GRÁFICOS
          ==================================================================== -->
     <section id="sec-graficos" class="section-view">
       <div class="card">
@@ -723,11 +752,11 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 9: IMPRESIÓN DEL PLANIFICADOR TIPO AGENDA
+         7. IMPRESIÓN AGENDA
          ==================================================================== -->
     <section id="sec-impresion" class="section-view">
       <div class="card no-print">
-        <h3 class="card-title">🖨️ Configurar Impresión del Planificador</h3>
+        <h3 class="card-title" data-i18n="nav7">7. Impresión agenda</h3>
         <div class="form-grid">
           <div>
             <label>Rango Rápido:</label>
@@ -758,7 +787,7 @@
         <button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar en PDF</button>
       </div>
 
-      <!-- Vista previa que saldrá impresa en el papel -->
+      <!-- Vista previa limpia para impresión -->
       <div class="card" id="print-area">
         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--primary-lila); padding-bottom:10px; margin-bottom:15px;">
           <h2>Mi Plan de Limpieza - LB</h2>
@@ -769,13 +798,13 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 10: COPIA DE SEGURIDAD (Sincronización entre dispositivos)
+         8. COPIA DE SEGURIDAD
          ==================================================================== -->
     <section id="sec-backup" class="section-view">
       <div class="card">
-        <h3 class="card-title">💾 Copia de Seguridad y Sincronización</h3>
+        <h3 class="card-title" data-i18n="nav8">8. Copia de seguridad</h3>
         <p style="margin-bottom:15px; line-height:1.5;">
-          Descarga tus datos en un archivo para guardar una copia de seguridad o para enviárselo por WhatsApp/Email a <strong>Lucas</strong> u <strong>Óscar</strong> y que ellos lo carguen en sus teléfonos.
+          Descarga tus datos en un archivo para guardar una copia de seguridad o para compartirla con <strong>Lucas</strong> y <strong>Óscar</strong> en sus dispositivos.
         </p>
         <div style="display:flex; gap:15px; flex-wrap:wrap;">
           <button class="btn" onclick="exportBackup()">⬇️ Descargar Copia de Seguridad (.json)</button>
@@ -788,10 +817,9 @@
     </section>
 
     <!-- ====================================================================
-         SECCIÓN 11: AJUSTES (Modo Claro/Oscuro, Idioma, Instalar/Desinstalar y Borrar Datos)
+         9. AJUSTES
          ==================================================================== -->
     <section id="sec-ajustes" class="section-view">
-      <!-- Tarjeta 1: Apariencia e Idioma -->
       <div class="card">
         <h3 class="card-title" data-i18n="titleAppearance">⚙️ Ajustes de Apariencia e Idioma</h3>
         <div class="form-grid">
@@ -810,7 +838,6 @@
         </div>
       </div>
 
-      <!-- Tarjeta 2: Instalar, Desinstalar y Borrar todos los datos -->
       <div class="card">
         <h3 class="card-title" data-i18n="titleAppManagement">📱 Instalación de la Aplicación y Datos</h3>
         <p style="margin-bottom:15px; font-size:0.9rem; color:var(--text-muted);" data-i18n="descAppManagement">
@@ -818,23 +845,18 @@
         </p>
 
         <div class="form-grid">
-          <!-- Botón para Instalar la App -->
           <div>
             <label data-i18n="lblInstallApp">Instalar en el dispositivo:</label>
             <button class="btn" onclick="installPWA()" style="width:100%;" id="btn-install-pwa" data-i18n="btnInstallApp">
               📲 Instalar Aplicación
             </button>
           </div>
-
-          <!-- Botón para Desinstalar la App -->
           <div>
             <label data-i18n="lblUninstallApp">Desinstalar del dispositivo:</label>
             <button class="btn btn-secondary" onclick="uninstallPWA()" style="width:100%;" data-i18n="btnUninstallApp">
               📤 Desinstalar Aplicación
             </button>
           </div>
-
-          <!-- Botón adicional para Borrar todos los datos -->
           <div>
             <label data-i18n="lblResetData">Restablecimiento total:</label>
             <button class="btn btn-danger" onclick="resetAllData()" style="width:100%;" data-i18n="btnResetData">
@@ -843,7 +865,6 @@
           </div>
         </div>
 
-        <!-- Cuadro de ayuda dinámica que se muestra al pulsar Instalar o Desinstalar -->
         <div id="pwa-helper-box" class="info-box"></div>
       </div>
     </section>
@@ -855,7 +876,7 @@
        ========================================================================== -->
   <script>
     /* --------------------------------------------------------------------------
-       A. DATOS INICIALES POR DEFECTO (Tus listas exactas)
+       A. DATOS INICIALES POR DEFECTO
        -------------------------------------------------------------------------- */
     const DEFAULT_DATA = {
       rooms: [
@@ -880,7 +901,7 @@
         "Hacer la cama", "Tender", "Doblar y guardar ropa"
       ],
       collaborators: ["Lorena", "Lucas", "Óscar"],
-      scheduledOccurrences: [], // Aquí se guardan las tareas programadas en el calendario
+      scheduledOccurrences: [],
       settings: {
         darkMode: false,
         lang: "es"
@@ -893,22 +914,25 @@
     const I18N = {
       es: {
         appTitle: "Mi Plan de Limpieza",
-        navAgenda: "📅 Agenda Día a Día",
-        navCalendar: "🗓️ Calendario y Programar",
-        navPending: "⚠️ Tareas Pendientes",
-        navRooms: "🏠 Estancias",
-        navTasks: "✨ Tareas",
-        navCategories: "🏷️ Categorías",
-        navCollabs: "👥 Colaboradores",
-        navCharts: "📊 Gráficos",
-        navPrint: "🖨️ Impresión Agenda",
-        navBackup: "💾 Copia de Seguridad",
-        navSettings: "⚙️ Ajustes",
-        lblSelectDate: "Seleccionar Fecha:",
-        lblFilterRoom: "Filtrar por Estancia:",
-        lblFilterCollab: "Filtrar por Colaborador:",
-        btnToday: "Ir a Hoy",
-        titleScheduleTask: "Programar Tarea Nueva",
+        lblHomeHint: "🏠 Inicio / Calendario",
+        titleHomeCalendar: "🗓️ Calendario del Mes",
+        btnGoCalendar: "🗓️ Inicio / Calendario",
+        lblPendingShort: "Pendientes:",
+        nav1: "1. Programar tarea",
+        nav2: "2. Estancias",
+        nav3: "3. Lista de tareas",
+        nav4: "4. Categorías",
+        nav5: "5. Colaboradores",
+        nav6: "6. Gráficos",
+        nav7: "7. Impresión agenda",
+        nav8: "8. Copia de seguridad",
+        nav9: "9. Ajustes",
+        btnToday: "Hoy",
+        btnViewMonth: "Mensual",
+        btnViewWeek: "Semanal",
+        btnViewDay: "Diaria",
+        btnAddForThisDay: "+ Programar tarea en este día",
+        titleScheduleTask: "1. Programar Tarea Nueva",
         lblStartDate: "Fecha de inicio:",
         lblRoom: "Estancia:",
         lblTask: "Tarea:",
@@ -930,22 +954,25 @@
       },
       ca: {
         appTitle: "El Meu Pla de Neteja",
-        navAgenda: "📅 Agenda Dia a Dia",
-        navCalendar: "🗓️ Calendari i Programar",
-        navPending: "⚠️ Tasques Pendents",
-        navRooms: "🏠 Estances",
-        navTasks: "✨ Tasques",
-        navCategories: "🏷️ Categories",
-        navCollabs: "👥 Col·laboradors",
-        navCharts: "📊 Gràfics",
-        navPrint: "🖨️ Impressió Agenda",
-        navBackup: "💾 Còpia de Seguretat",
-        navSettings: "⚙️ Ajustos",
-        lblSelectDate: "Seleccionar Data:",
-        lblFilterRoom: "Filtrar per Estança:",
-        lblFilterCollab: "Filtrar per Col·laborador:",
-        btnToday: "Anar a Avui",
-        titleScheduleTask: "Programar Tasca Nova",
+        lblHomeHint: "🏠 Inici / Calendari",
+        titleHomeCalendar: "🗓️ Calendari del Mes",
+        btnGoCalendar: "🗓️ Inici / Calendari",
+        lblPendingShort: "Pendents:",
+        nav1: "1. Programar tasca",
+        nav2: "2. Estances",
+        nav3: "3. Llista de tasques",
+        nav4: "4. Categories",
+        nav5: "5. Col·laboradors",
+        nav6: "6. Gràfics",
+        nav7: "7. Impressió agenda",
+        nav8: "8. Còpia de seguretat",
+        nav9: "9. Ajustos",
+        btnToday: "Avui",
+        btnViewMonth: "Mensual",
+        btnViewWeek: "Setmanal",
+        btnViewDay: "Diària",
+        btnAddForThisDay: "+ Programar tasca en aquest dia",
+        titleScheduleTask: "1. Programar Tasca Nova",
         lblStartDate: "Data d'inici:",
         lblRoom: "Estança:",
         lblTask: "Tasca:",
@@ -967,22 +994,25 @@
       },
       en: {
         appTitle: "My Cleaning Plan",
-        navAgenda: "📅 Daily Agenda",
-        navCalendar: "🗓️ Calendar & Schedule",
-        navPending: "⚠️ Pending Tasks",
-        navRooms: "🏠 Rooms",
-        navTasks: "✨ Tasks",
-        navCategories: "🏷️ Categories",
-        navCollabs: "👥 Collaborators",
-        navCharts: "📊 Charts",
-        navPrint: "🖨️ Print Planner",
-        navBackup: "💾 Backup & Sync",
-        navSettings: "⚙️ Settings",
-        lblSelectDate: "Select Date:",
-        lblFilterRoom: "Filter by Room:",
-        lblFilterCollab: "Filter by Collaborator:",
-        btnToday: "Go to Today",
-        titleScheduleTask: "Schedule New Task",
+        lblHomeHint: "🏠 Home / Calendar",
+        titleHomeCalendar: "🗓️ Monthly Calendar",
+        btnGoCalendar: "🗓️ Home / Calendar",
+        lblPendingShort: "Pending:",
+        nav1: "1. Schedule task",
+        nav2: "2. Rooms",
+        nav3: "3. Task list",
+        nav4: "4. Categories",
+        nav5: "5. Collaborators",
+        nav6: "6. Charts",
+        nav7: "7. Print planner",
+        nav8: "8. Backup",
+        nav9: "9. Settings",
+        btnToday: "Today",
+        btnViewMonth: "Monthly",
+        btnViewWeek: "Weekly",
+        btnViewDay: "Daily",
+        btnAddForThisDay: "+ Schedule task on this day",
+        titleScheduleTask: "1. Schedule New Task",
         lblStartDate: "Start Date:",
         lblRoom: "Room:",
         lblTask: "Task:",
@@ -1005,13 +1035,14 @@
     };
 
     /* --------------------------------------------------------------------------
-       C. ESTADO GLOBAL Y GESTIÓN DE MEMORIA LOCAL (localStorage)
+       C. ESTADO GLOBAL Y MEMORIA LOCAL (localStorage)
        -------------------------------------------------------------------------- */
     const STORAGE_KEY = "LORENA_CLEANING_APP_V1";
     let appData = loadData();
     let calCurrentDate = new Date();
-    let calViewMode = "month"; // 'month', 'week', 'day'
-    let deferredPrompt = null; // Guardará el evento de instalación de Android/Chrome
+    let calViewMode = "month";      // 'month', 'week', 'day'
+    let selectedDateISO = getTodayISO(); // Fecha actualmente seleccionada en el calendario de inicio
+    let deferredPrompt = null;
 
     function loadData() {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -1038,8 +1069,15 @@
       return `${year}-${month}-${day}`;
     }
 
+    function formatDateISO(dateObj) {
+      const y = dateObj.getFullYear();
+      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const d = String(dateObj.getDate()).padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+
     /* --------------------------------------------------------------------------
-       D. NAVEGACIÓN Y GESTIÓN DE INTERFAZ
+       D. NAVEGACIÓN ENTRE LA PÁGINA DE INICIO (CALENDARIO) Y LOS 9 PUNTOS
        -------------------------------------------------------------------------- */
     function showSection(sectionId) {
       document.querySelectorAll('.section-view').forEach(sec => sec.classList.remove('active'));
@@ -1048,14 +1086,19 @@
       const targetSec = document.getElementById('sec-' + sectionId);
       if (targetSec) targetSec.classList.add('active');
 
-      // Marcar botón activo
-      const clickedBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(sectionId));
-      if (clickedBtn) {
-        clickedBtn.classList.add('active');
-        document.getElementById('current-section-title').innerText = clickedBtn.innerText.replace(/[0-9]/g, '').trim();
+      const lang = appData.settings.lang || 'es';
+      const dict = I18N[lang] || I18N.es;
+
+      if (sectionId === 'inicio') {
+        document.getElementById('current-section-title').innerText = dict.titleHomeCalendar;
+      } else {
+        const clickedBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(`'${sectionId}'`));
+        if (clickedBtn) {
+          clickedBtn.classList.add('active');
+          document.getElementById('current-section-title').innerText = clickedBtn.innerText;
+        }
       }
 
-      // Cerrar menú en móvil si estaba abierto
       document.getElementById('sidebar').classList.remove('open');
       refreshAllViews();
     }
@@ -1064,8 +1107,20 @@
       document.getElementById('sidebar').classList.toggle('open');
     }
 
+    function openPendingTasksView() {
+      showSection('programar');
+      const card = document.getElementById('pending-tasks-card');
+      if (card) card.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function jumpToScheduleForSelectedDate() {
+      document.getElementById('sched-date').value = selectedDateISO;
+      showSection('programar');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     /* --------------------------------------------------------------------------
-       E. GESTIÓN DE LISTAS MAESTRAS (Crear, Editar y Borrar)
+       E. GESTIÓN DE LISTAS MAESTRAS (2. Estancias, 3. Tareas, 4. Categorías, 5. Colaboradores)
        -------------------------------------------------------------------------- */
     function renderMasterList(listKey, containerId) {
       const container = document.getElementById(containerId);
@@ -1099,7 +1154,6 @@
       if (newVal && newVal.trim() !== "") {
         const trimmed = newVal.trim();
         appData[listKey][index] = trimmed;
-        // Actualizar también en tareas ya programadas para no perder coherencia
         appData.scheduledOccurrences.forEach(occ => {
           if (listKey === 'rooms' && occ.room === oldVal) occ.room = trimmed;
           if (listKey === 'tasks' && occ.task === oldVal) occ.task = trimmed;
@@ -1118,11 +1172,11 @@
     }
 
     function populateDropdowns() {
-      const fillSelect = (id, items, includeAll = false) => {
+      const fillSelect = (id, items, includeAllLabel = null) => {
         const sel = document.getElementById(id);
         if (!sel) return;
         const prev = sel.value;
-        sel.innerHTML = includeAll ? `<option value="ALL">Todas / Todos</option>` : "";
+        sel.innerHTML = includeAllLabel ? `<option value="ALL">${includeAllLabel}</option>` : "";
         items.forEach(i => {
           const opt = document.createElement('option');
           opt.value = i;
@@ -1137,15 +1191,14 @@
       fillSelect('sched-cat', appData.categories);
       fillSelect('sched-collab', appData.collaborators);
 
-      fillSelect('agenda-room-filter', appData.rooms, true);
-      fillSelect('agenda-collab-filter', appData.collaborators, true);
-      fillSelect('cal-room-filter', appData.rooms, true);
-      fillSelect('print-room', appData.rooms, true);
-      fillSelect('print-collab', appData.collaborators, true);
+      fillSelect('cal-room-filter', appData.rooms, "🏠 Todas las estancias");
+      fillSelect('cal-collab-filter', appData.collaborators, "👤 Todos los colaboradores");
+      fillSelect('print-room', appData.rooms, "Todas las estancias");
+      fillSelect('print-collab', appData.collaborators, "Todos los colaboradores");
     }
 
     /* --------------------------------------------------------------------------
-       F. MOTOR DE PROGRAMACIÓN DE TAREAS Y CÁLCULO DE REPETICIONES
+       F. MOTOR DE PROGRAMACIÓN DE TAREAS Y REPETICIONES (1. Programar tarea)
        -------------------------------------------------------------------------- */
     function updateRepeatOptionsUI() {
       const val = document.getElementById('sched-repeat').value;
@@ -1153,7 +1206,6 @@
       document.getElementById('repeat-monthly-box').style.display = (val === 'monthly_nth') ? 'block' : 'none';
     }
 
-    // Calcula el "N-ésimo día de la semana" de un mes (Ej: Segundo jueves o Último miércoles)
     function getNthWeekdayOfMonth(year, month, weekday, nthPosition) {
       if (nthPosition > 0) {
         let count = 0;
@@ -1165,7 +1217,7 @@
             if (count === nthPosition) return d;
           }
         }
-      } else if (nthPosition === -1) { // Último del mes
+      } else if (nthPosition === -1) {
         for (let day = 31; day >= 1; day--) {
           const d = new Date(year, month, day);
           if (d.getMonth() !== month) continue;
@@ -1173,13 +1225,6 @@
         }
       }
       return null;
-    }
-
-    function formatDateISO(dateObj) {
-      const y = dateObj.getFullYear();
-      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
-      const d = String(dateObj.getDate()).padStart(2, '0');
-      return `${y}-${m}-${d}`;
     }
 
     function saveScheduledTask() {
@@ -1193,7 +1238,7 @@
 
       if (!startDateStr) return alert("Por favor, selecciona una fecha de inicio.");
 
-      // Si estamos editando un registro concreto, actualizamos ese registro
+      // Si estamos editando un registro existente
       if (editId) {
         const occ = appData.scheduledOccurrences.find(o => o.id === editId);
         if (occ) {
@@ -1203,13 +1248,14 @@
           occ.category = category;
           occ.collaborator = collaborator;
         }
+        selectedDateISO = startDateStr;
         cancelEditSchedule();
         saveData();
-        alert("Tarea actualizada correctamente.");
+        showSection('inicio');
         return;
       }
 
-      // Si es una programación nueva, calculamos las fechas de los próximos 12 meses (365 días)
+      // Calcular repeticiones para los próximos 12 meses (365 días)
       const startParts = startDateStr.split('-').map(Number);
       const startDate = new Date(startParts[0], startParts[1] - 1, startParts[2]);
       const datesToCreate = [];
@@ -1246,7 +1292,6 @@
         }
       }
 
-      // Crear los registros individuales en la base de datos
       datesToCreate.forEach(dateISO => {
         appData.scheduledOccurrences.push({
           id: 'occ_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
@@ -1259,14 +1304,17 @@
         });
       });
 
+      selectedDateISO = startDateStr;
+      calCurrentDate = new Date(startParts[0], startParts[1] - 1, startParts[2]);
       saveData();
-      alert(`¡Se han programado ${datesToCreate.length} sesiones para esta tarea en el calendario!`);
+      alert(`¡Tarea programada con éxito (${datesToCreate.length} sesiones)! Ahora la verás en el calendario.`);
+      showSection('inicio');
     }
 
     function editScheduledOccurrence(id) {
       const occ = appData.scheduledOccurrences.find(o => o.id === id);
       if (!occ) return;
-      showSection('calendario');
+      showSection('programar');
       document.getElementById('edit-schedule-id').value = occ.id;
       document.getElementById('sched-date').value = occ.date;
       document.getElementById('sched-room').value = occ.room;
@@ -1276,14 +1324,14 @@
       document.getElementById('sched-repeat').value = 'none';
       updateRepeatOptionsUI();
 
-      document.getElementById('btn-save-sched').innerText = "💾 Guardar Cambios en Registro";
-      document.getElementById('btn-cancel-sched').style.display = "inline-block";
+      document.getElementById('btn-save-sched').innerText = "💾 Guardar Cambios";
+      document.getElementById('btn-cancel-sched').style.display = "inline-flex";
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function cancelEditSchedule() {
       document.getElementById('edit-schedule-id').value = "";
-      document.getElementById('btn-save-sched').innerText = "💾 Guardar Programación";
+      document.getElementById('btn-save-sched').innerText = "💾 Guardar y Ver en Calendario";
       document.getElementById('btn-cancel-sched').style.display = "none";
     }
 
@@ -1303,11 +1351,39 @@
     }
 
     /* --------------------------------------------------------------------------
-       G. RENDERIZADO DE AGENDA Y TAREAS PENDIENTES
+       G. CALENDARIO EN PÁGINA DE INICIO + PANEL DEL DÍA SELECCIONADO
        -------------------------------------------------------------------------- */
-    function setAgendaToday() {
-      document.getElementById('agenda-date').value = getTodayISO();
-      renderAgenda();
+    function setCalView(mode) {
+      calViewMode = mode;
+      renderCalendar();
+    }
+
+    function goToTodayCalendar() {
+      calCurrentDate = new Date();
+      selectedDateISO = getTodayISO();
+      renderCalendar();
+      renderSelectedDayDetails();
+    }
+
+    function changeCalPeriod(delta) {
+      if (calViewMode === 'month') {
+        calCurrentDate.setMonth(calCurrentDate.getMonth() + delta);
+      } else if (calViewMode === 'week') {
+        calCurrentDate.setDate(calCurrentDate.getDate() + (delta * 7));
+      } else {
+        calCurrentDate.setDate(calCurrentDate.getDate() + delta);
+        selectedDateISO = formatDateISO(calCurrentDate);
+      }
+      renderCalendar();
+      renderSelectedDayDetails();
+    }
+
+    function selectDayInCalendar(dateISO) {
+      selectedDateISO = dateISO;
+      renderCalendar();
+      renderSelectedDayDetails();
+      const panel = document.getElementById('selected-day-panel');
+      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
     function createTaskRowHTML(occ, showDate = false) {
@@ -1316,10 +1392,10 @@
           <div class="task-info">
             <input type="checkbox" class="task-checkbox" ${occ.completed ? 'checked' : ''} onchange="toggleOccurrenceCompleted('${occ.id}')">
             <div>
-              <div style="${occ.completed ? 'text-decoration:line-through; opacity:0.6;' : 'font-weight:700;'}">
+              <div style="${occ.completed ? 'text-decoration:line-through; opacity:0.6;' : 'font-weight:700; font-size:1rem;'}">
                 ${occ.task}
               </div>
-              <div style="margin-top:4px;">
+              <div>
                 ${showDate ? `<span class="tag">📅 ${occ.date}</span>` : ''}
                 <span class="tag">🏠 ${occ.room}</span>
                 <span class="tag">🏷️ ${occ.category}</span>
@@ -1328,34 +1404,33 @@
             </div>
           </div>
           <div class="item-actions no-print">
-            <button class="btn btn-secondary btn-sm" onclick="editScheduledOccurrence('${occ.id}')">✏️</button>
-            <button class="btn btn-danger btn-sm" onclick="deleteScheduledOccurrence('${occ.id}')">🗑️</button>
+            <button class="btn btn-secondary btn-sm" onclick="editScheduledOccurrence('${occ.id}')" title="Editar">✏️</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteScheduledOccurrence('${occ.id}')" title="Borrar">🗑️</button>
           </div>
         </div>
       `;
     }
 
-    function renderAgenda() {
-      const dateInput = document.getElementById('agenda-date');
-      if (!dateInput.value) dateInput.value = getTodayISO();
-      const selectedDate = dateInput.value;
-      const roomFilter = document.getElementById('agenda-room-filter').value || 'ALL';
-      const collabFilter = document.getElementById('agenda-collab-filter').value || 'ALL';
+    function renderSelectedDayDetails() {
+      const roomFilter = document.getElementById('cal-room-filter').value || 'ALL';
+      const collabFilter = document.getElementById('cal-collab-filter').value || 'ALL';
 
-      document.getElementById('agenda-list-title').innerText = `Tareas del Día (${selectedDate})`;
+      const titleEl = document.getElementById('selected-day-title');
+      const isToday = (selectedDateISO === getTodayISO());
+      titleEl.innerText = `📅 Tareas del día: ${selectedDateISO} ${isToday ? '(Hoy)' : ''}`;
 
-      const filtered = appData.scheduledOccurrences.filter(occ => {
-        if (occ.date !== selectedDate) return false;
-        if (roomFilter !== 'ALL' && occ.room !== roomFilter) return false;
-        if (collabFilter !== 'ALL' && occ.collaborator !== collabFilter) return false;
+      const dayTasks = appData.scheduledOccurrences.filter(o => {
+        if (o.date !== selectedDateISO) return false;
+        if (roomFilter !== 'ALL' && o.room !== roomFilter) return false;
+        if (collabFilter !== 'ALL' && o.collaborator !== collabFilter) return false;
         return true;
       });
 
-      const container = document.getElementById('agenda-tasks-container');
-      if (filtered.length === 0) {
-        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">No hay tareas programadas para este filtro en esta fecha.</p>`;
+      const container = document.getElementById('selected-day-tasks-container');
+      if (dayTasks.length === 0) {
+        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">No hay tareas programadas para este día con el filtro actual. Puedes pulsar <strong>"+ Programar tarea en este día"</strong> para añadir una.</p>`;
       } else {
-        container.innerHTML = filtered.map(o => createTaskRowHTML(o, false)).join('');
+        container.innerHTML = dayTasks.map(o => createTaskRowHTML(o, false)).join('');
       }
     }
 
@@ -1367,46 +1442,33 @@
 
       document.getElementById('pending-count').innerText = pending.length;
       const container = document.getElementById('pending-tasks-container');
+      if (!container) return;
 
       if (pending.length === 0) {
-        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">🎉 ¡Excelente! No tienes ninguna tarea atrasada pendiente.</p>`;
+        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">🎉 ¡Todo al día! No tienes ninguna tarea atrasada pendiente.</p>`;
       } else {
         container.innerHTML = pending.map(o => createTaskRowHTML(o, true)).join('');
       }
-    }
-
-    /* --------------------------------------------------------------------------
-       H. VISTA DEL CALENDARIO (Mensual, Semanal y Diaria)
-       -------------------------------------------------------------------------- */
-    function setCalView(mode) {
-      calViewMode = mode;
-      renderCalendar();
-    }
-
-    function changeCalPeriod(delta) {
-      if (calViewMode === 'month') {
-        calCurrentDate.setMonth(calCurrentDate.getMonth() + delta);
-      } else if (calViewMode === 'week') {
-        calCurrentDate.setDate(calCurrentDate.getDate() + (delta * 7));
-      } else {
-        calCurrentDate.setDate(calCurrentDate.getDate() + delta);
-      }
-      renderCalendar();
-    }
-
-    function openDayInAgenda(dateISO) {
-      document.getElementById('agenda-date').value = dateISO;
-      showSection('agenda');
     }
 
     function renderCalendar() {
       const wrapper = document.getElementById('calendar-grid-wrapper');
       const headerLabel = document.getElementById('cal-header-label');
       const roomFilter = document.getElementById('cal-room-filter').value || 'ALL';
+      const collabFilter = document.getElementById('cal-collab-filter').value || 'ALL';
       const todayISO = getTodayISO();
 
       const monthsNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
       const dayHeaders = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+
+      const filterTasksByDate = (dateISO) => {
+        return appData.scheduledOccurrences.filter(o => {
+          if (o.date !== dateISO) return false;
+          if (roomFilter !== 'ALL' && o.room !== roomFilter) return false;
+          if (collabFilter !== 'ALL' && o.collaborator !== collabFilter) return false;
+          return true;
+        });
+      };
 
       if (calViewMode === 'month') {
         const year = calCurrentDate.getFullYear();
@@ -1415,7 +1477,7 @@
 
         const firstDay = new Date(year, month, 1);
         const daysInMonth = new Date(year, month + 1, 0).getDate();
-        let startOffset = (firstDay.getDay() + 6) % 7; // Ajuste para empezar en Lunes
+        let startOffset = (firstDay.getDay() + 6) % 7;
 
         let html = `<div class="cal-grid">`;
         dayHeaders.forEach(d => html += `<div class="cal-day-header">${d}</div>`);
@@ -1426,11 +1488,16 @@
 
         for (let day = 1; day <= daysInMonth; day++) {
           const dateISO = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-          const dayTasks = appData.scheduledOccurrences.filter(o => o.date === dateISO && (roomFilter === 'ALL' || o.room === roomFilter));
+          const dayTasks = filterTasksByDate(dateISO);
+          const isToday = (dateISO === todayISO);
+          const isSelected = (dateISO === selectedDateISO);
 
           html += `
-            <div class="cal-cell ${dateISO === todayISO ? 'today' : ''}" onclick="openDayInAgenda('${dateISO}')">
-              <div class="cal-date-num">${day}</div>
+            <div class="cal-cell ${isToday ? 'today' : ''} ${isSelected ? 'selected-day' : ''}" onclick="selectDayInCalendar('${dateISO}')">
+              <div class="cal-date-num">
+                <span>${day}</span>
+                ${isToday ? `<span class="today-badge">Hoy</span>` : ''}
+              </div>
               ${dayTasks.slice(0, 3).map(t => `<div class="cal-pill ${t.completed ? 'done' : ''}">${t.room}: ${t.task}</div>`).join('')}
               ${dayTasks.length > 3 ? `<div style="font-size:0.7rem; color:var(--primary-pink); font-weight:bold;">+${dayTasks.length - 3} más...</div>` : ''}
             </div>
@@ -1440,7 +1507,6 @@
         wrapper.innerHTML = html;
 
       } else if (calViewMode === 'week') {
-        // Calcular el lunes de la semana actual
         const current = new Date(calCurrentDate);
         const day = (current.getDay() + 6) % 7;
         const monday = new Date(current);
@@ -1452,11 +1518,16 @@
           const d = new Date(monday);
           d.setDate(monday.getDate() + i);
           const dateISO = formatDateISO(d);
-          const dayTasks = appData.scheduledOccurrences.filter(o => o.date === dateISO && (roomFilter === 'ALL' || o.room === roomFilter));
+          const dayTasks = filterTasksByDate(dateISO);
+          const isToday = (dateISO === todayISO);
+          const isSelected = (dateISO === selectedDateISO);
 
           html += `
-            <div class="cal-cell ${dateISO === todayISO ? 'today' : ''}" onclick="openDayInAgenda('${dateISO}')">
-              <div class="cal-date-num">${dayHeaders[i]} ${d.getDate()}</div>
+            <div class="cal-cell ${isToday ? 'today' : ''} ${isSelected ? 'selected-day' : ''}" onclick="selectDayInCalendar('${dateISO}')">
+              <div class="cal-date-num">
+                <span>${dayHeaders[i]} ${d.getDate()}</span>
+                ${isToday ? `<span class="today-badge">Hoy</span>` : ''}
+              </div>
               ${dayTasks.map(t => `<div class="cal-pill ${t.completed ? 'done' : ''}">${t.room}: ${t.task} (${t.collaborator})</div>`).join('')}
             </div>
           `;
@@ -1464,18 +1535,16 @@
         html += `</div>`;
         wrapper.innerHTML = html;
 
-      } else { // Vista Diaria dentro de Calendario
+      } else {
         const dateISO = formatDateISO(calCurrentDate);
-        headerLabel.innerText = `Día ${dateISO}`;
-        const dayTasks = appData.scheduledOccurrences.filter(o => o.date === dateISO && (roomFilter === 'ALL' || o.room === roomFilter));
-        wrapper.innerHTML = dayTasks.length
-          ? dayTasks.map(o => createTaskRowHTML(o, false)).join('')
-          : `<p style="padding:10px; color:var(--text-muted);">No hay tareas programadas para este día.</p>`;
+        selectedDateISO = dateISO;
+        headerLabel.innerText = `Vista Diaria (${dateISO})`;
+        wrapper.innerHTML = `<p style="color:var(--text-muted); font-size:0.9rem;">Mostrando el detalle completo del día en el panel inferior.</p>`;
       }
     }
 
     /* --------------------------------------------------------------------------
-       I. GRÁFICOS DE CUMPLIMIENTO (Por Estancia, Fecha y Tarea)
+       H. GRÁFICOS DE CUMPLIMIENTO (6. Gráficos)
        -------------------------------------------------------------------------- */
     function renderCharts() {
       const buildBarHTML = (label, done, total) => {
@@ -1493,7 +1562,6 @@
         `;
       };
 
-      // 1. Por Estancia
       const roomContainer = document.getElementById('chart-by-room');
       let roomHTML = "";
       appData.rooms.forEach(room => {
@@ -1505,7 +1573,6 @@
       });
       roomContainer.innerHTML = roomHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por estancia.</p>`;
 
-      // 2. Por Fecha
       const dateContainer = document.getElementById('chart-by-date');
       const uniqueDates = [...new Set(appData.scheduledOccurrences.map(o => o.date))].sort().slice(-7);
       let dateHTML = "";
@@ -1516,7 +1583,6 @@
       });
       dateContainer.innerHTML = dateHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por fecha.</p>`;
 
-      // 3. Por Tarea
       const taskContainer = document.getElementById('chart-by-task');
       let taskHTML = "";
       appData.tasks.forEach(task => {
@@ -1530,7 +1596,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       J. IMPRESIÓN DEL PLANIFICADOR TIPO AGENDA
+       I. IMPRESIÓN DEL PLANIFICADOR (7. Impresión agenda)
        -------------------------------------------------------------------------- */
     function applyPrintPreset() {
       const preset = document.getElementById('print-preset').value;
@@ -1577,7 +1643,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       K. COPIA DE SEGURIDAD, AJUSTES, IDIOMA Y GESTIÓN DE INSTALACIÓN PWA
+       J. COPIA DE SEGURIDAD, AJUSTES E INSTALACIÓN PWA (8 y 9)
        -------------------------------------------------------------------------- */
     function exportBackup() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
@@ -1599,7 +1665,7 @@
           if (imported.rooms && imported.tasks) {
             appData = imported;
             saveData();
-            alert("¡Copia de seguridad cargada y sincronizada con éxito!");
+            alert("¡Copia de seguridad cargada con éxito!");
           } else {
             alert("El archivo no tiene el formato correcto.");
           }
@@ -1634,13 +1700,11 @@
       });
     }
 
-    // 1. Capturar el evento de instalación cuando se abre en GitHub Pages / Android Chrome
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
     });
 
-    // 2. Configurar Manifiesto PWA con icono SVG integrado para Android
     function setupPWA() {
       const iconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#f5ebe0"/><rect x="10" y="52" width="11" height="28" fill="#4a2559"/><rect x="25" y="42" width="11" height="38" fill="#4a2559"/><rect x="40" y="32" width="11" height="48" fill="#4a2559"/><text x="54" y="78" font-family="Georgia, serif" font-size="38" font-weight="bold" fill="#1d1d1b">LB</text></svg>`;
       const iconDataUrl = "data:image/svg+xml;utf8," + encodeURIComponent(iconSVG);
@@ -1665,19 +1729,16 @@
       document.getElementById('pwa-manifest').setAttribute('href', URL.createObjectURL(blob));
     }
 
-    // 3. Función del botón "📲 Instalar Aplicación"
     async function installPWA() {
       const helperBox = document.getElementById('pwa-helper-box');
       helperBox.style.display = 'block';
 
-      // Comprobar si ya se está ejecutando como aplicación instalada
       const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
       if (isStandalone) {
         helperBox.innerHTML = "✅ <strong>¡La aplicación ya está instalada!</strong> Actualmente la estás utilizando desde el icono de tu dispositivo.";
         return;
       }
 
-      // Si el navegador capturó el permiso automático de instalación, lo lanzamos
       if (deferredPrompt) {
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
@@ -1688,22 +1749,19 @@
         }
         deferredPrompt = null;
       } else {
-        // Si se abre en local o el navegador requiere el menú manual
         helperBox.innerHTML = `
           📲 <strong>Cómo instalar la aplicación en tu dispositivo:</strong><br>
-          1. Asegúrate de haber abierto este archivo desde tu enlace web de <strong>GitHub Pages</strong> en Google Chrome.<br>
-          2. En tu móvil Android, toca el icono de los <strong>tres puntos (⋮)</strong> arriba a la derecha en Chrome.<br>
+          1. Abre este enlace desde tu repositorio de <strong>GitHub Pages</strong> en Google Chrome.<br>
+          2. En tu móvil Android, toca el icono de los <strong>tres puntos (⋮)</strong> arriba a la derecha.<br>
           3. Selecciona <strong>"Instalar aplicación"</strong> o <strong>"Añadir a pantalla de inicio"</strong>.
         `;
       }
     }
 
-    // 4. Función del botón "📤 Desinstalar Aplicación"
     async function uninstallPWA() {
       const helperBox = document.getElementById('pwa-helper-box');
       helperBox.style.display = 'block';
 
-      // Limpiar posibles Service Workers o cachés de navegador registrados
       if ('serviceWorker' in navigator) {
         const registrations = await navigator.serviceWorker.getRegistrations();
         for (let registration of registrations) {
@@ -1713,13 +1771,11 @@
 
       helperBox.innerHTML = `
         📤 <strong>Pasos para desinstalar la aplicación del dispositivo:</strong><br>
-        • <strong>En móvil Android:</strong> Ve a la pantalla de inicio de tu teléfono, mantén pulsado el icono de <em>"Plan Limpieza"</em> durante 2 segundos y arrástralo hacia <strong>"Desinstalar"</strong> (o toca el icono de información ⓘ y pulsa Desinstalar).<br>
-        • <strong>En Ordenador (Chrome/Edge):</strong> Abre la aplicación instalada, haz clic en los tres puntos (⋮) de la barra superior derecha y selecciona <strong>"Desinstalar Mi Plan de Limpieza"</strong>.<br>
-        <em>Nota: Si también deseas eliminar tus registros guardados antes de desinstalar, pulsa el botón rojo "🗑️ Borrar todos los datos".</em>
+        • <strong>En móvil Android:</strong> Mantén pulsado el icono de <em>"Plan Limpieza"</em> en tu pantalla de inicio durante 2 segundos y selecciona <strong>"Desinstalar"</strong>.<br>
+        • <strong>En Ordenador (Chrome/Edge):</strong> Abre la aplicación instalada, haz clic en los tres puntos (⋮) arriba a la derecha y selecciona <strong>"Desinstalar Mi Plan de Limpieza"</strong>.
       `;
     }
 
-    // 5. Función del botón "🗑️ Borrar todos los datos"
     function resetAllData() {
       const confirm1 = confirm("⚠️ ¿Estás segura de que quieres BORRAR TODOS LOS DATOS?\n\nSe eliminarán todas las tareas programadas en el calendario y se restaurarán las listas originales.");
       if (!confirm1) return;
@@ -1731,7 +1787,7 @@
         saveData();
         const helperBox = document.getElementById('pwa-helper-box');
         helperBox.style.display = 'block';
-        helperBox.innerHTML = "✅ <strong>Todos los datos han sido borrados correctamente.</strong> La aplicación ha vuelto a su estado original de fábrica.";
+        helperBox.innerHTML = "✅ <strong>Todos los datos han sido borrados correctamente.</strong> La aplicación ha vuelto a su estado original.";
         alert("Todos los datos se han borrado correctamente.");
       }
     }
@@ -1742,16 +1798,15 @@
       renderMasterList('tasks', 'tasks-list');
       renderMasterList('categories', 'categories-list');
       renderMasterList('collaborators', 'collaborators-list');
-      renderAgenda();
-      renderPendingTasks();
       renderCalendar();
+      renderSelectedDayDetails();
+      renderPendingTasks();
       renderCharts();
     }
 
-    // Inicialización al arrancar la página
+    // Inicialización al arrancar la aplicación
     window.onload = function() {
       document.getElementById('sched-date').value = getTodayISO();
-      document.getElementById('agenda-date').value = getTodayISO();
       setupPWA();
       applySettings();
       applyPrintPreset();
