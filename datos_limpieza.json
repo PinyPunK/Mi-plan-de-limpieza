@@ -6472,6 +6472,51 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107194577_8srd9p",
+      "date": "2026-12-16",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107194577_3ml1gc",
+      "date": "2027-02-17",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107194577_57w173",
+      "date": "2027-04-21",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107194577_wtm8wf",
+      "date": "2027-06-16",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107194577_1chuxw",
+      "date": "2027-08-18",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
