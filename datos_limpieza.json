@@ -12241,6 +12241,33 @@
       "category": "Mensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107711271_fm4m19",
+      "date": "2027-01-20",
+      "room": "Baño Principal",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107711271_vhxus0",
+      "date": "2027-04-21",
+      "room": "Baño Principal",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107711271_5ooo2p",
+      "date": "2027-07-21",
+      "room": "Baño Principal",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
