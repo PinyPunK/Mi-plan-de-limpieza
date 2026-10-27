@@ -17704,6 +17704,483 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132182399_7o6wzf",
+      "date": "2026-10-26",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_sec4h1",
+      "date": "2026-11-02",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_mc1cf9",
+      "date": "2026-11-09",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_d84j9e",
+      "date": "2026-11-16",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_29c8jl",
+      "date": "2026-11-23",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_82o6eg",
+      "date": "2026-11-30",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_xgsf2d",
+      "date": "2026-12-07",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_fbcba3",
+      "date": "2026-12-14",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_lfxazk",
+      "date": "2026-12-21",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_9n7qth",
+      "date": "2026-12-28",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_zs6fb3",
+      "date": "2027-01-04",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_axi1gd",
+      "date": "2027-01-11",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_35nmus",
+      "date": "2027-01-18",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_dr2bz0",
+      "date": "2027-01-25",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_w7dn7u",
+      "date": "2027-02-01",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_wgliy6",
+      "date": "2027-02-08",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_cdh4o4",
+      "date": "2027-02-15",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_t2vko2",
+      "date": "2027-02-22",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_yd587t",
+      "date": "2027-03-01",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_6dukcv",
+      "date": "2027-03-08",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_gfl3i3",
+      "date": "2027-03-15",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_6h3uj4",
+      "date": "2027-03-22",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_60jndn",
+      "date": "2027-03-29",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_3taud7",
+      "date": "2027-04-05",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_pm9uac",
+      "date": "2027-04-12",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_0qb6od",
+      "date": "2027-04-19",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_hsguso",
+      "date": "2027-04-26",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_k3035d",
+      "date": "2027-05-03",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_3dg7rk",
+      "date": "2027-05-10",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_w4g50f",
+      "date": "2027-05-17",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_mr7ao2",
+      "date": "2027-05-24",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_qnml7f",
+      "date": "2027-05-31",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_2ewq34",
+      "date": "2027-06-07",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_r69uvl",
+      "date": "2027-06-14",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_xq2vjf",
+      "date": "2027-06-21",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_rnseye",
+      "date": "2027-06-28",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_ev9uup",
+      "date": "2027-07-05",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_jo3zym",
+      "date": "2027-07-12",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_0tstc9",
+      "date": "2027-07-19",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_108p36",
+      "date": "2027-07-26",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_3i35cc",
+      "date": "2027-08-02",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_mve9dt",
+      "date": "2027-08-09",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_q112qv",
+      "date": "2027-08-16",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_307scy",
+      "date": "2027-08-23",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_69wf4r",
+      "date": "2027-08-30",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_zqgirp",
+      "date": "2027-09-06",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_7bvdnj",
+      "date": "2027-09-13",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_sgp2l6",
+      "date": "2027-09-20",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_b9jtjj",
+      "date": "2027-09-27",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_lcp8sj",
+      "date": "2027-10-04",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_l7gmdz",
+      "date": "2027-10-11",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_e9krhp",
+      "date": "2027-10-18",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132182399_v44rub",
+      "date": "2027-10-25",
+      "room": "Salón",
+      "task": "Limpiar comedero",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
