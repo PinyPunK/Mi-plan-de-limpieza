@@ -15625,6 +15625,483 @@
       "category": "Semestral",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132026108_7estyq",
+      "date": "2026-10-26",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_8v3bl7",
+      "date": "2026-11-02",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_5qhnwt",
+      "date": "2026-11-09",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_q2odjo",
+      "date": "2026-11-16",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_7re2tk",
+      "date": "2026-11-23",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_rs4qby",
+      "date": "2026-11-30",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_dbom4x",
+      "date": "2026-12-07",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_jo9fou",
+      "date": "2026-12-14",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_z9b6a1",
+      "date": "2026-12-21",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_eyx4lr",
+      "date": "2026-12-28",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_v33t98",
+      "date": "2027-01-04",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_pgbi5w",
+      "date": "2027-01-11",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_8g21n7",
+      "date": "2027-01-18",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_85x2yg",
+      "date": "2027-01-25",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_zab0ud",
+      "date": "2027-02-01",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_307ush",
+      "date": "2027-02-08",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_3hhb6c",
+      "date": "2027-02-15",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_6bncsj",
+      "date": "2027-02-22",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_dzyqts",
+      "date": "2027-03-01",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_j4y4ho",
+      "date": "2027-03-08",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_8ti3wj",
+      "date": "2027-03-15",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_1blro6",
+      "date": "2027-03-22",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_sklrq3",
+      "date": "2027-03-29",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_5i9h8b",
+      "date": "2027-04-05",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_a5iwjf",
+      "date": "2027-04-12",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_9dciud",
+      "date": "2027-04-19",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_r56jcs",
+      "date": "2027-04-26",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_tkg3ay",
+      "date": "2027-05-03",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_jah0zd",
+      "date": "2027-05-10",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_sjigdh",
+      "date": "2027-05-17",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_is7obn",
+      "date": "2027-05-24",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_mt9j9m",
+      "date": "2027-05-31",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_nr2ock",
+      "date": "2027-06-07",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_0q1c8a",
+      "date": "2027-06-14",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_1pggd5",
+      "date": "2027-06-21",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_w9zb59",
+      "date": "2027-06-28",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_95y3th",
+      "date": "2027-07-05",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_4cvjug",
+      "date": "2027-07-12",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_hj377t",
+      "date": "2027-07-19",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_oox6yb",
+      "date": "2027-07-26",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_dt8ffx",
+      "date": "2027-08-02",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_r1mo41",
+      "date": "2027-08-09",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_revqt0",
+      "date": "2027-08-16",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_woktna",
+      "date": "2027-08-23",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_dq0fmu",
+      "date": "2027-08-30",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_fgttjd",
+      "date": "2027-09-06",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_lq46sm",
+      "date": "2027-09-13",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_77bg7y",
+      "date": "2027-09-20",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_awfxsp",
+      "date": "2027-09-27",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_vtx25v",
+      "date": "2027-10-04",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_cenkua",
+      "date": "2027-10-11",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_8zdo81",
+      "date": "2027-10-18",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132026108_n1jek1",
+      "date": "2027-10-25",
+      "room": "Recibidor",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
