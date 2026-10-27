@@ -11926,6 +11926,24 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107609221_nt1ycl",
+      "date": "2027-03-31",
+      "room": "Dormitorio Lucas",
+      "task": "Organizar armario",
+      "category": "Semestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107609221_ezafh5",
+      "date": "2027-09-29",
+      "room": "Dormitorio Lucas",
+      "task": "Organizar armario",
+      "category": "Semestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
