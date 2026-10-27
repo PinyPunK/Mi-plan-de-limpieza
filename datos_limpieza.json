@@ -19234,6 +19234,105 @@
       "category": "Mensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132267989_j1823b",
+      "date": "2026-11-02",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_nbfxmu",
+      "date": "2026-12-07",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_h40xu7",
+      "date": "2027-01-04",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_uhe4ed",
+      "date": "2027-02-01",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_qnftla",
+      "date": "2027-03-01",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_cw3p7o",
+      "date": "2027-04-05",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_cwg8dl",
+      "date": "2027-05-03",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_3zclft",
+      "date": "2027-06-07",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_l6tt5g",
+      "date": "2027-07-05",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_z8ykso",
+      "date": "2027-08-02",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132267989_vk8g2p",
+      "date": "2027-09-06",
+      "room": "Salón",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
