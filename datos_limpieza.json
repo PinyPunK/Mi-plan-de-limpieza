@@ -9424,6 +9424,51 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107448301_9vt5fj",
+      "date": "2026-12-09",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107448301_ypw6qk",
+      "date": "2027-02-10",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107448301_y61nre",
+      "date": "2027-04-14",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107448301_9ns76v",
+      "date": "2027-06-09",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107448301_w5o8wv",
+      "date": "2027-08-11",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
