@@ -6517,6 +6517,33 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107217878_qjqmkc",
+      "date": "2027-01-20",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107217878_gmoluz",
+      "date": "2027-04-21",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107217878_gcqsam",
+      "date": "2027-07-21",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
