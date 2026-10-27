@@ -17155,6 +17155,51 @@
       "category": "Mensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132118920_giupsk",
+      "date": "2026-12-21",
+      "room": "Recibidor",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132118920_idyadw",
+      "date": "2027-02-15",
+      "room": "Recibidor",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132118920_p5qhw2",
+      "date": "2027-04-19",
+      "room": "Recibidor",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132118920_58wgjy",
+      "date": "2027-06-21",
+      "room": "Recibidor",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132118920_odhfmr",
+      "date": "2027-08-16",
+      "room": "Recibidor",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
