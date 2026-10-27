@@ -11944,6 +11944,105 @@
       "category": "Semestral",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107654920_nv3emf",
+      "date": "2026-11-04",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_pqd8t3",
+      "date": "2026-12-02",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_tc9a6y",
+      "date": "2027-01-06",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_ofh8e4",
+      "date": "2027-02-03",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_30y1ys",
+      "date": "2027-03-03",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_by8flt",
+      "date": "2027-04-07",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_ul8owg",
+      "date": "2027-05-05",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_3ny2yl",
+      "date": "2027-06-02",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_fsp4ea",
+      "date": "2027-07-07",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_vvo4x8",
+      "date": "2027-08-04",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107654920_l2rzm7",
+      "date": "2027-09-01",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
