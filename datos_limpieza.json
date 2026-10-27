@@ -15607,6 +15607,24 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107821256_gm96dm",
+      "date": "2026-10-28",
+      "room": "Baño Principal",
+      "task": "Limpiar azulejos",
+      "category": "Semestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107821256_rltrle",
+      "date": "2027-04-28",
+      "room": "Baño Principal",
+      "task": "Limpiar azulejos",
+      "category": "Semestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
