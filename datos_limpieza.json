@@ -6382,6 +6382,51 @@
       "category": "Diario",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107156421_k1jy32",
+      "date": "2026-12-09",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107156422_6kct2e",
+      "date": "2027-02-10",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107156422_5se8lb",
+      "date": "2027-04-14",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107156422_l3dz8f",
+      "date": "2027-06-09",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107156422_aw8c6p",
+      "date": "2027-08-11",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
