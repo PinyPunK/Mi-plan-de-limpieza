@@ -19513,6 +19513,33 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132343010_uqiyu0",
+      "date": "2027-01-18",
+      "room": "Salón",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132343010_l81mnm",
+      "date": "2027-04-19",
+      "room": "Salón",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132343010_52v2dd",
+      "date": "2027-07-19",
+      "room": "Salón",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
