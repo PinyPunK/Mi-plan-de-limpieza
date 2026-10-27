@@ -12142,6 +12142,105 @@
       "category": "Mensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107689307_736imt",
+      "date": "2026-11-04",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_dy2285",
+      "date": "2026-12-02",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_ay6k8q",
+      "date": "2027-01-06",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_pb96i6",
+      "date": "2027-02-03",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_mcqs4v",
+      "date": "2027-03-03",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_fid5p0",
+      "date": "2027-04-07",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_gr1qxz",
+      "date": "2027-05-05",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_kvc3z7",
+      "date": "2027-06-02",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_uvmpsj",
+      "date": "2027-07-07",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_3wjsz4",
+      "date": "2027-08-04",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107689307_rrokg2",
+      "date": "2027-09-01",
+      "room": "Baño Principal",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
