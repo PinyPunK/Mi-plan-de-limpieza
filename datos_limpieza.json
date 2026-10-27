@@ -73,7 +73,35 @@
     "Lucas",
     "Óscar"
   ],
-  "scheduledOccurrences": [],
+  "scheduledOccurrences": [
+    {
+      "id": "occ_1793106671850_xsulf0",
+      "date": "2027-01-19",
+      "room": "Aseo",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106671850_iqjyb8",
+      "date": "2027-04-20",
+      "room": "Aseo",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106671850_0prchs",
+      "date": "2027-07-20",
+      "room": "Aseo",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    }
+  ],
   "settings": {
     "darkMode": true,
     "lang": "es"
