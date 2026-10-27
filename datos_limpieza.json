@@ -19540,6 +19540,33 @@
       "category": "Trimestral",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132365098_ngv94v",
+      "date": "2027-01-18",
+      "room": "Salón",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132365098_e1bit4",
+      "date": "2027-04-19",
+      "room": "Salón",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132365098_k0uz3a",
+      "date": "2027-07-19",
+      "room": "Salón",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
