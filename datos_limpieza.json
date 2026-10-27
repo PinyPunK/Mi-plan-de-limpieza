@@ -17200,6 +17200,33 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132144101_zz3ixp",
+      "date": "2027-01-18",
+      "room": "Recibidor",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132144101_dpmm7f",
+      "date": "2027-04-19",
+      "room": "Recibidor",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132144101_l9t0ei",
+      "date": "2027-07-19",
+      "room": "Recibidor",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
