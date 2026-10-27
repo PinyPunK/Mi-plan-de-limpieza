@@ -12745,6 +12745,483 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107743375_hdtxpu",
+      "date": "2026-10-28",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_vaub52",
+      "date": "2026-11-04",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_zyjisq",
+      "date": "2026-11-11",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_5cvy5t",
+      "date": "2026-11-18",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_t01zsk",
+      "date": "2026-11-25",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_py16k0",
+      "date": "2026-12-02",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_ih50q0",
+      "date": "2026-12-09",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_k8oipm",
+      "date": "2026-12-16",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_trln09",
+      "date": "2026-12-23",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_cg64yk",
+      "date": "2026-12-30",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_qtxau2",
+      "date": "2027-01-06",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_m30wxu",
+      "date": "2027-01-13",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_ahfk20",
+      "date": "2027-01-20",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_bjeype",
+      "date": "2027-01-27",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_8z1d4q",
+      "date": "2027-02-03",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_0vhfp7",
+      "date": "2027-02-10",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_37bnzc",
+      "date": "2027-02-17",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_etl00p",
+      "date": "2027-02-24",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_6n0nau",
+      "date": "2027-03-03",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_tilpil",
+      "date": "2027-03-10",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_5iky4g",
+      "date": "2027-03-17",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_hecg8z",
+      "date": "2027-03-24",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_31efmy",
+      "date": "2027-03-31",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_2cz9zr",
+      "date": "2027-04-07",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_d5cgj5",
+      "date": "2027-04-14",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_opz3sk",
+      "date": "2027-04-21",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_6b6g6t",
+      "date": "2027-04-28",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_ykqjgm",
+      "date": "2027-05-05",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_415x87",
+      "date": "2027-05-12",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_4djh66",
+      "date": "2027-05-19",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_2edvg5",
+      "date": "2027-05-26",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_rh8ftl",
+      "date": "2027-06-02",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_kdedgr",
+      "date": "2027-06-09",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_wge41x",
+      "date": "2027-06-16",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_crae3n",
+      "date": "2027-06-23",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_asgtpn",
+      "date": "2027-06-30",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_py3n3u",
+      "date": "2027-07-07",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_166nn5",
+      "date": "2027-07-14",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_umvgfv",
+      "date": "2027-07-21",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_gvyr2m",
+      "date": "2027-07-28",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_aozpna",
+      "date": "2027-08-04",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_v3238m",
+      "date": "2027-08-11",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_3bdz6o",
+      "date": "2027-08-18",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_52qrkz",
+      "date": "2027-08-25",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_wkcs0g",
+      "date": "2027-09-01",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_337iow",
+      "date": "2027-09-08",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_gdalqe",
+      "date": "2027-09-15",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_sko6dl",
+      "date": "2027-09-22",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_23vp1t",
+      "date": "2027-09-29",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_ghphoj",
+      "date": "2027-10-06",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_pbg1gt",
+      "date": "2027-10-13",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743375_h3rhep",
+      "date": "2027-10-20",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107743376_suo2et",
+      "date": "2027-10-27",
+      "room": "Baño Principal",
+      "task": "Aspirar",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
