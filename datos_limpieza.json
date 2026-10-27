@@ -5851,6 +5851,51 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793106949621_jp7x30",
+      "date": "2026-12-08",
+      "room": "Estudio",
+      "task": "Limpiar cristales",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106949621_65zcri",
+      "date": "2027-02-09",
+      "room": "Estudio",
+      "task": "Limpiar cristales",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106949621_lxtidb",
+      "date": "2027-04-13",
+      "room": "Estudio",
+      "task": "Limpiar cristales",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106949621_r3xh9a",
+      "date": "2027-06-08",
+      "room": "Estudio",
+      "task": "Limpiar cristales",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106949621_axwucs",
+      "date": "2027-08-10",
+      "room": "Estudio",
+      "task": "Limpiar cristales",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
