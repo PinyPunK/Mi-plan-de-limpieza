@@ -5896,6 +5896,15 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107068032_48p4v7",
+      "date": "2027-09-14",
+      "room": "Aseo",
+      "task": "Limpiar azulejos",
+      "category": "Semestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
