@@ -19423,6 +19423,51 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132315143_0mlq96",
+      "date": "2026-12-14",
+      "room": "Salón",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132315143_qbhnlk",
+      "date": "2027-02-08",
+      "room": "Salón",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132315143_mkvnuy",
+      "date": "2027-04-12",
+      "room": "Salón",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132315143_ixshju",
+      "date": "2027-06-14",
+      "room": "Salón",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132315143_ni1i3p",
+      "date": "2027-08-09",
+      "room": "Salón",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
