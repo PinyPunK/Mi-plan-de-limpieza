@@ -19468,6 +19468,51 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132323896_wrb6gx",
+      "date": "2026-12-14",
+      "room": "Salón",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132323896_zayjpz",
+      "date": "2027-02-08",
+      "room": "Salón",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132323896_rfjssh",
+      "date": "2027-04-12",
+      "room": "Salón",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132323896_6dgg18",
+      "date": "2027-06-14",
+      "room": "Salón",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132323896_q18932",
+      "date": "2027-08-09",
+      "room": "Salón",
+      "task": "Limpiar lámparas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
