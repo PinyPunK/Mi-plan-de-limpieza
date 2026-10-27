@@ -3916,6 +3916,33 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793106848609_iele3p",
+      "date": "2027-01-19",
+      "room": "Estudio",
+      "task": "Limpiar Puerta",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106848609_12pkji",
+      "date": "2027-04-20",
+      "room": "Estudio",
+      "task": "Limpiar Puerta",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106848609_crloun",
+      "date": "2027-07-20",
+      "room": "Estudio",
+      "task": "Limpiar Puerta",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
