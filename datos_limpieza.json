@@ -12043,6 +12043,105 @@
       "category": "Mensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107674975_f1n8t7",
+      "date": "2026-11-04",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_aeen0n",
+      "date": "2026-12-02",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_783ere",
+      "date": "2027-01-06",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_lkvb7b",
+      "date": "2027-02-03",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_arhrgf",
+      "date": "2027-03-03",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_lqu689",
+      "date": "2027-04-07",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_161ncc",
+      "date": "2027-05-05",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_ubw6m4",
+      "date": "2027-06-02",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_792emr",
+      "date": "2027-07-07",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_f4wfen",
+      "date": "2027-08-04",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107674975_3q2icd",
+      "date": "2027-09-01",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar interruptores",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
