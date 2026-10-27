@@ -9469,6 +9469,51 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107470826_r5aolc",
+      "date": "2026-12-16",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107470826_bdaq4n",
+      "date": "2027-02-17",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107470826_szfvoe",
+      "date": "2027-04-21",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107470826_rpvx6q",
+      "date": "2027-06-16",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107470826_7fsgmw",
+      "date": "2027-08-18",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar ventilador",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
