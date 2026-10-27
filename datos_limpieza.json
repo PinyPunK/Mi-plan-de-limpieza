@@ -3447,7 +3447,7 @@
       "task": "Limpiar el polvo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": true
+      "completed": false
     },
     {
       "id": "occ_1793106817520_rk3g5j",
@@ -15610,7 +15610,7 @@
     },
     {
       "id": "occ_1793107821256_gm96dm",
-      "date": "2026-10-28",
+      "date": "2026-09-30",
       "room": "Baño Principal",
       "task": "Limpiar azulejos",
       "category": "Semestral",
