@@ -12268,6 +12268,483 @@
       "category": "Trimestral",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107731906_50tdhe",
+      "date": "2026-10-28",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_kro7c7",
+      "date": "2026-11-04",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_kiyytf",
+      "date": "2026-11-11",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_wm8hms",
+      "date": "2026-11-18",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_k6315l",
+      "date": "2026-11-25",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_ot4b4y",
+      "date": "2026-12-02",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_602zh6",
+      "date": "2026-12-09",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_pe1n83",
+      "date": "2026-12-16",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_ndez5s",
+      "date": "2026-12-23",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_rncfvs",
+      "date": "2026-12-30",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_fb0jgp",
+      "date": "2027-01-06",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_hui8ov",
+      "date": "2027-01-13",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_xrfxgz",
+      "date": "2027-01-20",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_ypct5f",
+      "date": "2027-01-27",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_wfu62m",
+      "date": "2027-02-03",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_3arnn6",
+      "date": "2027-02-10",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_duugvw",
+      "date": "2027-02-17",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_3m8ddp",
+      "date": "2027-02-24",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_04w9o2",
+      "date": "2027-03-03",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_uqekaa",
+      "date": "2027-03-10",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_e2msfl",
+      "date": "2027-03-17",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_gea3jx",
+      "date": "2027-03-24",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_p06sr0",
+      "date": "2027-03-31",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_mc541a",
+      "date": "2027-04-07",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_bxraaj",
+      "date": "2027-04-14",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_ps05qm",
+      "date": "2027-04-21",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_vb2fhu",
+      "date": "2027-04-28",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731906_5yybge",
+      "date": "2027-05-05",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_ox6zme",
+      "date": "2027-05-12",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_r7jaxn",
+      "date": "2027-05-19",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_q5rdeu",
+      "date": "2027-05-26",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_frf0d6",
+      "date": "2027-06-02",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_regezp",
+      "date": "2027-06-09",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_zfn021",
+      "date": "2027-06-16",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_vvuss0",
+      "date": "2027-06-23",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_zxuyvb",
+      "date": "2027-06-30",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_hdoc5t",
+      "date": "2027-07-07",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_gq8d28",
+      "date": "2027-07-14",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_y0wqcl",
+      "date": "2027-07-21",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_skawnj",
+      "date": "2027-07-28",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_zkjphh",
+      "date": "2027-08-04",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_edepj0",
+      "date": "2027-08-11",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_ahv169",
+      "date": "2027-08-18",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_v6am1p",
+      "date": "2027-08-25",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_s55ety",
+      "date": "2027-09-01",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_mixyvf",
+      "date": "2027-09-08",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_6sffzi",
+      "date": "2027-09-15",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_3gcdha",
+      "date": "2027-09-22",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_f8yn7o",
+      "date": "2027-09-29",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_xfumhw",
+      "date": "2027-10-06",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_hy30v1",
+      "date": "2027-10-13",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_l98ilh",
+      "date": "2027-10-20",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107731907_e8kjam",
+      "date": "2027-10-27",
+      "room": "Baño Principal",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
