@@ -9514,6 +9514,33 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107499862_82jtyy",
+      "date": "2027-01-20",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107499863_0dm2lp",
+      "date": "2027-04-21",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107499863_gtlczu",
+      "date": "2027-07-21",
+      "room": "Dormitorio Lucas",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
