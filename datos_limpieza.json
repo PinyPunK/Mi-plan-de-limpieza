@@ -8929,6 +8929,24 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793107369618_49rhzq",
+      "date": "2027-03-31",
+      "room": "Dormitorio Óscar",
+      "task": "Organizar armario",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793107369618_rtvz3e",
+      "date": "2027-09-29",
+      "room": "Dormitorio Óscar",
+      "task": "Organizar armario",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
