@@ -19135,6 +19135,105 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793132243026_qdj0pg",
+      "date": "2026-11-09",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_biawqi",
+      "date": "2026-12-14",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_anspq2",
+      "date": "2027-01-11",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_nz6546",
+      "date": "2027-02-08",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_9c6ath",
+      "date": "2027-03-08",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_klxdo0",
+      "date": "2027-04-12",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_6lugd5",
+      "date": "2027-05-10",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_hwtsal",
+      "date": "2027-06-14",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_tnad8u",
+      "date": "2027-07-12",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_zigs78",
+      "date": "2027-08-09",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793132243026_cud9ri",
+      "date": "2027-09-13",
+      "room": "Salón",
+      "task": "Cambiar filtro Fuente",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
