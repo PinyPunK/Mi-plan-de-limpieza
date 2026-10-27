@@ -3943,6 +3943,483 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793106873665_hlo1gy",
+      "date": "2026-10-27",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_xa2tx8",
+      "date": "2026-11-03",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_9x907z",
+      "date": "2026-11-10",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_52802c",
+      "date": "2026-11-17",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_pi7bw6",
+      "date": "2026-11-24",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_yy0lr2",
+      "date": "2026-12-01",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_jv7ilc",
+      "date": "2026-12-08",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_yppcmb",
+      "date": "2026-12-15",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_o5w99d",
+      "date": "2026-12-22",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_6lt6al",
+      "date": "2026-12-29",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_3p2yv3",
+      "date": "2027-01-05",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_bg80h7",
+      "date": "2027-01-12",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_av18f9",
+      "date": "2027-01-19",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_1d282l",
+      "date": "2027-01-26",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_wjb64b",
+      "date": "2027-02-02",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_w6ryf3",
+      "date": "2027-02-09",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_x4jd1c",
+      "date": "2027-02-16",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_0b5fjm",
+      "date": "2027-02-23",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_qenbm1",
+      "date": "2027-03-02",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_0yhaht",
+      "date": "2027-03-09",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_dn3zy6",
+      "date": "2027-03-16",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_n0hbtl",
+      "date": "2027-03-23",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_4hl26p",
+      "date": "2027-03-30",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_iu9bqz",
+      "date": "2027-04-06",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_fv39uw",
+      "date": "2027-04-13",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_g5bdrn",
+      "date": "2027-04-20",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_njemor",
+      "date": "2027-04-27",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_di0izk",
+      "date": "2027-05-04",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_o8wy18",
+      "date": "2027-05-11",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_34jk2v",
+      "date": "2027-05-18",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_4ossrl",
+      "date": "2027-05-25",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_6nxsp0",
+      "date": "2027-06-01",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_f8mv0o",
+      "date": "2027-06-08",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_e448n8",
+      "date": "2027-06-15",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_5f1lc7",
+      "date": "2027-06-22",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_71btne",
+      "date": "2027-06-29",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_hc6pb3",
+      "date": "2027-07-06",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_kyd5h1",
+      "date": "2027-07-13",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_eaj6wp",
+      "date": "2027-07-20",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_vfd76m",
+      "date": "2027-07-27",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_hcca5o",
+      "date": "2027-08-03",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_egmz2c",
+      "date": "2027-08-10",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_dfwmnp",
+      "date": "2027-08-17",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_216jnm",
+      "date": "2027-08-24",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_ypxam7",
+      "date": "2027-08-31",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_hh3auw",
+      "date": "2027-09-07",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_ljmo1x",
+      "date": "2027-09-14",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_mb4t9g",
+      "date": "2027-09-21",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_jxf3s2",
+      "date": "2027-09-28",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_fhx0w1",
+      "date": "2027-10-05",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_g6k4cw",
+      "date": "2027-10-12",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_afre8j",
+      "date": "2027-10-19",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793106873665_x2fyo0",
+      "date": "2027-10-26",
+      "room": "Estudio",
+      "task": "Desinfectar con Ozono",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
