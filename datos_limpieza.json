@@ -10981,7 +10981,7 @@
       "task": "Cambiar bolsa de basura",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107556929_z6d0xj",
@@ -11458,7 +11458,7 @@
       "task": "Cambiar sábanas",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107568274_n0th1z",
