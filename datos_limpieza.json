@@ -8461,7 +8461,7 @@
       "task": "Cambiar sábanas",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107317127_urbns8",
@@ -8956,7 +8956,7 @@
       "task": "Limpiar el polvo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107419525_9ekjhr",
