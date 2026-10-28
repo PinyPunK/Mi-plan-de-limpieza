@@ -27686,6 +27686,483 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793226848001_nf8c18",
+      "date": "2026-10-29",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848001_p7jrs9",
+      "date": "2026-11-05",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848001_8znvvo",
+      "date": "2026-11-12",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848001_2sec3t",
+      "date": "2026-11-19",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_kfe2ty",
+      "date": "2026-11-26",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_89gr1h",
+      "date": "2026-12-03",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_46jwiq",
+      "date": "2026-12-10",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_hv5ksj",
+      "date": "2026-12-17",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_3tkrc3",
+      "date": "2026-12-24",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_zfro2i",
+      "date": "2026-12-31",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_klbbth",
+      "date": "2027-01-07",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_d5j1f0",
+      "date": "2027-01-14",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_ybcbng",
+      "date": "2027-01-21",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_tm7ipd",
+      "date": "2027-01-28",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_fzibd8",
+      "date": "2027-02-04",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_lu8eo8",
+      "date": "2027-02-11",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_05hzh3",
+      "date": "2027-02-18",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_bblypf",
+      "date": "2027-02-25",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_i19076",
+      "date": "2027-03-04",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_q874t5",
+      "date": "2027-03-11",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_u7mteq",
+      "date": "2027-03-18",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_v9dl4o",
+      "date": "2027-03-25",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_vyq4h3",
+      "date": "2027-04-01",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_3i0hlc",
+      "date": "2027-04-08",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_brj6y2",
+      "date": "2027-04-15",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_86b1de",
+      "date": "2027-04-22",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_6n4o32",
+      "date": "2027-04-29",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_u84yo4",
+      "date": "2027-05-06",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_dem5ua",
+      "date": "2027-05-13",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_2r89ok",
+      "date": "2027-05-20",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_n9lbnw",
+      "date": "2027-05-27",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_merfso",
+      "date": "2027-06-03",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_kkfqzz",
+      "date": "2027-06-10",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_nqvwfz",
+      "date": "2027-06-17",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_dcirr4",
+      "date": "2027-06-24",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_as9vhl",
+      "date": "2027-07-01",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_9vklp9",
+      "date": "2027-07-08",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_8sxkqe",
+      "date": "2027-07-15",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_q6x9us",
+      "date": "2027-07-22",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_5xydkk",
+      "date": "2027-07-29",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_7wm3wj",
+      "date": "2027-08-05",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_ct4zef",
+      "date": "2027-08-12",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_0jb52o",
+      "date": "2027-08-19",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_zbmjth",
+      "date": "2027-08-26",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_prjk9g",
+      "date": "2027-09-02",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_zxtdh6",
+      "date": "2027-09-09",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_1n0uie",
+      "date": "2027-09-16",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_nur3mz",
+      "date": "2027-09-23",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_bjpttz",
+      "date": "2027-09-30",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_s71chk",
+      "date": "2027-10-07",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_kc8gy4",
+      "date": "2027-10-14",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_r7qbde",
+      "date": "2027-10-21",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226848002_lita57",
+      "date": "2027-10-28",
+      "room": "Baño Suite",
+      "task": "Cambiar bolsa de basura",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
