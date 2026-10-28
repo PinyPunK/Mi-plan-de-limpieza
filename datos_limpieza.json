@@ -13708,7 +13708,7 @@
       "task": "Limpiar sanitarios",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107764635_o36pcv",
@@ -14185,7 +14185,7 @@
       "task": "Limpiar espejo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107775630_zja45j",
