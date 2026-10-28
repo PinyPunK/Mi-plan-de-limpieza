@@ -20999,6 +20999,15 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793200793346_l9dm60",
+      "date": "2026-10-28",
+      "room": "Patio",
+      "task": "Limpiar zona gatos",
+      "category": "Diario",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
