@@ -7507,7 +7507,7 @@
       "task": "Fregar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107289534_iilcxo",
@@ -7984,7 +7984,7 @@
       "task": "Cambiar bolsa de basura",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107305279_jyqn3u",
