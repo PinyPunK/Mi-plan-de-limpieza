@@ -21008,6 +21008,483 @@
       "category": "Diario",
       "collaborator": "Lorena",
       "completed": true
+    },
+    {
+      "id": "occ_1793226625420_elv8n3",
+      "date": "2026-10-29",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_rqp6jg",
+      "date": "2026-11-05",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_kg2xw5",
+      "date": "2026-11-12",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_43rkqv",
+      "date": "2026-11-19",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_vj7bu1",
+      "date": "2026-11-26",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_ie98lu",
+      "date": "2026-12-03",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_9b12q5",
+      "date": "2026-12-10",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_yh29ql",
+      "date": "2026-12-17",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_opydoo",
+      "date": "2026-12-24",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_w9x76q",
+      "date": "2026-12-31",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_9p1o99",
+      "date": "2027-01-07",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_hekqgl",
+      "date": "2027-01-14",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_yaeco5",
+      "date": "2027-01-21",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_m5o0jp",
+      "date": "2027-01-28",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_ayaonx",
+      "date": "2027-02-04",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_bcpefe",
+      "date": "2027-02-11",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_l0nqpp",
+      "date": "2027-02-18",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_cb2v1l",
+      "date": "2027-02-25",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_v5p0w0",
+      "date": "2027-03-04",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_xn7f3v",
+      "date": "2027-03-11",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_p4qa5o",
+      "date": "2027-03-18",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_11td2x",
+      "date": "2027-03-25",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_w7f81q",
+      "date": "2027-04-01",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_tviq7w",
+      "date": "2027-04-08",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_dkjcz5",
+      "date": "2027-04-15",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_1l8h2s",
+      "date": "2027-04-22",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_92cvpf",
+      "date": "2027-04-29",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_mt6ls8",
+      "date": "2027-05-06",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_tw9l6z",
+      "date": "2027-05-13",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_duu1nm",
+      "date": "2027-05-20",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_mbfhce",
+      "date": "2027-05-27",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_qv84nj",
+      "date": "2027-06-03",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_vu6zum",
+      "date": "2027-06-10",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_ffhi5r",
+      "date": "2027-06-17",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_nqcnt1",
+      "date": "2027-06-24",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_nout2x",
+      "date": "2027-07-01",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_d6t1w8",
+      "date": "2027-07-08",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_0ogg6d",
+      "date": "2027-07-15",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_bc0v02",
+      "date": "2027-07-22",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_nin5so",
+      "date": "2027-07-29",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_8x2pbg",
+      "date": "2027-08-05",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_x7ayg8",
+      "date": "2027-08-12",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_n8rqla",
+      "date": "2027-08-19",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_smnksh",
+      "date": "2027-08-26",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_xwazk6",
+      "date": "2027-09-02",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_wt184c",
+      "date": "2027-09-09",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_vhxf5o",
+      "date": "2027-09-16",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_v4snm1",
+      "date": "2027-09-23",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_f1dk32",
+      "date": "2027-09-30",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_4ivj1p",
+      "date": "2027-10-07",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_0csluw",
+      "date": "2027-10-14",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_16z4fu",
+      "date": "2027-10-21",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793226625421_aw4nc4",
+      "date": "2027-10-28",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar el polvo",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
