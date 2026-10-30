@@ -31133,6 +31133,114 @@
       "category": "Mensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793319223528_k2pd0y",
+      "date": "2026-10-30",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_z2gwt5",
+      "date": "2026-11-27",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_7qw2s9",
+      "date": "2026-12-25",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_4rref3",
+      "date": "2027-01-29",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_iywtej",
+      "date": "2027-02-26",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_n9htbj",
+      "date": "2027-03-26",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_ct71lj",
+      "date": "2027-04-30",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_cxxydc",
+      "date": "2027-05-28",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_ae5rpm",
+      "date": "2027-06-25",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_i4dvhg",
+      "date": "2027-07-30",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_8zif8n",
+      "date": "2027-08-27",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319223528_vgv9q9",
+      "date": "2027-09-24",
+      "room": "Cocina",
+      "task": "Limpiar Microondas",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
