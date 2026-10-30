@@ -31025,6 +31025,114 @@
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793319209408_gy76t9",
+      "date": "2026-10-30",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_zfwzub",
+      "date": "2026-11-27",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_48o9lt",
+      "date": "2026-12-25",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_4g92y7",
+      "date": "2027-01-29",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_tkkcne",
+      "date": "2027-02-26",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_7y8yka",
+      "date": "2027-03-26",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_3wsa4s",
+      "date": "2027-04-30",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_cjw9py",
+      "date": "2027-05-28",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_p1uo21",
+      "date": "2027-06-25",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_9n2crt",
+      "date": "2027-07-30",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_lqbtjw",
+      "date": "2027-08-27",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319209408_4z9avy",
+      "date": "2027-09-24",
+      "room": "Cocina",
+      "task": "Limpiar Air Frier",
+      "category": "Mensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
