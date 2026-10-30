@@ -27217,7 +27217,7 @@
       "task": "Cambiar toallas",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226838113_sovwhx",
@@ -27694,7 +27694,7 @@
       "task": "Cambiar bolsa de basura",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226848001_p7jrs9",
