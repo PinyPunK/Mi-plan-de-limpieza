@@ -31241,6 +31241,483 @@
       "category": "Mensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1793319239389_uqv55t",
+      "date": "2026-10-30",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_1y2613",
+      "date": "2026-11-06",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_2ol6nl",
+      "date": "2026-11-13",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_2th57h",
+      "date": "2026-11-20",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_s2lw72",
+      "date": "2026-11-27",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_tklszt",
+      "date": "2026-12-04",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_hdhi24",
+      "date": "2026-12-11",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_i501ji",
+      "date": "2026-12-18",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_6hf670",
+      "date": "2026-12-25",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_3gxvpo",
+      "date": "2027-01-01",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_xm9sa6",
+      "date": "2027-01-08",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_ae3ckb",
+      "date": "2027-01-15",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_c6wl9w",
+      "date": "2027-01-22",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_r9zvu0",
+      "date": "2027-01-29",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_uyxvqv",
+      "date": "2027-02-05",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_8lupgi",
+      "date": "2027-02-12",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_u1rswu",
+      "date": "2027-02-19",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_a3jzx5",
+      "date": "2027-02-26",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_o343pf",
+      "date": "2027-03-05",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_vqiu7q",
+      "date": "2027-03-12",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_2qcms6",
+      "date": "2027-03-19",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_ui68iw",
+      "date": "2027-03-26",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_cwijkz",
+      "date": "2027-04-02",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_zb9d9r",
+      "date": "2027-04-09",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_ot1xdp",
+      "date": "2027-04-16",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_nuxick",
+      "date": "2027-04-23",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_rdmobw",
+      "date": "2027-04-30",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_z6l3e1",
+      "date": "2027-05-07",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_96v6ug",
+      "date": "2027-05-14",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_d8mp5w",
+      "date": "2027-05-21",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_3jsvx3",
+      "date": "2027-05-28",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_hrrobd",
+      "date": "2027-06-04",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_v92749",
+      "date": "2027-06-11",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_n6qeu8",
+      "date": "2027-06-18",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_tloobm",
+      "date": "2027-06-25",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_m8k9u4",
+      "date": "2027-07-02",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_w80ws9",
+      "date": "2027-07-09",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_k5syyx",
+      "date": "2027-07-16",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_y1m733",
+      "date": "2027-07-23",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_5xuttp",
+      "date": "2027-07-30",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_1ziuv1",
+      "date": "2027-08-06",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_0iv9aw",
+      "date": "2027-08-13",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_iqgoti",
+      "date": "2027-08-20",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_42r13w",
+      "date": "2027-08-27",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_5znt25",
+      "date": "2027-09-03",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_1mm4t2",
+      "date": "2027-09-10",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_qq5sef",
+      "date": "2027-09-17",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_2iijp3",
+      "date": "2027-09-24",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_9uzhar",
+      "date": "2027-10-01",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_poxpp6",
+      "date": "2027-10-08",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_h651du",
+      "date": "2027-10-15",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_alnep1",
+      "date": "2027-10-22",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1793319239389_z4xb73",
+      "date": "2027-10-29",
+      "room": "Cocina",
+      "task": "Limpiar mesa",
+      "category": "Semanal",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
