@@ -2971,7 +2971,7 @@
       "task": "Cambiar bolsa de basura",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106790815_h282zm",
@@ -6553,7 +6553,7 @@
       "task": "Desinfectar con Ozono",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107265084_9kk8j4",
@@ -21016,7 +21016,7 @@
       "task": "Limpiar el polvo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226625421_rqp6jg",
@@ -21493,7 +21493,7 @@
       "task": "Limpiar comedero",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226638856_qelyk4",
@@ -21970,7 +21970,7 @@
       "task": "Limpiar Fuente",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226689780_eus6yz",
@@ -22447,7 +22447,7 @@
       "task": "Rellenar comedero",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226698229_2fmtgh",
@@ -22924,7 +22924,7 @@
       "task": "Desinfectar con Ozono",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226714182_zbf1jj",
@@ -23401,7 +23401,7 @@
       "task": "Aspirar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226731307_k6f3vv",
@@ -23878,7 +23878,7 @@
       "task": "Fregar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226741284_2mlac0",
