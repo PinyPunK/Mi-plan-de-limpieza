@@ -24355,7 +24355,7 @@
       "task": "Cambiar sábanas",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226759577_o5v4hw",
@@ -24832,7 +24832,7 @@
       "task": "Desinfectar con Ozono",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226793394_oo555l",
