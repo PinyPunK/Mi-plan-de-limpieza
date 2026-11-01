@@ -29602,7 +29602,7 @@
       "task": "Fregadero",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793319142829_kx5xvh",
@@ -30079,7 +30079,7 @@
       "task": "Limpiar encimera",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793319153258_4wxemy",
@@ -31033,7 +31033,7 @@
       "task": "Limpiar Air Frier",
       "category": "Mensual",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793319209408_zfwzub",
