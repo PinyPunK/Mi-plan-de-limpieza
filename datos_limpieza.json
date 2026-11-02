@@ -1072,7 +1072,7 @@
       "task": "Fregar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106743124_z7xoel",
@@ -1549,7 +1549,7 @@
       "task": "Limpiar sanitarios",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106757638_lfx8l9",
@@ -2026,7 +2026,7 @@
       "task": "Limpiar espejo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106767885_prixtd",
@@ -2503,7 +2503,7 @@
       "task": "Cambiar toallas",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106779279_5598cn",
@@ -2980,7 +2980,7 @@
       "task": "Cambiar bolsa de basura",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106790815_10rlej",
