@@ -118,7 +118,7 @@
       "task": "Desinfectar con Ozono",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106702043_5ktq7k",
@@ -595,7 +595,7 @@
       "task": "Aspirar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106731697_3v7n10",
