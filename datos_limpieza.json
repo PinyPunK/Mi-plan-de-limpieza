@@ -18199,7 +18199,7 @@
       "task": "Limpiar Fuente",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793132191103_ljgt1y",
@@ -18676,7 +18676,7 @@
       "task": "Rellenar comedero",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793132201639_o804z0",
