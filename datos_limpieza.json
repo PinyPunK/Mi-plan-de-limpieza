@@ -31249,7 +31249,7 @@
       "task": "Limpiar mesa",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793319239389_1y2613",
@@ -31713,15 +31713,6 @@
     {
       "id": "occ_1793319239389_z4xb73",
       "date": "2027-10-29",
-      "room": "Cocina",
-      "task": "Limpiar mesa",
-      "category": "Semanal",
-      "collaborator": "Lorena",
-      "completed": false
-    },
-    {
-      "id": "occ_1793319330696_i0qxbn",
-      "date": "2026-10-30",
       "room": "Cocina",
       "task": "Limpiar mesa",
       "category": "Semanal",
