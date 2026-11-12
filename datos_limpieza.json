@@ -12763,7 +12763,7 @@
       "task": "Aspirar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107743375_zyjisq",
@@ -13240,7 +13240,7 @@
       "task": "Fregar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107753672_q40rpg",
@@ -13717,7 +13717,7 @@
       "task": "Limpiar sanitarios",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107764635_bmoahs",
