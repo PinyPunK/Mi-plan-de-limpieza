@@ -8965,7 +8965,7 @@
       "task": "Limpiar el polvo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107419525_xeqeep",
@@ -9559,7 +9559,7 @@
       "task": "Desinfectar con Ozono",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107516587_ihrii3",
