@@ -6562,7 +6562,7 @@
       "task": "Desinfectar con Ozono",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107265084_0g0zcr",
@@ -7039,7 +7039,7 @@
       "task": "Aspirar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107278280_0buixs",
@@ -7516,7 +7516,7 @@
       "task": "Fregar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107289534_cvi0mr",
