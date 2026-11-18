@@ -32654,6 +32654,60 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1795039331010_0kn3gp",
+      "date": "2026-11-12",
+      "room": "Baño Suite",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039331011_dc8ipb",
+      "date": "2027-01-14",
+      "room": "Baño Suite",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039331011_w8xy7a",
+      "date": "2027-03-11",
+      "room": "Baño Suite",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039331011_nsytgv",
+      "date": "2027-05-13",
+      "room": "Baño Suite",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039331011_uw6dw1",
+      "date": "2027-07-08",
+      "room": "Baño Suite",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039331011_s4nn1u",
+      "date": "2027-09-09",
+      "room": "Baño Suite",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
