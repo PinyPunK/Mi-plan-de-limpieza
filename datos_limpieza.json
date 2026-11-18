@@ -32231,6 +32231,51 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1794961277644_63wph6",
+      "date": "2027-01-14",
+      "room": "Dormitorio Suite",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1794961277644_jkkaw5",
+      "date": "2027-03-11",
+      "room": "Dormitorio Suite",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1794961277644_a4ntl7",
+      "date": "2027-05-13",
+      "room": "Dormitorio Suite",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1794961277644_su3ely",
+      "date": "2027-07-08",
+      "room": "Dormitorio Suite",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1794961277644_a2wpw2",
+      "date": "2027-09-09",
+      "room": "Dormitorio Suite",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
