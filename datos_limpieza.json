@@ -20071,7 +20071,7 @@
       "task": "Fregar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793132407768_5yjuxf",
@@ -20548,7 +20548,7 @@
       "task": "Limpiar espejo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793132424743_b4n162",
