@@ -17254,7 +17254,7 @@
       "task": "Limpiar el polvo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793132171377_oobz5q",
@@ -17731,7 +17731,7 @@
       "task": "Limpiar comedero",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793132182399_d84j9e",
