@@ -28,7 +28,7 @@
       --text-muted: #7b6888;      /* Texto secundario */
       --border-color: #e1bee7;    /* Bordes lila claro */
       --danger: #ff4d6d;          /* Rojo rosado para avisos/borrar */
-      --success: #2ec4b6;         /* Verde turquesa para tareas completadas */
+      --success: #2ec4b6;         /* Verde turquesa para estancias 100% completadas */
       --shadow: 0 4px 14px rgba(155, 93, 229, 0.12);
     }
 
@@ -121,17 +121,17 @@
       margin-top: 2px;
     }
 
-    /* Botones del menú numerado (1 al 9) */
+    /* Botones del menú numerado (1 al 10) */
     .nav-btn {
       background: transparent;
       border: none;
       text-align: left;
-      padding: 11px 14px;
-      margin-bottom: 6px;
+      padding: 10px 14px;
+      margin-bottom: 5px;
       border-radius: 10px;
       color: var(--text-main);
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       cursor: pointer;
       transition: all 0.2s;
       display: flex;
@@ -267,7 +267,46 @@
     .btn-danger { background: var(--danger); color: #fff; }
     .btn-sm { padding: 6px 11px; font-size: 0.82rem; border-radius: 8px; }
 
-    /* Listas de elementos */
+    /* Selector Múltiple de Subtareas en "1. Programar tarea" */
+    .multi-task-box {
+      border: 1.5px solid var(--border-color);
+      background: var(--bg-main);
+      border-radius: 12px;
+      padding: 12px;
+      max-height: 230px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .multi-task-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      font-size: 0.88rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .multi-task-item:hover {
+      border-color: var(--primary-pink);
+      background: var(--soft-pink);
+    }
+
+    .multi-task-item input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--primary-pink);
+      cursor: pointer;
+    }
+
+    /* Listas de elementos maestros */
     .items-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -320,7 +359,7 @@
     .cal-cell {
       background: var(--bg-main);
       border: 1.5px solid var(--border-color);
-      min-height: 98px;
+      min-height: 104px;
       border-radius: 12px;
       padding: 8px;
       cursor: pointer;
@@ -361,38 +400,106 @@
       border-radius: 6px;
     }
 
+    /* Etiqueta de Estancia agrupada dentro del Calendario */
     .cal-pill {
-      font-size: 0.72rem;
+      font-size: 0.74rem;
+      font-weight: 600;
       background: var(--primary-lila);
       color: white;
-      padding: 3px 6px;
-      border-radius: 6px;
+      padding: 4px 7px;
+      border-radius: 7px;
       margin-bottom: 4px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      transition: transform 0.1s, filter 0.15s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
     }
 
+    .cal-pill:hover {
+      filter: brightness(1.1);
+      transform: scale(1.02);
+    }
+
+    /* Borde extra cuando una estancia concreta está seleccionada */
+    .cal-pill.active-room-pill {
+      outline: 2px solid var(--primary-pink);
+      box-shadow: 0 0 6px rgba(241, 91, 181, 0.6);
+    }
+
+    /* Solo se pone verde y tachada cuando TODAS las subtareas de la estancia están hechas */
     .cal-pill.done {
       background: var(--success);
       text-decoration: line-through;
-      opacity: 0.85;
+      opacity: 0.88;
     }
 
-    /* Filas de tareas */
+    /* Tarjetas de Estancia y Checklist de Subtareas en el Panel Inferior */
+    .room-group-card {
+      background: var(--bg-main);
+      border: 2px solid var(--border-color);
+      border-radius: 14px;
+      padding: 15px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .room-group-card.room-completed {
+      border-color: var(--success);
+    }
+
+    .room-group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--soft-pink);
+    }
+
+    .room-group-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--primary-lila);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .room-status-badge {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      background: var(--soft-pink);
+      color: var(--primary-pink);
+    }
+
+    .room-status-badge.all-done {
+      background: var(--success);
+      color: #ffffff;
+    }
+
+    /* Filas de subtareas dentro del checklist de cada estancia */
     .task-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px;
+      padding: 10px 12px;
       border-bottom: 1px solid var(--border-color);
       gap: 10px;
       border-radius: 10px;
+      background: var(--bg-card);
+      margin-bottom: 6px;
       transition: background 0.15s;
     }
 
-    .task-row:hover { background: var(--bg-main); }
-    .task-row:last-child { border-bottom: none; }
+    .task-row:last-child { margin-bottom: 0; border-bottom: none; }
 
     .task-info {
       display: flex;
@@ -410,9 +517,9 @@
 
     .tag {
       display: inline-block;
-      padding: 3px 8px;
+      padding: 2px 8px;
       border-radius: 8px;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 600;
       background: var(--soft-pink);
       color: var(--primary-lila);
@@ -454,6 +561,55 @@
       display: none;
     }
 
+    /* ==========================================================================
+       ESTILOS ESPECÍFICOS PARA EL MANUAL DE USUARIO (Sección 10)
+       ========================================================================== */
+    .manual-index {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .manual-block {
+      line-height: 1.65;
+      font-size: 0.95rem;
+    }
+
+    .manual-block h4 {
+      color: var(--primary-pink);
+      margin: 14px 0 6px 0;
+      font-size: 1.03rem;
+    }
+
+    .manual-block ul, .manual-block ol {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+
+    .manual-block li {
+      margin-bottom: 6px;
+    }
+
+    .manual-tip {
+      background: var(--soft-pink);
+      border-left: 4px solid var(--primary-lila);
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+
+    .code-badge {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-weight: bold;
+      color: var(--primary-lila);
+    }
+
     .mobile-menu-btn {
       display: none;
       background: var(--primary-lila);
@@ -492,20 +648,20 @@
         background: #ffffff !important;
         color: #000000 !important;
       }
-      .card {
+      .card, .room-group-card {
         box-shadow: none !important;
         border: 1px solid #ccc !important;
+        break-inside: avoid;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- BARRA LATERAL IZQUIERDA (Logotipo de Inicio + Menú 1 al 9) -->
+  <!-- BARRA LATERAL IZQUIERDA (Logotipo de Inicio + Menú 1 al 10) -->
   <aside class="sidebar" id="sidebar">
     <!-- Al presionar el logotipo volvemos siempre al Calendario de Inicio -->
     <div class="brand-box" onclick="showSection('inicio')" title="Ir al Calendario de Inicio">
-      <!-- Carga el archivo Logo Lorena.jpg de tu carpeta; si no lo encuentra, muestra el SVG de respaldo -->
       <img src="Logo%20Lorena.jpg" alt="Logo LB" class="brand-logo-img" id="sidebar-logo-img" onerror="this.style.display='none'; document.getElementById('fallback-svg-logo').style.display='block';">
       <svg id="fallback-svg-logo" style="display:none;" width="48" height="42" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="48" width="11" height="28" fill="#4a2559" rx="1"/>
@@ -521,7 +677,7 @@
       </div>
     </div>
 
-    <!-- Menú con los 9 apartados exactos -->
+    <!-- Menú lateral numerado -->
     <button class="nav-btn" onclick="showSection('programar')" data-i18n="nav1">1. Programar tarea</button>
     <button class="nav-btn" onclick="showSection('estancias')" data-i18n="nav2">2. Estancias</button>
     <button class="nav-btn" onclick="showSection('tareas')" data-i18n="nav3">3. Lista de tareas</button>
@@ -531,11 +687,12 @@
     <button class="nav-btn" onclick="showSection('impresion')" data-i18n="nav7">7. Impresión agenda</button>
     <button class="nav-btn" onclick="showSection('backup')" data-i18n="nav8">8. Copia de seguridad</button>
     <button class="nav-btn" onclick="showSection('ajustes')" data-i18n="nav9">9. Ajustes</button>
+    <button class="nav-btn" onclick="showSection('manual')" data-i18n="nav10">10. Manual de usuario</button>
   </aside>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="main-content">
-    <!-- Cabecera superior con estado de Sincronización en la Nube, Pendientes y Tema -->
+    <!-- Cabecera superior con acceso rápido a Nube, Pendientes, Manual y Tema -->
     <header class="header-bar">
       <div style="display:flex; align-items:center; gap:10px;">
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
@@ -548,15 +705,18 @@
         <button class="btn btn-secondary btn-sm" onclick="syncFromGitHub(true)" title="Descargar últimos cambios de otros dispositivos">
           🔄 Sincronizar
         </button>
-        <button class="btn btn-danger btn-sm" onclick="openPendingTasksView()" title="Ver tareas atrasadas sin completar">
+        <button class="btn btn-danger btn-sm" onclick="openPendingTasksView()" title="Ver subtareas atrasadas sin completar por estancia">
           ⚠️ <span data-i18n="lblPendingShort">Pendientes:</span> <span id="pending-count">0</span>
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="showSection('manual')" title="Abrir Manual de Usuario Completo">
+          ❓ Manual
         </button>
         <button class="btn btn-secondary btn-sm" onclick="toggleTheme()" id="theme-btn" title="Modo Claro / Oscuro">🌙 / ☀️</button>
       </div>
     </header>
 
     <!-- ====================================================================
-         PÁGINA DE INICIO: CALENDARIO DEL MES EN CURSO Y DETALLE DEL DÍA
+         PÁGINA DE INICIO: CALENDARIO POR ESTANCIAS Y CHECKLIST DE SUBTAREAS
          ==================================================================== -->
     <section id="sec-inicio" class="section-view active">
       <div class="card">
@@ -569,33 +729,44 @@
           </div>
 
           <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-            <select id="cal-room-filter" onchange="renderCalendar()" style="width:auto;"></select>
-            <select id="cal-collab-filter" onchange="renderCalendar()" style="width:auto;"></select>
+            <select id="cal-room-filter" onchange="renderCalendar(); renderSelectedDayDetails();" style="width:auto;"></select>
+            <select id="cal-collab-filter" onchange="renderCalendar(); renderSelectedDayDetails();" style="width:auto;"></select>
             <button class="btn btn-sm" onclick="setCalView('month')" data-i18n="btnViewMonth">Mensual</button>
             <button class="btn btn-sm" onclick="setCalView('week')" data-i18n="btnViewWeek">Semanal</button>
             <button class="btn btn-sm" onclick="setCalView('day')" data-i18n="btnViewDay">Diaria</button>
           </div>
         </div>
 
+        <p style="font-size:0.83rem; color:var(--text-muted); margin-bottom:10px;">
+          💡 <em>Haz clic en cualquier <strong>Estancia</strong> del calendario (ej. 🏠 Salón) para desplegar abajo su checklist de subtareas. La estancia solo se marcará como completada (✅) cuando todas sus subtareas estén hechas.</em>
+        </p>
+
         <div id="calendar-grid-wrapper"></div>
       </div>
 
-      <!-- Panel inferior interactivo: muestra las tareas del día seleccionado -->
+      <!-- Panel inferior interactivo: muestra el Checklist de Subtareas de la Estancia o Día seleccionado -->
       <div class="card" id="selected-day-panel">
         <div class="card-title">
-          <span id="selected-day-title">📅 Tareas del Día Seleccionado</span>
-          <button class="btn btn-sm" onclick="jumpToScheduleForSelectedDate()" data-i18n="btnAddForThisDay">+ Programar tarea en este día</button>
+          <span id="selected-day-title">📅 Estancias y Subtareas del Día</span>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn btn-secondary btn-sm" id="btn-show-all-rooms-day" style="display:none;" onclick="clearSelectedRoomFilter()">
+              🏠 Ver todas las estancias de este día
+            </button>
+            <button class="btn btn-sm" onclick="jumpToScheduleForSelectedDate()" data-i18n="btnAddForThisDay">
+              + Programar en este día
+            </button>
+          </div>
         </div>
         <div id="selected-day-tasks-container"></div>
       </div>
     </section>
 
     <!-- ====================================================================
-         1. PROGRAMAR TAREA (Incluye también el bloque de Tareas Pendientes)
+         1. PROGRAMAR TAREA (Con Selección Múltiple de Subtareas por Estancia)
          ==================================================================== -->
     <section id="sec-programar" class="section-view">
       <div class="card">
-        <h3 class="card-title" data-i18n="titleScheduleTask">1. Programar Tarea Nueva</h3>
+        <h3 class="card-title" data-i18n="titleScheduleTask">1. Programar Estancia y Subtareas</h3>
         <input type="hidden" id="edit-schedule-id" value="">
         <div class="form-grid">
           <div>
@@ -605,10 +776,6 @@
           <div>
             <label data-i18n="lblRoom">Estancia:</label>
             <select id="sched-room"></select>
-          </div>
-          <div>
-            <label data-i18n="lblTask">Tarea:</label>
-            <select id="sched-task"></select>
           </div>
           <div>
             <label data-i18n="lblCategory">Categoría:</label>
@@ -629,6 +796,26 @@
           </div>
         </div>
 
+        <!-- Selector de Subtareas (Permite marcar varias subtareas a la vez para la estancia) -->
+        <div id="multi-task-selector-wrapper" style="margin-bottom: 15px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+            <label style="margin:0;">Selecciona una o varias Subtareas para esta Estancia:</label>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <input type="text" id="filter-multitask-input" placeholder="🔍 Buscar subtarea..." oninput="filterMultiTaskCheckboxes()" style="width:170px; padding:5px 9px; font-size:0.82rem;">
+              <button type="button" class="btn btn-secondary btn-sm" onclick="toggleAllMultiTasks(true)">Marcar todas</button>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="toggleAllMultiTasks(false)">Desmarcar</button>
+            </div>
+          </div>
+          <div id="sched-tasks-multibox" class="multi-task-box"></div>
+        </div>
+
+        <!-- Desplegable individual que solo aparece cuando se edita una subtarea puntual -->
+        <div id="single-task-edit-wrapper" style="display:none; margin-bottom:15px;">
+          <label data-i18n="lblTask">Subtarea a editar:</label>
+          <select id="sched-task"></select>
+        </div>
+
+        <!-- Opciones si elige Semanalmente -->
         <div id="repeat-weekly-box" style="display:none; margin-bottom:15px; padding:12px; background:var(--soft-pink); border-radius:10px;">
           <label>Marca los días de la semana que se repite:</label>
           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:6px;">
@@ -642,6 +829,7 @@
           </div>
         </div>
 
+        <!-- Opciones si elige Cada X meses -->
         <div id="repeat-monthly-box" style="display:none; margin-bottom:15px; padding:12px; background:var(--soft-pink); border-radius:10px;">
           <div class="form-grid">
             <div>
@@ -679,8 +867,12 @@
         </div>
       </div>
 
+      <!-- Bloque de Tareas Pendientes agrupadas por Estancia -->
       <div class="card" id="pending-tasks-card">
-        <h3 class="card-title">⚠️ Tareas Pendientes (Vencidas en días anteriores sin completar)</h3>
+        <h3 class="card-title">⚠️ Estancias con Subtareas Pendientes (Vencidas en días anteriores)</h3>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+          Aquí se muestran las estancias de días pasados que quedaron incompletas, detallando únicamente las subtareas que faltaron por marcar:
+        </p>
         <div id="pending-tasks-container"></div>
       </div>
     </section>
@@ -706,7 +898,7 @@
       <div class="card">
         <h3 class="card-title" data-i18n="nav3">3. Lista de tareas</h3>
         <div style="display:flex; gap:10px; margin-bottom:15px;">
-          <input type="text" id="new-task-input" placeholder="Crear nueva tarea...">
+          <input type="text" id="new-task-input" placeholder="Crear nueva tarea / subtarea...">
           <button class="btn" onclick="addMasterItem('tasks', 'new-task-input')">+ Añadir</button>
         </div>
         <div id="tasks-list" class="items-grid"></div>
@@ -754,13 +946,13 @@
         <div id="chart-by-date"></div>
       </div>
       <div class="card">
-        <h3 class="card-title">✨ Índice de Cumplimiento por Tarea</h3>
+        <h3 class="card-title">✨ Índice de Cumplimiento por Subtarea</h3>
         <div id="chart-by-task"></div>
       </div>
     </section>
 
     <!-- ====================================================================
-         7. IMPRESIÓN AGENDA
+         7. IMPRESIÓN AGENDA (Agrupada por Fecha y Estancia)
          ==================================================================== -->
     <section id="sec-impresion" class="section-view">
       <div class="card no-print">
@@ -798,7 +990,7 @@
       <div class="card" id="print-area">
         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--primary-lila); padding-bottom:10px; margin-bottom:15px;">
           <h2>Mi Plan de Limpieza - LB</h2>
-          <span id="print-subtitle" style="font-weight:bold; color:var(--primary-pink);">Planificador</span>
+          <span id="print-subtitle" style="font-weight:bold; color:var(--primary-pink);">Planificador por Estancias</span>
         </div>
         <div id="print-preview-container"></div>
       </div>
@@ -808,7 +1000,6 @@
          8. COPIA DE SEGURIDAD Y SINCRONIZACIÓN EN LA NUBE (GITHUB API)
          ==================================================================== -->
     <section id="sec-backup" class="section-view">
-      <!-- Tarjeta 1: Sincronización automática entre dispositivos con GitHub -->
       <div class="card">
         <h3 class="card-title">☁️ Sincronización Automática entre Dispositivos (GitHub Cloud)</h3>
         <p style="margin-bottom:15px; font-size:0.9rem; line-height:1.5; color:var(--text-muted);">
@@ -837,7 +1028,6 @@
         </div>
       </div>
 
-      <!-- Tarjeta 2: Copia de seguridad manual en archivo .json -->
       <div class="card">
         <h3 class="card-title" data-i18n="nav8">💾 Copia de Seguridad en Archivo Local (.json)</h3>
         <p style="margin-bottom:15px; line-height:1.5; font-size:0.9rem; color:var(--text-muted);">
@@ -906,6 +1096,117 @@
       </div>
     </section>
 
+    <!-- ====================================================================
+         10. MANUAL DE USUARIO Y GUÍA TÉCNICA DE ADMINISTRACIÓN (En Español)
+         ==================================================================== -->
+    <section id="sec-manual" class="section-view">
+      <div class="card no-print">
+        <div class="card-title">
+          <span>📖 Manual de Usuario y Guía Técnica - Mi Plan de Limpieza LB</span>
+          <button class="btn btn-sm" onclick="window.print()">🖨️ Imprimir Manual / Guardar PDF</button>
+        </div>
+        <p style="font-size:0.92rem; color:var(--text-muted);">
+          Bienvenida a la documentación oficial de tu aplicación. Pulsa en cualquiera de los capítulos siguientes para saltar directamente a esa explicación:
+        </p>
+        <div class="manual-index">
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap1')">1. Calendario por Estancias y Checklist</button>
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap2')">2. Programar Múltiples Subtareas</button>
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap3')">3. Subtareas Pendientes por Estancia</button>
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap4')">4. Gestión de Listas Maestras</button>
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap5')">5. Gráficos e Impresión de Agenda</button>
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap6')">6. Sincronización en la Nube (GitHub)</button>
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap7')">7. Instalación en Windows y Android</button>
+          <button class="btn btn-secondary btn-sm" onclick="scrollToManual('man-cap8')">8. Mantenimiento y Restablecimiento</button>
+        </div>
+      </div>
+
+      <!-- CAPÍTULO 1 -->
+      <div class="card manual-block" id="man-cap1">
+        <h3 class="card-title">1. Funcionamiento del Calendario Agrupado por Estancias y Checklist</h3>
+        <p>
+          La pantalla de inicio muestra el <strong>Calendario del mes en curso</strong> organizando todas las tareas dentro de su <strong>Estancia</strong> correspondiente para ofrecer una vista limpia e intuitiva.
+        </p>
+        <h4>🏠 Cómo funcionan las etiquetas de Estancia en el Calendario</h4>
+        <ul>
+          <li>En lugar de llenar la casilla del día con muchas tareas sueltas, verás una única etiqueta por cada estancia programada ese día junto con su contador de subtareas: por ejemplo, <span class="code-badge">🏠 Salón (1/3)</span>.</li>
+          <li><strong>Condición de Estancia Completada:</strong> Mientras quede alguna subtarea sin marcar, la estancia aparecerá en color lila. En el instante en que marques <strong>todas</strong> las subtareas de esa estancia, la etiqueta pasará automáticamente a color verde turquesa y se tachará: <span class="code-badge">✅ Salón (3/3)</span>.</li>
+          <li><strong>Clic directo sobre una Estancia:</strong> Si pulsas sobre <span class="code-badge">🏠 Salón (1/3)</span> dentro del calendario, el panel inferior te mostrará exclusivamente el <strong>Checklist de Subtareas del Salón</strong> para que vayas marcando cada casilla conforme limpias.</li>
+          <li><strong>Clic sobre el número del día:</strong> Si pulsas sobre el recuadro general del día, el panel inferior te mostrará todas las estancias programadas en esa fecha con sus respectivos checklists debajo.</li>
+        </ul>
+      </div>
+
+      <!-- CAPÍTULO 2 -->
+      <div class="card manual-block" id="man-cap2">
+        <h3 class="card-title">2. Cómo Programar Estancias y Múltiples Subtareas a la vez</h3>
+        <p>
+          En el apartado <strong>1. Programar tarea</strong> puedes asignar de una sola vez todas las subtareas que necesita una estancia:
+        </p>
+        <ol>
+          <li>Selecciona la <strong>Fecha de inicio</strong>, la <strong>Estancia</strong> (ej. <em>Salón</em> o <em>Cocina</em>), la <strong>Categoría</strong> y el <strong>Colaborador</strong>.</li>
+          <li>En el cuadro <strong>"Selecciona una o varias Subtareas para esta Estancia"</strong>, marca todas las casillas que quieras incluir en el checklist (por ejemplo: <em>Aspirar, Limpiar el polvo, Fregar y Limpiar cristales</em>). Puedes usar el buscador superior para encontrar cualquier subtarea rápidamente.</li>
+          <li>Elige la <strong>Repetición</strong> (<em>Sin repetición, Diariamente, Semanalmente eligiendo los días de la semana, o Cada X meses como el "Primer martes de cada mes"</em>).</li>
+          <li>Pulsa <strong>"💾 Guardar y Sincronizar"</strong>. Si más adelante programas otra subtarea suelta para la misma estancia en el mismo día, se unirá automáticamente al checklist de esa estancia.</li>
+        </ol>
+      </div>
+
+      <!-- CAPÍTULO 3 -->
+      <div class="card manual-block" id="man-cap3">
+        <h3 class="card-title">3. Control de Subtareas Pendientes por Estancia (Vencidas)</h3>
+        <p>
+          Si llega el final del día y en una estancia se completaron algunas subtareas pero quedó alguna sin realizar:
+        </p>
+        <ul>
+          <li>Al día siguiente, el contador superior rojo (<strong>⚠️ Pendientes: X</strong>) te avisará del número de subtareas atrasadas.</li>
+          <li>Al pulsar en <strong>⚠️ Pendientes</strong> (o en la parte inferior de <em>1. Programar tarea</em>), verás tarjetas agrupadas por <strong>Fecha y Estancia</strong> mostrando únicamente las subtareas pendientes que faltaron por completar en esa estancia.</li>
+        </ul>
+      </div>
+
+      <!-- CAPÍTULO 4 -->
+      <div class="card manual-block" id="man-cap4">
+        <h3 class="card-title">4. Gestión de Estancias, Lista de Tareas, Categorías y Colaboradores</h3>
+        <p>
+          Desde los apartados <strong>2. Estancias</strong>, <strong>3. Lista de tareas</strong>, <strong>4. Categorías</strong> y <strong>5. Colaboradores</strong> puedes añadir nuevos elementos, editar sus nombres con el botón <strong>✏️</strong> (actualizándose automáticamente en todo el calendario) o borrarlos con <strong>🗑️</strong>.
+        </p>
+      </div>
+
+      <!-- CAPÍTULO 5 -->
+      <div class="card manual-block" id="man-cap5">
+        <h3 class="card-title">5. Gráficos de Cumplimiento e Impresión de Agenda</h3>
+        <ul>
+          <li><strong>6. Gráficos:</strong> Muestra barras de progreso con el porcentaje exacto de subtareas completadas por Estancia, por Fecha y por Subtarea.</li>
+          <li><strong>7. Impresión agenda:</strong> Genera un documento limpio en papel o PDF agrupado por fecha y estancia con las casillas del checklist listas para marcar a mano.</li>
+        </ul>
+      </div>
+
+      <!-- CAPÍTULO 6 -->
+      <div class="card manual-block" id="man-cap6">
+        <h3 class="card-title">6. Guía Técnica: Sincronización entre Dispositivos (GitHub Cloud)</h3>
+        <ol>
+          <li>En <strong>GitHub.com</strong>, ve a tu foto de perfil > <strong>Settings</strong> > <strong>Developer settings</strong> > <strong>Personal access tokens (classic)</strong>.</li>
+          <li>Pulsa <strong>"Generate new token (classic)"</strong>, selecciona <em>No expiration</em>, marca la casilla <strong>☑️ repo</strong> y copia el código <span class="code-badge">ghp_...</span>.</li>
+          <li>En cada dispositivo (PC Windows y móviles Android), entra en <strong>8. Copia de seguridad</strong>, introduce tu Usuario, Nombre del Repositorio y Token, y pulsa <strong>"🔗 Guardar y Conectar Dispositivo"</strong>.</li>
+        </ol>
+      </div>
+
+      <!-- CAPÍTULO 7 -->
+      <div class="card manual-block" id="man-cap7">
+        <h3 class="card-title">7. Guía Técnica: Instalación con Logo LB en Windows y Android</h3>
+        <ul>
+          <li>El código convierte automáticamente el archivo <span class="code-badge">Logo Lorena.jpg</span> en iconos <span class="code-badge">PNG 192x192 y 512x512</span> compatibles con Windows y Android.</li>
+          <li>Para instalar o desinstalar, acude al apartado <strong>9. Ajustes</strong> y utiliza los botones <strong>📲 Instalar Aplicación</strong> o <strong>📤 Desinstalar Aplicación</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- CAPÍTULO 8 -->
+      <div class="card manual-block" id="man-cap8">
+        <h3 class="card-title">8. Mantenimiento, Copias Locales y Restablecimiento de Fábrica</h3>
+        <ul>
+          <li>En <strong>8. Copia de seguridad</strong> puedes exportar o importar en cualquier momento un archivo <span class="code-badge">.json</span> con todos tus registros.</li>
+          <li>En <strong>9. Ajustes</strong> dispones del botón rojo <strong>"🗑️ Borrar todos los datos"</strong> con doble confirmación de seguridad para restaurar la aplicación a su estado inicial.</li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <!-- ==========================================================================
@@ -914,8 +1215,6 @@
   <script>
     /* --------------------------------------------------------------------------
        A. VARIABLES CONFIGURABLES Y DATOS INICIALES
-       Si tu imagen en GitHub tiene otro nombre distinto a "Logo Lorena.jpg",
-       solo tienes que cambiarlo en la constante LOGO_FILENAME de abajo.
        -------------------------------------------------------------------------- */
     const LOGO_FILENAME = "Logo Lorena.jpg";
     const GITHUB_DATA_FILENAME = "datos_limpieza.json";
@@ -970,15 +1269,16 @@
         nav7: "7. Impresión agenda",
         nav8: "8. Copia de seguridad",
         nav9: "9. Ajustes",
+        nav10: "10. Manual de usuario",
         btnToday: "Hoy",
         btnViewMonth: "Mensual",
         btnViewWeek: "Semanal",
         btnViewDay: "Diaria",
-        btnAddForThisDay: "+ Programar tarea en este día",
-        titleScheduleTask: "1. Programar Tarea Nueva",
+        btnAddForThisDay: "+ Programar en este día",
+        titleScheduleTask: "1. Programar Estancia y Subtareas",
         lblStartDate: "Fecha de inicio:",
         lblRoom: "Estancia:",
-        lblTask: "Tarea:",
+        lblTask: "Subtarea:",
         lblCategory: "Categoría:",
         lblAssignTo: "Asignar a (Colaborador):",
         lblRepeatType: "Repetición:",
@@ -1009,15 +1309,16 @@
         nav7: "7. Impressió agenda",
         nav8: "8. Còpia de seguretat",
         nav9: "9. Ajustos",
+        nav10: "10. Manual d'usuari",
         btnToday: "Avui",
         btnViewMonth: "Mensual",
         btnViewWeek: "Setmanal",
         btnViewDay: "Diària",
-        btnAddForThisDay: "+ Programar tasca en aquest dia",
-        titleScheduleTask: "1. Programar Tasca Nova",
+        btnAddForThisDay: "+ Programar en aquest dia",
+        titleScheduleTask: "1. Programar Estança i Subtasques",
         lblStartDate: "Data d'inici:",
         lblRoom: "Estança:",
-        lblTask: "Tasca:",
+        lblTask: "Subtasca:",
         lblCategory: "Categoria:",
         lblAssignTo: "Assignar a (Col·laborador):",
         lblRepeatType: "Repetició:",
@@ -1048,15 +1349,16 @@
         nav7: "7. Print planner",
         nav8: "8. Backup",
         nav9: "9. Settings",
+        nav10: "10. User manual",
         btnToday: "Today",
         btnViewMonth: "Monthly",
         btnViewWeek: "Weekly",
         btnViewDay: "Daily",
-        btnAddForThisDay: "+ Schedule task on this day",
-        titleScheduleTask: "1. Schedule New Task",
+        btnAddForThisDay: "+ Schedule on this day",
+        titleScheduleTask: "1. Schedule Room & Subtasks",
         lblStartDate: "Start Date:",
         lblRoom: "Room:",
-        lblTask: "Task:",
+        lblTask: "Subtask:",
         lblCategory: "Category:",
         lblAssignTo: "Assign to (Collaborator):",
         lblRepeatType: "Repeat:",
@@ -1082,6 +1384,7 @@
     let calCurrentDate = new Date();
     let calViewMode = "month";
     let selectedDateISO = getTodayISO();
+    let selectedRoomInDay = null; // Si es null, muestra todas las estancias del día; si tiene nombre (ej. "Salón"), muestra el checklist de esa estancia
     let deferredPrompt = null;
 
     function loadData() {
@@ -1092,7 +1395,6 @@
       return JSON.parse(JSON.stringify(DEFAULT_DATA));
     }
 
-    // Guarda en memoria local y sube automáticamente los cambios al repositorio de GitHub
     function saveData(skipCloudUpload = false) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
       refreshAllViews();
@@ -1108,7 +1410,6 @@
     }
 
     function loadGitHubConfigToUI() {
-      // Si la página está alojada en GitHub Pages (ej: usuario.github.io/repo), deducimos usuario y repo automáticamente
       let defaultOwner = "";
       let defaultRepo = "";
       if (window.location.hostname.includes("github.io")) {
@@ -1141,7 +1442,6 @@
       localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({ owner, repo, token }));
       updateCloudBadge("Verificando...");
 
-      // Al conectar, primero intentamos descargar si ya existen datos en la nube; si no, subimos los actuales
       const downloaded = await syncFromGitHub(false);
       if (!downloaded) {
         await syncToGitHub(true);
@@ -1150,7 +1450,6 @@
       }
     }
 
-    // Funciones auxiliares para codificar/decodificar texto en formato UTF-8 Base64 (requerido por GitHub)
     function utf8ToBase64(str) {
       return window.btoa(unescape(encodeURIComponent(str)));
     }
@@ -1158,7 +1457,6 @@
       return decodeURIComponent(escape(window.atob(str)));
     }
 
-    // Descarga los datos desde el archivo datos_limpieza.json en tu repositorio de GitHub
     async function syncFromGitHub(showAlerts = false) {
       const cfg = getGitHubConfig();
       if (!cfg || !cfg.owner || !cfg.repo || !cfg.token) {
@@ -1211,7 +1509,6 @@
       return false;
     }
 
-    // Sube automáticamente los cambios al archivo datos_limpieza.json en tu repositorio de GitHub
     async function syncToGitHub(showAlerts = false) {
       const cfg = getGitHubConfig();
       if (!cfg || !cfg.owner || !cfg.repo || !cfg.token) return false;
@@ -1220,7 +1517,6 @@
         updateCloudBadge("Guardando...");
         const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${GITHUB_DATA_FILENAME}`;
 
-        // 1. Consultar si el archivo ya existe para obtener su código identificador (SHA)
         let currentSha = null;
         const getRes = await fetch(url, {
           headers: {
@@ -1235,7 +1531,6 @@
           currentSha = existing.sha;
         }
 
-        // 2. Enviar el archivo actualizado a GitHub
         const bodyPayload = {
           message: `Actualización automática Plan de Limpieza (${getTodayISO()})`,
           content: utf8ToBase64(JSON.stringify(appData, null, 2))
@@ -1275,7 +1570,7 @@
     }
 
     /* --------------------------------------------------------------------------
-       D. NAVEGACIÓN ENTRE PÁGINA DE INICIO (CALENDARIO) Y LOS 9 PUNTOS
+       D. NAVEGACIÓN ENTRE PÁGINA DE INICIO (CALENDARIO) Y LOS 10 PUNTOS
        -------------------------------------------------------------------------- */
     function showSection(sectionId) {
       document.querySelectorAll('.section-view').forEach(sec => sec.classList.remove('active'));
@@ -1301,6 +1596,11 @@
       refreshAllViews();
     }
 
+    function scrollToManual(elementId) {
+      const el = document.getElementById(elementId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     function toggleMobileMenu() {
       document.getElementById('sidebar').classList.toggle('open');
     }
@@ -1311,14 +1611,20 @@
       if (card) card.scrollIntoView({ behavior: 'smooth' });
     }
 
-    function jumpToScheduleForSelectedDate() {
+    function jumpToScheduleForSelectedDate(preselectRoom = null) {
+      cancelEditSchedule();
       document.getElementById('sched-date').value = selectedDateISO;
+      if (preselectRoom) {
+        document.getElementById('sched-room').value = preselectRoom;
+      } else if (selectedRoomInDay) {
+        document.getElementById('sched-room').value = selectedRoomInDay;
+      }
       showSection('programar');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     /* --------------------------------------------------------------------------
-       E. GESTIÓN DE LISTAS MAESTRAS
+       E. GESTIÓN DE LISTAS MAESTRAS Y SELECTOR MÚLTIPLE DE SUBTAREAS
        -------------------------------------------------------------------------- */
     function renderMasterList(listKey, containerId) {
       const container = document.getElementById(containerId);
@@ -1393,10 +1699,48 @@
       fillSelect('cal-collab-filter', appData.collaborators, "👤 Todos los colaboradores");
       fillSelect('print-room', appData.rooms, "Todas las estancias");
       fillSelect('print-collab', appData.collaborators, "Todos los colaboradores");
+
+      renderMultiTaskCheckboxes();
+    }
+
+    function renderMultiTaskCheckboxes() {
+      const box = document.getElementById('sched-tasks-multibox');
+      if (!box) return;
+      // Conservar las que ya estuvieran marcadas antes de redibujar
+      const previouslyChecked = Array.from(box.querySelectorAll('.sched-multitask-cb:checked')).map(cb => cb.value);
+      const filterText = (document.getElementById('filter-multitask-input')?.value || "").toLowerCase().trim();
+
+      box.innerHTML = appData.tasks.map(t => {
+        const isChecked = previouslyChecked.includes(t) ? "checked" : "";
+        const isHidden = (filterText && !t.toLowerCase().includes(filterText)) ? "style='display:none;'" : "";
+        return `
+          <label class="multi-task-item" ${isHidden}>
+            <input type="checkbox" class="sched-multitask-cb" value="${t}" ${isChecked}>
+            <span>${t}</span>
+          </label>
+        `;
+      }).join('');
+    }
+
+    function filterMultiTaskCheckboxes() {
+      const filterText = (document.getElementById('filter-multitask-input')?.value || "").toLowerCase().trim();
+      document.querySelectorAll('#sched-tasks-multibox .multi-task-item').forEach(lbl => {
+        const text = lbl.innerText.toLowerCase();
+        lbl.style.display = (!filterText || text.includes(filterText)) ? 'flex' : 'none';
+      });
+    }
+
+    function toggleAllMultiTasks(state) {
+      document.querySelectorAll('#sched-tasks-multibox .multi-task-item').forEach(lbl => {
+        if (lbl.style.display !== 'none') {
+          const cb = lbl.querySelector('.sched-multitask-cb');
+          if (cb) cb.checked = state;
+        }
+      });
     }
 
     /* --------------------------------------------------------------------------
-       F. MOTOR DE PROGRAMACIÓN DE TAREAS Y REPETICIONES
+       F. MOTOR DE PROGRAMACIÓN DE SUBTAREAS Y REPETICIONES
        -------------------------------------------------------------------------- */
     function updateRepeatOptionsUI() {
       const val = document.getElementById('sched-repeat').value;
@@ -1428,7 +1772,6 @@
     function saveScheduledTask() {
       const startDateStr = document.getElementById('sched-date').value;
       const room = document.getElementById('sched-room').value;
-      const task = document.getElementById('sched-task').value;
       const category = document.getElementById('sched-cat').value;
       const collaborator = document.getElementById('sched-collab').value;
       const repeatType = document.getElementById('sched-repeat').value;
@@ -1436,20 +1779,29 @@
 
       if (!startDateStr) return alert("Por favor, selecciona una fecha de inicio.");
 
+      // Si estamos editando una subtarea concreta existente
       if (editId) {
+        const singleTask = document.getElementById('sched-task').value;
         const occ = appData.scheduledOccurrences.find(o => o.id === editId);
         if (occ) {
           occ.date = startDateStr;
           occ.room = room;
-          occ.task = task;
+          occ.task = singleTask;
           occ.category = category;
           occ.collaborator = collaborator;
         }
         selectedDateISO = startDateStr;
+        selectedRoomInDay = room;
         cancelEditSchedule();
         saveData();
         showSection('inicio');
         return;
+      }
+
+      // Recoger todas las subtareas marcadas en el selector múltiple
+      const selectedTasks = Array.from(document.querySelectorAll('.sched-multitask-cb:checked')).map(cb => cb.value);
+      if (selectedTasks.length === 0) {
+        return alert("Por favor, marca al menos una subtarea de la lista para esta estancia.");
       }
 
       const startParts = startDateStr.split('-').map(Number);
@@ -1488,22 +1840,28 @@
         }
       }
 
+      let createdCount = 0;
       datesToCreate.forEach(dateISO => {
-        appData.scheduledOccurrences.push({
-          id: 'occ_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
-          date: dateISO,
-          room,
-          task,
-          category,
-          collaborator,
-          completed: false
+        selectedTasks.forEach(taskName => {
+          appData.scheduledOccurrences.push({
+            id: 'occ_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
+            date: dateISO,
+            room,
+            task: taskName,
+            category,
+            collaborator,
+            completed: false
+          });
+          createdCount++;
         });
       });
 
+      toggleAllMultiTasks(false);
       selectedDateISO = startDateStr;
+      selectedRoomInDay = room;
       calCurrentDate = new Date(startParts[0], startParts[1] - 1, startParts[2]);
       saveData();
-      alert(`¡Tarea programada (${datesToCreate.length} sesiones)!`);
+      alert(`¡Se han programado ${selectedTasks.length} subtareas en "${room}" (${datesToCreate.length} fechas en el calendario)!`);
       showSection('inicio');
     }
 
@@ -1520,20 +1878,33 @@
       document.getElementById('sched-repeat').value = 'none';
       updateRepeatOptionsUI();
 
-      document.getElementById('btn-save-sched').innerText = "💾 Guardar Cambios";
+      document.getElementById('multi-task-selector-wrapper').style.display = 'none';
+      document.getElementById('single-task-edit-wrapper').style.display = 'block';
+      document.getElementById('btn-save-sched').innerText = "💾 Guardar Cambios en Subtarea";
       document.getElementById('btn-cancel-sched').style.display = "inline-flex";
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function cancelEditSchedule() {
       document.getElementById('edit-schedule-id').value = "";
+      document.getElementById('multi-task-selector-wrapper').style.display = 'block';
+      document.getElementById('single-task-edit-wrapper').style.display = 'none';
       document.getElementById('btn-save-sched').innerText = "💾 Guardar y Sincronizar";
       document.getElementById('btn-cancel-sched').style.display = "none";
     }
 
     function deleteScheduledOccurrence(id) {
-      if (confirm("¿Deseas borrar esta tarea programada?")) {
+      if (confirm("¿Deseas borrar esta subtarea programada?")) {
         appData.scheduledOccurrences = appData.scheduledOccurrences.filter(o => o.id !== id);
+        saveData();
+      }
+    }
+
+    // Permite borrar de golpe todas las subtareas de una estancia en un día concreto
+    function deleteEntireRoomDayGroup(dateISO, roomName) {
+      if (confirm(`¿Deseas borrar todas las subtareas de "${roomName}" del día ${dateISO}?`)) {
+        appData.scheduledOccurrences = appData.scheduledOccurrences.filter(o => !(o.date === dateISO && o.room === roomName));
+        if (selectedRoomInDay === roomName) selectedRoomInDay = null;
         saveData();
       }
     }
@@ -1547,8 +1918,34 @@
     }
 
     /* --------------------------------------------------------------------------
-       G. CALENDARIO EN PÁGINA DE INICIO + PANEL DEL DÍA SELECCIONADO
+       G. AGRUPACIÓN LÓGICA POR ESTANCIA EN EL CALENDARIO Y PANEL DE CHECKLIST
        -------------------------------------------------------------------------- */
+    // Función clave: reúne una lista de subtareas por su Estancia y calcula si la estancia está 100% completada
+    function groupOccurrencesByRoom(occurrences) {
+      const map = {};
+      occurrences.forEach(occ => {
+        if (!map[occ.room]) {
+          map[occ.room] = {
+            room: occ.room,
+            subtasks: [],
+            doneCount: 0,
+            totalCount: 0,
+            allCompleted: false
+          };
+        }
+        map[occ.room].subtasks.push(occ);
+        map[occ.room].totalCount++;
+        if (occ.completed) map[occ.room].doneCount++;
+      });
+
+      Object.values(map).forEach(group => {
+        // La estancia SOLO está completada si tiene subtareas y TODAS están completadas
+        group.allCompleted = (group.totalCount > 0 && group.doneCount === group.totalCount);
+      });
+
+      return Object.values(map);
+    }
+
     function setCalView(mode) {
       calViewMode = mode;
       renderCalendar();
@@ -1557,6 +1954,7 @@
     function goToTodayCalendar() {
       calCurrentDate = new Date();
       selectedDateISO = getTodayISO();
+      selectedRoomInDay = null;
       renderCalendar();
       renderSelectedDayDetails();
     }
@@ -1574,34 +1972,87 @@
       renderSelectedDayDetails();
     }
 
+    // Cuando el usuario hace clic en el recuadro general de un día
     function selectDayInCalendar(dateISO) {
       selectedDateISO = dateISO;
+      selectedRoomInDay = null;
       renderCalendar();
       renderSelectedDayDetails();
       const panel = document.getElementById('selected-day-panel');
       if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    function createTaskRowHTML(occ, showDate = false) {
+    // Cuando el usuario hace clic directamente sobre una Estancia (ej. "Salón") dentro del calendario
+    function selectRoomInCalendar(event, dateISO, roomName) {
+      if (event) event.stopPropagation();
+      selectedDateISO = dateISO;
+      selectedRoomInDay = roomName;
+      renderCalendar();
+      renderSelectedDayDetails();
+      const panel = document.getElementById('selected-day-panel');
+      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function clearSelectedRoomFilter() {
+      selectedRoomInDay = null;
+      renderCalendar();
+      renderSelectedDayDetails();
+    }
+
+    // Crea la fila HTML de una subtarea dentro del checklist de una estancia
+    function createSubtaskChecklistRowHTML(occ) {
       return `
         <div class="task-row">
           <div class="task-info">
             <input type="checkbox" class="task-checkbox" ${occ.completed ? 'checked' : ''} onchange="toggleOccurrenceCompleted('${occ.id}')">
             <div>
-              <div style="${occ.completed ? 'text-decoration:line-through; opacity:0.6;' : 'font-weight:700; font-size:1rem;'}">
+              <div style="${occ.completed ? 'text-decoration:line-through; opacity:0.6;' : 'font-weight:700; font-size:0.97rem;'}">
                 ${occ.task}
               </div>
               <div>
-                ${showDate ? `<span class="tag">📅 ${occ.date}</span>` : ''}
-                <span class="tag">🏠 ${occ.room}</span>
                 <span class="tag">🏷️ ${occ.category}</span>
                 <span class="tag">👤 ${occ.collaborator}</span>
               </div>
             </div>
           </div>
           <div class="item-actions no-print">
-            <button class="btn btn-secondary btn-sm" onclick="editScheduledOccurrence('${occ.id}')" title="Editar">✏️</button>
-            <button class="btn btn-danger btn-sm" onclick="deleteScheduledOccurrence('${occ.id}')" title="Borrar">🗑️</button>
+            <button class="btn btn-secondary btn-sm" onclick="editScheduledOccurrence('${occ.id}')" title="Editar subtarea">✏️</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteScheduledOccurrence('${occ.id}')" title="Borrar subtarea">🗑️</button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Dibuja una tarjeta de Estancia con su barra de progreso y su checklist de subtareas
+    function createRoomGroupCardHTML(group, dateISO, isPendingView = false) {
+      const pct = group.totalCount === 0 ? 0 : Math.round((group.doneCount / group.totalCount) * 100);
+      const statusIcon = group.allCompleted ? "✅" : "🏠";
+      const statusText = isPendingView
+        ? `⚠️ ${group.subtasks.length} subtarea(s) pendiente(s)`
+        : (group.allCompleted ? `¡Estancia Completada! (${group.doneCount}/${group.totalCount})` : `En progreso: ${group.doneCount} de ${group.totalCount} (${pct}%)`);
+
+      return `
+        <div class="room-group-card ${group.allCompleted ? 'room-completed' : ''}">
+          <div class="room-group-header">
+            <div class="room-group-title">
+              <span>${statusIcon} ${group.room}</span>
+              ${isPendingView ? `<span class="tag">📅 Fecha vencida: ${dateISO}</span>` : ''}
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span class="room-status-badge ${group.allCompleted ? 'all-done' : ''}">${statusText}</span>
+              ${!isPendingView ? `
+                <button class="btn btn-secondary btn-sm no-print" onclick="jumpToScheduleForSelectedDate('${group.room.replace(/'/g, "\\'")}')" title="Añadir más subtareas a esta estancia">+ Subtarea</button>
+                <button class="btn btn-danger btn-sm no-print" onclick="deleteEntireRoomDayGroup('${dateISO}', '${group.room.replace(/'/g, "\\'")}')" title="Borrar estancia de este día">🗑️</button>
+              ` : ''}
+            </div>
+          </div>
+          ${!isPendingView ? `
+            <div class="progress-bg" style="height:8px; margin-bottom:12px;">
+              <div class="progress-fill" style="width:${pct}%; background:${group.allCompleted ? 'var(--success)' : ''};"></div>
+            </div>
+          ` : ''}
+          <div>
+            ${group.subtasks.map(sub => createSubtaskChecklistRowHTML(sub)).join('')}
           </div>
         </div>
       `;
@@ -1610,41 +2061,69 @@
     function renderSelectedDayDetails() {
       const roomFilter = document.getElementById('cal-room-filter').value || 'ALL';
       const collabFilter = document.getElementById('cal-collab-filter').value || 'ALL';
+      const showAllBtn = document.getElementById('btn-show-all-rooms-day');
 
       const titleEl = document.getElementById('selected-day-title');
       const isToday = (selectedDateISO === getTodayISO());
-      titleEl.innerText = `📅 Tareas del día: ${selectedDateISO} ${isToday ? '(Hoy)' : ''}`;
+
+      if (selectedRoomInDay) {
+        titleEl.innerText = `🏠 Checklist de "${selectedRoomInDay}" — Día ${selectedDateISO} ${isToday ? '(Hoy)' : ''}`;
+        if (showAllBtn) showAllBtn.style.display = 'inline-flex';
+      } else {
+        titleEl.innerText = `📅 Estancias y Subtareas del día: ${selectedDateISO} ${isToday ? '(Hoy)' : ''}`;
+        if (showAllBtn) showAllBtn.style.display = 'none';
+      }
 
       const dayTasks = appData.scheduledOccurrences.filter(o => {
         if (o.date !== selectedDateISO) return false;
+        if (selectedRoomInDay && o.room !== selectedRoomInDay) return false;
         if (roomFilter !== 'ALL' && o.room !== roomFilter) return false;
         if (collabFilter !== 'ALL' && o.collaborator !== collabFilter) return false;
         return true;
       });
 
+      const roomGroups = groupOccurrencesByRoom(dayTasks);
       const container = document.getElementById('selected-day-tasks-container');
-      if (dayTasks.length === 0) {
-        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">No hay tareas programadas para este día. Pulsa <strong>"+ Programar tarea en este día"</strong> para añadir una.</p>`;
+
+      if (roomGroups.length === 0) {
+        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">No hay estancias programadas para esta selección. Pulsa <strong>"+ Programar en este día"</strong> para añadir subtareas.</p>`;
       } else {
-        container.innerHTML = dayTasks.map(o => createTaskRowHTML(o, false)).join('');
+        container.innerHTML = roomGroups.map(g => createRoomGroupCardHTML(g, selectedDateISO, false)).join('');
       }
     }
 
+    // Muestra en el apartado de Pendientes las subtareas no completadas agrupadas por su Estancia y Fecha
     function renderPendingTasks() {
       const today = getTodayISO();
-      const pending = appData.scheduledOccurrences
+      const pendingSubtasks = appData.scheduledOccurrences
         .filter(occ => occ.date < today && !occ.completed)
         .sort((a, b) => a.date.localeCompare(b.date));
 
-      document.getElementById('pending-count').innerText = pending.length;
+      document.getElementById('pending-count').innerText = pendingSubtasks.length;
       const container = document.getElementById('pending-tasks-container');
       if (!container) return;
 
-      if (pending.length === 0) {
-        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">🎉 ¡Todo al día! No tienes ninguna tarea atrasada pendiente.</p>`;
-      } else {
-        container.innerHTML = pending.map(o => createTaskRowHTML(o, true)).join('');
+      if (pendingSubtasks.length === 0) {
+        container.innerHTML = `<p style="color:var(--text-muted); padding:10px;">🎉 ¡Todo al día! No tienes ninguna estancia con subtareas atrasadas pendientes.</p>`;
+        return;
       }
+
+      // Agrupar primero por Fecha y dentro por Estancia
+      const byDate = {};
+      pendingSubtasks.forEach(occ => {
+        if (!byDate[occ.date]) byDate[occ.date] = [];
+        byDate[occ.date].push(occ);
+      });
+
+      let html = "";
+      Object.keys(byDate).sort().forEach(dateISO => {
+        const roomGroups = groupOccurrencesByRoom(byDate[dateISO]);
+        roomGroups.forEach(g => {
+          html += createRoomGroupCardHTML(g, dateISO, true);
+        });
+      });
+
+      container.innerHTML = html;
     }
 
     function renderCalendar() {
@@ -1657,13 +2136,28 @@
       const monthsNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
       const dayHeaders = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
 
-      const filterTasksByDate = (dateISO) => {
-        return appData.scheduledOccurrences.filter(o => {
+      const getRoomGroupsForDate = (dateISO) => {
+        const filtered = appData.scheduledOccurrences.filter(o => {
           if (o.date !== dateISO) return false;
           if (roomFilter !== 'ALL' && o.room !== roomFilter) return false;
           if (collabFilter !== 'ALL' && o.collaborator !== collabFilter) return false;
           return true;
         });
+        return groupOccurrencesByRoom(filtered);
+      };
+
+      const renderRoomPillHTML = (dateISO, group) => {
+        const icon = group.allCompleted ? "✅" : "🏠";
+        const isActiveRoom = (selectedDateISO === dateISO && selectedRoomInDay === group.room);
+        const escapedRoom = group.room.replace(/'/g, "\\'");
+        return `
+          <div class="cal-pill ${group.allCompleted ? 'done' : ''} ${isActiveRoom ? 'active-room-pill' : ''}"
+               onclick="selectRoomInCalendar(event, '${dateISO}', '${escapedRoom}')"
+               title="Clic para abrir el checklist de ${group.room} (${group.doneCount} de ${group.totalCount} subtareas hechas)">
+            <span style="overflow:hidden; text-overflow:ellipsis;">${icon} ${group.room}</span>
+            <span>(${group.doneCount}/${group.totalCount})</span>
+          </div>
+        `;
       };
 
       if (calViewMode === 'month') {
@@ -1681,7 +2175,7 @@
 
         for (let day = 1; day <= daysInMonth; day++) {
           const dateISO = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-          const dayTasks = filterTasksByDate(dateISO);
+          const roomGroups = getRoomGroupsForDate(dateISO);
           const isToday = (dateISO === todayISO);
           const isSelected = (dateISO === selectedDateISO);
 
@@ -1691,8 +2185,8 @@
                 <span>${day}</span>
                 ${isToday ? `<span class="today-badge">Hoy</span>` : ''}
               </div>
-              ${dayTasks.slice(0, 3).map(t => `<div class="cal-pill ${t.completed ? 'done' : ''}">${t.room}: ${t.task}</div>`).join('')}
-              ${dayTasks.length > 3 ? `<div style="font-size:0.7rem; color:var(--primary-pink); font-weight:bold;">+${dayTasks.length - 3} más...</div>` : ''}
+              ${roomGroups.slice(0, 4).map(g => renderRoomPillHTML(dateISO, g)).join('')}
+              ${roomGroups.length > 4 ? `<div style="font-size:0.7rem; color:var(--primary-pink); font-weight:bold;">+${roomGroups.length - 4} estancias más...</div>` : ''}
             </div>
           `;
         }
@@ -1711,7 +2205,7 @@
           const d = new Date(monday);
           d.setDate(monday.getDate() + i);
           const dateISO = formatDateISO(d);
-          const dayTasks = filterTasksByDate(dateISO);
+          const roomGroups = getRoomGroupsForDate(dateISO);
           const isToday = (dateISO === todayISO);
           const isSelected = (dateISO === selectedDateISO);
 
@@ -1721,7 +2215,7 @@
                 <span>${dayHeaders[i]} ${d.getDate()}</span>
                 ${isToday ? `<span class="today-badge">Hoy</span>` : ''}
               </div>
-              ${dayTasks.map(t => `<div class="cal-pill ${t.completed ? 'done' : ''}">${t.room}: ${t.task} (${t.collaborator})</div>`).join('')}
+              ${roomGroups.map(g => renderRoomPillHTML(dateISO, g)).join('')}
             </div>
           `;
         }
@@ -1732,12 +2226,12 @@
         const dateISO = formatDateISO(calCurrentDate);
         selectedDateISO = dateISO;
         headerLabel.innerText = `Vista Diaria (${dateISO})`;
-        wrapper.innerHTML = `<p style="color:var(--text-muted); font-size:0.9rem;">Mostrando el detalle completo del día en el panel inferior.</p>`;
+        wrapper.innerHTML = `<p style="color:var(--text-muted); font-size:0.9rem;">Mostrando todas las estancias y sus checklists de subtareas en el panel inferior.</p>`;
       }
     }
 
     /* --------------------------------------------------------------------------
-       H. GRÁFICOS E IMPRESIÓN (6 y 7)
+       H. GRÁFICOS E IMPRESIÓN AGRUPADA POR ESTANCIAS (6 y 7)
        -------------------------------------------------------------------------- */
     function renderCharts() {
       const buildBarHTML = (label, done, total) => {
@@ -1785,7 +2279,7 @@
           taskHTML += buildBarHTML(task, done, list.length);
         }
       });
-      taskContainer.innerHTML = taskHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por tarea.</p>`;
+      taskContainer.innerHTML = taskHTML || `<p style="color:var(--text-muted);">Programa tareas para ver estadísticas por subtarea.</p>`;
     }
 
     function applyPrintPreset() {
@@ -1827,9 +2321,24 @@
       const container = document.getElementById('print-preview-container');
       if (list.length === 0) {
         container.innerHTML = `<p>No hay tareas registradas para este rango.</p>`;
-      } else {
-        container.innerHTML = list.map(o => createTaskRowHTML(o, true)).join('');
+        return;
       }
+
+      const byDate = {};
+      list.forEach(occ => {
+        if (!byDate[occ.date]) byDate[occ.date] = [];
+        byDate[occ.date].push(occ);
+      });
+
+      let html = "";
+      Object.keys(byDate).sort().forEach(dateISO => {
+        html += `<h3 style="margin: 14px 0 8px 0; color:var(--primary-pink);">📅 Fecha: ${dateISO}</h3>`;
+        const groups = groupOccurrencesByRoom(byDate[dateISO]);
+        groups.forEach(g => {
+          html += createRoomGroupCardHTML(g, dateISO, false);
+        });
+      });
+      container.innerHTML = html;
     }
 
     /* --------------------------------------------------------------------------
@@ -1895,7 +2404,6 @@
       deferredPrompt = e;
     });
 
-    // Dibuja un icono PNG cuadrado perfecto a partir de tu archivo "Logo Lorena.jpg" (o el diseño LB de respaldo)
     function createPNGIconFromLogo(size) {
       return new Promise((resolve) => {
         const canvas = document.createElement('canvas');
@@ -1912,7 +2420,6 @@
           resolve(canvas.toDataURL('image/png'));
         };
         img.onerror = function() {
-          // Respaldo en PNG si el archivo aún no ha cargado
           ctx.fillStyle = "#f5ebe0";
           ctx.fillRect(0, 0, size, size);
           ctx.fillStyle = "#4a2559";
@@ -1929,7 +2436,6 @@
       });
     }
 
-    // Genera el Manifiesto PWA con iconos PNG de 192x192 y 512x512 para que Windows muestre el logo al instalar
     async function setupPWA() {
       const icon192 = await createPNGIconFromLogo(192);
       const icon512 = await createPNGIconFromLogo(512);
@@ -2032,6 +2538,7 @@
       renderSelectedDayDetails();
       renderPendingTasks();
       renderCharts();
+      renderPrintPreview();
     }
 
     // Inicialización al arrancar la aplicación
@@ -2042,7 +2549,6 @@
       applyPrintPreset();
       loadGitHubConfigToUI();
       refreshAllViews();
-      // Descargar automáticamente los últimos cambios desde GitHub al abrir la app
       await syncFromGitHub(false);
     };
   </script>
