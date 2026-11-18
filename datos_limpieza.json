@@ -32330,6 +32330,42 @@
       "category": "Trimestral",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1795038951530_1b2nqu",
+      "date": "2026-11-16",
+      "room": "Recibidor",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038951530_chit6s",
+      "date": "2027-02-15",
+      "room": "Recibidor",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038951530_vab1gy",
+      "date": "2027-05-17",
+      "room": "Recibidor",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038951530_096q2a",
+      "date": "2027-08-16",
+      "room": "Recibidor",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
