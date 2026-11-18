@@ -32708,6 +32708,42 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1795039368043_urrab7",
+      "date": "2026-11-19",
+      "room": "Baño Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039368043_zsbsi7",
+      "date": "2027-02-18",
+      "room": "Baño Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039368043_sbdanu",
+      "date": "2027-05-20",
+      "room": "Baño Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039368043_d195rl",
+      "date": "2027-08-19",
+      "room": "Baño Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
