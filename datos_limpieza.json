@@ -32384,6 +32384,42 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1795038604677_n8n93y",
+      "date": "2026-11-18",
+      "room": "Aseo",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038604678_tjcpw9",
+      "date": "2027-02-17",
+      "room": "Aseo",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038604678_idwar9",
+      "date": "2027-05-19",
+      "room": "Aseo",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038604678_vx0s0f",
+      "date": "2027-08-18",
+      "room": "Aseo",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
