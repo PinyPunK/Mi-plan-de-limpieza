@@ -15157,7 +15157,7 @@
       "task": "Cambiar bolsa de basura",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793107796440_8fzv4k",
@@ -21034,7 +21034,7 @@
       "task": "Limpiar el polvo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793226625421_43rkqv",
