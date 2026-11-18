@@ -32492,6 +32492,114 @@
       "category": "Bimensual",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1795039257141_g66ty8",
+      "date": "2026-11-11",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_zrik3m",
+      "date": "2026-11-11",
+      "room": "Dormitorio Óscar",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_syi8fh",
+      "date": "2027-01-13",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_a51vih",
+      "date": "2027-01-13",
+      "room": "Dormitorio Óscar",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_dtaxqu",
+      "date": "2027-03-10",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_hrqbct",
+      "date": "2027-03-10",
+      "room": "Dormitorio Óscar",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_zmxqz1",
+      "date": "2027-05-12",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_anuo7j",
+      "date": "2027-05-12",
+      "room": "Dormitorio Óscar",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_vjc884",
+      "date": "2027-07-14",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_7pe4oc",
+      "date": "2027-07-14",
+      "room": "Dormitorio Óscar",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_xgb8fv",
+      "date": "2027-09-08",
+      "room": "Dormitorio Óscar",
+      "task": "Limpiar cristales",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039257141_k10ogf",
+      "date": "2027-09-08",
+      "room": "Dormitorio Óscar",
+      "task": "Lavar cortinas",
+      "category": "Bimensual",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
