@@ -32294,6 +32294,42 @@
       "category": "Trimestral",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1795038884773_eqe69n",
+      "date": "2026-11-19",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038884773_bcgu4k",
+      "date": "2027-02-18",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038884773_9s3nu8",
+      "date": "2027-05-20",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795038884773_4bwih2",
+      "date": "2027-08-19",
+      "room": "Dormitorio Suite",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
