@@ -32402,6 +32402,42 @@
       "category": "Trimestral",
       "collaborator": "Lorena",
       "completed": false
+    },
+    {
+      "id": "occ_1795039147409_ylyxw5",
+      "date": "2026-11-17",
+      "room": "Estudio",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039147410_2xqlin",
+      "date": "2027-02-16",
+      "room": "Estudio",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039147410_874dak",
+      "date": "2027-05-18",
+      "room": "Estudio",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
+    },
+    {
+      "id": "occ_1795039147410_fesqmk",
+      "date": "2027-08-17",
+      "room": "Estudio",
+      "task": "Limpiar Puerta",
+      "category": "Trimestral",
+      "collaborator": "Lorena",
+      "completed": false
     }
   ],
   "settings": {
