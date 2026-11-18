@@ -29533,15 +29533,6 @@
       "completed": true
     },
     {
-      "id": "occ_1793319142829_eu9rtv",
-      "date": "2026-11-13",
-      "room": "Cocina",
-      "task": "Fregadero",
-      "category": "Semanal",
-      "collaborator": "Lorena",
-      "completed": false
-    },
-    {
       "id": "occ_1793319142829_lk60eb",
       "date": "2026-11-20",
       "room": "Cocina",
@@ -30464,15 +30455,6 @@
       "date": "2027-10-29",
       "room": "Cocina",
       "task": "Limpiar encimera",
-      "category": "Semanal",
-      "collaborator": "Lorena",
-      "completed": false
-    },
-    {
-      "id": "occ_1793319161877_ju8ulf",
-      "date": "2026-11-13",
-      "room": "Cocina",
-      "task": "Limpiar nevera",
       "category": "Semanal",
       "collaborator": "Lorena",
       "completed": false
