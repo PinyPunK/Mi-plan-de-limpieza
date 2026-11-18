@@ -136,7 +136,7 @@
       "task": "Desinfectar con Ozono",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106702043_6pysw7",
@@ -20557,7 +20557,7 @@
       "task": "Limpiar espejo",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793132424743_dug5fx",
