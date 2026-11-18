@@ -1081,7 +1081,7 @@
       "task": "Fregar",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106743124_vo96im",
@@ -1558,7 +1558,7 @@
       "task": "Limpiar sanitarios",
       "category": "Semanal",
       "collaborator": "Lorena",
-      "completed": false
+      "completed": true
     },
     {
       "id": "occ_1793106757638_wic6uq",
